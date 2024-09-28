@@ -51,7 +51,8 @@ public class GameManager : MonoBehaviour
     public Image debugMenu;
     public Image alphaGrid;
     public Image betaGrid;
-    public Image eqGrid3;
+
+    public Image EquationX1;
 
     // Tutorial Descriptions
     public TextMeshProUGUI lbrackTutText;
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
     // crafting
     public Transform StorageSlot;
     public GameObject one;
+    public GameObject two;
     public GameObject addition;
     
     //slots
@@ -78,7 +80,7 @@ public class GameManager : MonoBehaviour
     public int[] eqIndex = {0, 0, 0, 0, 0, 0, 0}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1 [everything starts at 1]
     
     //crafting slots
-    public int[,] craftIndex = { {0, 0, 0}, {0, 0, 0} }; //lets try starting from 0 // [0] = values, [1] = addition
+    public int[,] craftIndex = { {0, 0, 0}, {0, 0, 0}, { 0, 0, 0 }, { 0, 0, 0 } }; //lets try starting from 0 // [0] = values, [1] = addition, [2] = subtraction, [3] = multiplication
     
     // symbol types in order of operation. used as X in [#, X]
     public int lbrack;
@@ -101,8 +103,19 @@ public class GameManager : MonoBehaviour
     public int[,] multIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
     public int[,] addIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
     public int[,] subIndex  = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-
-    // variables used for computation
+    
+    // Recursion indexes for each symbol, switches equivilent position to true if the exact slot is used
+    public bool[,] lbrackRecIndex       = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] rbrackRecIndex      = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] rootstartRecIndex  = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] rootendRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] pwrRecIndex      = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] divRecIndex     = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] multRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] addRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] subRecIndex  = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+   
+     // variables used for computation
     private double pwrvar1 = -1; // the x in (x^y)
     private double pwrvar2 = -1; // the y in (x^y)
     private double divar1 = -1; // the x in (x/y)
@@ -166,13 +179,43 @@ public class GameManager : MonoBehaviour
         */
     }
     
+    public void GetSymbol (int symbolVal)
+    {
+
+        switch (symbolVal)
+        {case 1:
+            Instantiate(one, StorageSlot);
+            break;
+        case 2:
+            Instantiate(two, StorageSlot);
+
+            break;
+        }
+
+        Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
+        if (rnd.Next(10) == 1) // 1/10 chance
+            {
+                Instantiate(addition, StorageSlot);
+            }
+        symbolClaimText.text = "[SYMBOL CLAIM / TOTAL: "+StorageSlot.transform.childCount+" ]";
+        Debug.Log("FOR LOOP");
+    }
     
     public void gameProgression() // this is where game progression is controlled, ran just before temp values are reset
     { 
         record = (solution > record) ? record = solution : record = record; // shorthand if // 0 for now. fix later               // record is y, output is x
-        if (record >= 8) 
+        if(record >= 970)
         {
-            progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.7);
+            progressIndex = Math.Pow(record*2, 0.6) + 70;
+        }
+        else if (record >= 20)
+        {
+            progressIndex = Math.Pow(record, 0.75) + 20;
+            EquationX1.gameObject.SetActive(true);
+        }
+        else if (record >= 8) 
+        {
+            progressIndex = (Math.Pow(record, 0.75) + 20);//progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.8);
         }                                  //Math.Pow(record, (0.13 * record));//m * (Math.Log(record * progressStage)); //y=m(log(x*c)) m=22 c=0.6  //2.2        //(Math.Log(record, progressIndex + 1)); //progressIndex = (Math.Log((Math.Pow(record, progressIndex)+1), progressStage));
         else
         {
@@ -185,19 +228,25 @@ public class GameManager : MonoBehaviour
         
         if (progressIndex > PrevProgressIndex)
             {
-                Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
-                for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
-                {   
-                    Instantiate(one, StorageSlot);
-                    if (rnd.Next(5) == 1) // 1/15 chance
-                    {
-                        Instantiate(addition, StorageSlot);
+                if (record > 500)
+                {
+                    for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
+                    {   
+                        if (prev % 2 == 0) // gives half, but double value; saves time with crafting 
+                        {
+                            GetSymbol(2);
+                        }
                     }
-                    symbolClaimText.text = "CLICK TO CLAIM SYMBOL ["+prev+"]";
-                    Debug.Log("FOR LOOP");
+
                 }
-                
-                PrevProgressIndex = progressIndex;
+                else
+                {
+                    for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
+                    {   
+                        GetSymbol(1);
+                    }
+                }  
+                PrevProgressIndex = progressIndex;  
             }
         //for (int i = (int) progressIndex)
 
@@ -231,124 +280,50 @@ public class GameManager : MonoBehaviour
       
         pwrslotText.text = "\t-- internal symbol slot data --\n---------------------------------------\nLbrack 1 = "+lbrackIndex[1, 1]+" "+lbrackIndex[1, 2]+" "+lbrackIndex[1, 3]+" "+lbrackIndex[1, 4]+" "+lbrackIndex[1, 5]+" "+lbrackIndex[1, 6]+" "+lbrackIndex[1, 7]+" "+lbrackIndex[1, 8]+" "+lbrackIndex[1, 9]+" "+lbrackIndex[1, 10]+"\nLbrack 2 = "+lbrackIndex[2, 1]+" "+lbrackIndex[2, 2]+" "+lbrackIndex[2, 3]+" "+lbrackIndex[2, 4]+" "+lbrackIndex[2, 5]+" "+lbrackIndex[2, 6]+" "+lbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+lbrackIndex[2, 9]+" "+lbrackIndex[2, 10]+"\n---------------------------------------\nRbrack 1 = "+rbrackIndex[1, 1]+" "+rbrackIndex[1, 2]+" "+rbrackIndex[1, 3]+" "+rbrackIndex[1, 4]+" "+rbrackIndex[1, 5]+" "+rbrackIndex[1, 6]+" "+rbrackIndex[1, 7]+" "+rbrackIndex[1, 8]+" "+rbrackIndex[1, 9]+" "+rbrackIndex[1, 10]+"\nRbrack 2 = "+rbrackIndex[2, 1]+" "+rbrackIndex[2, 2]+" "+rbrackIndex[2, 3]+" "+rbrackIndex[2, 4]+" "+rbrackIndex[2, 5]+" "+rbrackIndex[2, 6]+" "+rbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+rbrackIndex[2, 9]+" "+rbrackIndex[2, 10]+"\n---------------------------------------\nRootstart 1 = "+rootstartIndex[1, 1]+" "+rootstartIndex[1, 2]+" "+rootstartIndex[1, 3]+" "+rootstartIndex[1, 4]+" "+rootstartIndex[1, 5]+" "+rootstartIndex[1, 6]+" "+rootstartIndex[1, 7]+" "+rootstartIndex[1, 8]+" "+rootstartIndex[1, 9]+" "+rootstartIndex[1, 10]+"\nRootstart 2 = "+rootstartIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootstartIndex[2, 3]+" "+rootstartIndex[2, 4]+" "+rootstartIndex[2, 5]+" "+rootstartIndex[2, 6]+" "+rootstartIndex[2, 7]+" "+rootstartIndex[2, 8]+" "+rootstartIndex[2, 9]+" "+rootstartIndex[2, 10]+"\n---------------------------------------\nRootend 1 = "+rootendIndex[1, 1]+" "+rootendIndex[1, 2]+" "+rootendIndex[1, 3]+" "+rootendIndex[1, 4]+" "+rootendIndex[1, 5]+" "+rootendIndex[1, 6]+" "+rootendIndex[1, 7]+" "+rootendIndex[1, 8]+" "+rootendIndex[1, 9]+" "+rootendIndex[1, 10]+"\nRootend 2 = "+rootendIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootendIndex[2, 3]+" "+rootendIndex[2, 4]+" "+rootendIndex[2, 5]+" "+rootendIndex[2, 6]+" "+rootendIndex[2, 7]+" "+rootendIndex[2, 8]+" "+rootendIndex[2, 9]+" "+rootendIndex[2, 10]+"\n---------------------------------------\nPwrslot 1 = "+pwrIndex[1, 1]+" "+pwrIndex[1, 2]+" "+pwrIndex[1, 3]+" "+pwrIndex[1, 4]+" "+pwrIndex[1, 5]+" "+pwrIndex[1, 6]+" "+pwrIndex[1, 7]+" "+pwrIndex[1, 8]+" "+pwrIndex[1, 9]+" "+pwrIndex[1, 10]+"\nPwrslot 2 = "+pwrIndex[2, 1]+" "+pwrIndex[2, 2]+" "+pwrIndex[2, 3]+" "+pwrIndex[2, 4]+" "+pwrIndex[2, 5]+" "+pwrIndex[2, 6]+" "+pwrIndex[2, 7]+" "+pwrIndex[2, 8]+" "+pwrIndex[2, 9]+" "+pwrIndex[2, 10]+"\n---------------------------------------\nDivslot 1 = "+divIndex[1, 1]+" "+divIndex[1, 2]+" "+divIndex[1, 3]+" "+divIndex[1, 4]+" "+divIndex[1, 5]+" "+divIndex[1, 6]+" "+divIndex[1, 7]+" "+divIndex[1, 8]+" "+divIndex[1, 9]+" "+divIndex[1, 10]+"\nDivslot 2 = "+divIndex[2, 1]+" "+divIndex[2, 2]+" "+divIndex[2, 3]+" "+divIndex[2, 4]+" "+divIndex[2, 5]+" "+divIndex[2, 6]+" "+divIndex[2, 7]+" "+divIndex[2, 8]+" "+divIndex[2, 9]+" "+divIndex[2, 10]+"\n---------------------------------------\nMultslot 1 = "+multIndex[1, 1]+" "+multIndex[1, 2]+" "+multIndex[1, 3]+" "+multIndex[1, 4]+" "+multIndex[1, 5]+" "+multIndex[1, 6]+" "+multIndex[1, 7]+" "+multIndex[1, 8]+" "+multIndex[1, 9]+" "+multIndex[1, 10]+"\nMultslot 2 = "+multIndex[2, 1]+" "+multIndex[2, 2]+" "+multIndex[2, 3]+" "+multIndex[2, 4]+" "+multIndex[2, 5]+" "+multIndex[2, 6]+" "+multIndex[2, 7]+" "+multIndex[2, 8]+" "+multIndex[2, 9]+" "+multIndex[2, 10]+"\n---------------------------------------\nAddslot 1 = "+""+addIndex[1, 1]+" "+addIndex[1, 2]+" "+addIndex[1, 3]+" "+addIndex[1, 4]+" "+addIndex[1, 5]+" "+addIndex[1, 6]+" "+addIndex[1, 7]+" "+addIndex[1, 8]+" "+addIndex[1, 9]+" "+addIndex[1, 10]+"\nAddslot 2 = "+addIndex[2, 1]+" "+addIndex[2, 2]+" "+addIndex[2, 3]+" "+addIndex[2, 4]+" "+addIndex[2, 5]+" "+addIndex[2, 6]+" "+addIndex[2, 7]+" "+addIndex[2, 8]+" "+addIndex[2, 9]+" "+addIndex[2, 10]+"\n---------------------------------------\nSubslot 1 = "+subIndex[1, 1]+" "+subIndex[1, 2]+" "+subIndex[1, 3]+" "+subIndex[1, 4]+" "+subIndex[1, 5]+" "+subIndex[1, 6]+" "+subIndex[1, 7]+" "+subIndex[1, 8]+" "+subIndex[1, 9]+" "+subIndex[1, 10]+"\nSubslot 2 = "+subIndex[2, 1]+" "+subIndex[2, 2]+" "+subIndex[2, 3]+" "+subIndex[2, 4]+" "+subIndex[2, 5]+" "+subIndex[2, 6]+" "+subIndex[2, 7]+" "+subIndex[2, 8]+" "+subIndex[2, 9]+" "+subIndex[2, 10]+"\n---------------------------------------";
         
-       
-
-        
-        
-        rootstartText.text = "dev build v1.10 beta";
+        rootstartText.text = "dev build v1.10";
         
         pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
         
         
     }
 
-    public void EqReset(int CurrentEq) // probably a better way to do this 
+    public void EqReset(int CurrentEq)
     {   
         Debug.Log("Resetting Slot Data for ["+CurrentEq+", 1-10]");
-        slotpos[CurrentEq, 1] = slotposStored[CurrentEq, 1];
-        slotpos[CurrentEq, 2] = slotposStored[CurrentEq, 2];
-        slotpos[CurrentEq, 3] = slotposStored[CurrentEq, 3];
-        slotpos[CurrentEq, 4] = slotposStored[CurrentEq, 4];
-        slotpos[CurrentEq, 5] = slotposStored[CurrentEq, 5];
-        slotpos[CurrentEq, 6] = slotposStored[CurrentEq, 6];
-        slotpos[CurrentEq, 7] = slotposStored[CurrentEq, 7];
-        slotpos[CurrentEq, 8] = slotposStored[CurrentEq, 8];
-        slotpos[CurrentEq, 9] = slotposStored[CurrentEq, 9];
-        slotpos[CurrentEq, 10] = slotposStored[CurrentEq, 10];
-        /*
-        slotpos[1, 1] = slotposStored[1, 1];
-        slotpos[1, 2] = slotposStored[1, 2];
-        slotpos[1, 3] = slotposStored[1, 3];
-        slotpos[1, 4] = slotposStored[1, 4];
-        slotpos[1, 5] = slotposStored[1, 5];
-        slotpos[1, 6] = slotposStored[1, 6];
-        slotpos[1, 7] = slotposStored[1, 7];
-        slotpos[1, 8] = slotposStored[1, 8];
-        slotpos[1, 9] = slotposStored[1, 9];
-        slotpos[1, 10] = slotposStored[1, 10];
+        for (int i = 1; i <= 10; i++)
+        {
+            slotpos[CurrentEq, i] = slotposStored[CurrentEq, i];
+        }
         
-        slotpos[2, 1] = slotposStored[2, 1];
-        slotpos[2, 2] = slotposStored[2, 2];
-        slotpos[2, 3] = slotposStored[2, 3];
-        slotpos[2, 4] = slotposStored[2, 4];
-        slotpos[2, 5] = slotposStored[2, 5];
-        slotpos[2, 6] = slotposStored[2, 6];
-        slotpos[2, 7] = slotposStored[2, 7];
-        slotpos[2, 8] = slotposStored[2, 8];
-        slotpos[2, 9] = slotposStored[2, 9];
-        slotpos[2, 10] = slotposStored[2, 10];
-        
-        slotpos[3, 1] = slotposStored[3, 1];
-        slotpos[3, 2] = slotposStored[3, 2];
-        slotpos[3, 3] = slotposStored[3, 3];
-        slotpos[3, 4] = slotposStored[3, 4];
-        slotpos[3, 5] = slotposStored[3, 5];
-        slotpos[3, 6] = slotposStored[3, 6];
-        slotpos[3, 7] = slotposStored[3, 7];
-        slotpos[3, 8] = slotposStored[3, 8];
-        slotpos[3, 9] = slotposStored[3, 9];
-        slotpos[3, 10] = slotposStored[3, 10];
-        */
-        BrackRecDone = false;
-        AddRecDone = false;
-        MultRecDone = false;
-        PowRecDone = false;
-        SqrtRecDone = false;
-        DivRecDone = false;
-        SubRecDone = false;
-        
+        for (int k = 0; k <= 3; k++)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                lbrackRecIndex[k, i] = false;
+                rbrackRecIndex[k, i] = false;
+                rootstartRecIndex[k, i] = false;
+                rootendRecIndex[k, i] = false;
+                pwrRecIndex[k, i] = false;
+                divRecIndex[k, i] = false;
+                multRecIndex[k, i] = false;
+                addRecIndex[k, i] = false;
+                subRecIndex[k, i] = false;
+            }
+        }
+
         solution = 0;
     }
 
     public void EqPreset()
     {
-        slotposStored[0, 1] = slotpos[0, 1];
-        slotposStored[0, 2] = slotpos[0, 2];
-        slotposStored[0, 3] = slotpos[0, 3];
-        slotposStored[0, 4] = slotpos[0, 4];
-        slotposStored[0, 5] = slotpos[0, 5];
-        slotposStored[0, 6] = slotpos[0, 6];
-        slotposStored[0, 7] = slotpos[0, 7];
-        slotposStored[0, 8] = slotpos[0, 8];
-        slotposStored[0, 9] = slotpos[0, 9];
-        slotposStored[0, 10] = slotpos[0, 10];
-        
-        slotposStored[1, 1] = slotpos[1, 1];
-        slotposStored[1, 2] = slotpos[1, 2];
-        slotposStored[1, 3] = slotpos[1, 3];
-        slotposStored[1, 4] = slotpos[1, 4];
-        slotposStored[1, 5] = slotpos[1, 5];
-        slotposStored[1, 6] = slotpos[1, 6];
-        slotposStored[1, 7] = slotpos[1, 7];
-        slotposStored[1, 8] = slotpos[1, 8];
-        slotposStored[1, 9] = slotpos[1, 9];
-        slotposStored[1, 10] = slotpos[1, 10];
-        
-        slotposStored[2, 1] = slotpos[2, 1];
-        slotposStored[2, 2] = slotpos[2, 2];
-        slotposStored[2, 3] = slotpos[2, 3];
-        slotposStored[2, 4] = slotpos[2, 4];
-        slotposStored[2, 5] = slotpos[2, 5];
-        slotposStored[2, 6] = slotpos[2, 6];
-        slotposStored[2, 7] = slotpos[2, 7];
-        slotposStored[2, 8] = slotpos[2, 8];
-        slotposStored[2, 9] = slotpos[2, 9];
-        slotposStored[2, 10] = slotpos[2, 10];
-        
-        slotposStored[3, 1] = slotpos[3, 1];
-        slotposStored[3, 2] = slotpos[3, 2];
-        slotposStored[3, 3] = slotpos[3, 3];
-        slotposStored[3, 4] = slotpos[3, 4];
-        slotposStored[3, 5] = slotpos[3, 5];
-        slotposStored[3, 6] = slotpos[3, 6];
-        slotposStored[3, 7] = slotpos[3, 7];
-        slotposStored[3, 8] = slotpos[3, 8];
-        slotposStored[3, 9] = slotpos[3, 9];
-        slotposStored[3, 10] = slotpos[3, 10];
+        for (int i = 0; i <= 3; i++)
+            {
+                for (int k = 1;k<=10; k++)
+                {
+                    slotposStored[i, k] = slotpos[i,k];
+                }
+            }
     }
-
-
-    
 
     public void Mathfunc(int startpos, int endpos, bool IsRecCall, int eqCalled) //todo: FIGURE OUT HOW TO MAKE EQUATIONS SNAPPABLE
     {   
@@ -370,7 +345,7 @@ public class GameManager : MonoBehaviour
         switch (eqIndex[eqCalled]) //checks for current eq slot
         {
 
-            case 1: //normal type
+            case 0: //normal type
             {
         
                 if(IsRecCall == false)
@@ -379,15 +354,30 @@ public class GameManager : MonoBehaviour
                 }
 
                 // BRACKETS
-                if (lbrackIndex[eqCalled, lbrack] >= startpos && rbrackIndex[eqCalled, rbrack] <= endpos && rbrackIndex[eqCalled, rbrack] > lbrackIndex[eqCalled, lbrack] && BrackRecDone == false) // if brackets are used within scope
+            
+                for (int index=startpos;index<endpos;index++) // check all possible positions within bounds for left brackets 
+                {
+                    if (lbrackIndex[eqCalled, index] > 0 && lbrackRecIndex[eqCalled, index] == false)
+                    {
+                        Debug.Log("lbrack found at slot"+index);
+                        for (int index2=index+1;index2<=endpos;index2++) // if a vaild left bracket position is found, check all for right brackets, starting at the left bracket position to end
                         {
-                    Mathfunc(lbrackIndex[eqCalled, lbrack] + 1, rbrackIndex[eqCalled, rbrack] - 1, true, eqCalled); //what stuff is in the brackets and solve that first
-                    solution = slotpos[eqCalled, rbrackIndex[eqCalled, rbrack]-1];
-                    slotpos[eqCalled, rbrackIndex[eqCalled, rbrack]] = slotpos[eqCalled, lbrackIndex[eqCalled, lbrack]] = solution;
-                    Debug.Log("//BRACKETS DONE)");
-                    BrackRecDone = true;
-                    Debug.Log("post brack =" + solution);
+                            if (rbrackIndex[eqCalled, index2] > 0 && rbrackRecIndex[eqCalled, index2] == false) // if checked position has a right bracket in it and has not been done before
+                            {
+                                Debug.Log("rbrack found at slot"+index2);
+                                lbrackRecIndex[eqCalled, index] = rbrackRecIndex[eqCalled, index2] = true; // updates what has been solved for recursion
+                                Mathfunc(lbrackIndex[eqCalled, index] + 1, rbrackIndex[eqCalled, index2] - 1, true, eqCalled); //what stuff is in the brackets and solve that first
+                                Debug.Log("post brack TEST =" + solution);
+                                //solution = slotpos[eqCalled, rbrackIndex[eqCalled, rbrack]-1];
+                                slotpos[eqCalled, rbrackIndex[eqCalled, index2]] = slotpos[eqCalled, lbrackIndex[eqCalled, index]] = solution;
+                                Debug.Log("//BRACKETS DONE)");
+                                Debug.Log("post brack =" + solution);
+                            }
+                        }
+                    }
+                    //&&  <= endpos && rbrackIndex[eqCalled, rbrack] > lbrackIndex[eqCalled, lbrack] && B) // if brackets are used within scope
                 }
+            
 
                 // EXPONENTS
 
@@ -395,15 +385,26 @@ public class GameManager : MonoBehaviour
                 if (rootstartIndex[eqCalled, rootstart] < pwrIndex[eqCalled, pwrslot])
                 {
                     // SQUARE ROOT
-                    if (rootstartIndex[eqCalled, rootstart] >= startpos && rootendIndex[eqCalled, rootend] <= endpos && SqrtRecDone == false) // if rootstart is within scope
+                    for (int index = startpos; index<=endpos; index++)
                     {
-                        Mathfunc(rootstartIndex[eqCalled, rootstart] + 1, rootendIndex[eqCalled, rootend] - 1, true, eqCalled);
-                        solution = slotpos[eqCalled, rootendIndex[eqCalled, rootend] - 1]; // get solution value from the last slot inside of the scope
-                        solution = Math.Sqrt(solution); // square root the solution
-                        slotpos[eqCalled, rootendIndex[eqCalled, rootend]] = slotpos[eqCalled, rootstartIndex[eqCalled, rootstart]] = solution; // make the root slots equal the new solution
-                        SqrtRecDone = true;
-                        Debug.Log("//SQUARE ROOT DONE");
-                        Debug.Log(solution);
+                        if (rootstartIndex[eqCalled, index] > 0 && rootstartRecIndex[eqCalled, index] == false)
+                        {
+                            for (int index2=index+1;index2<=endpos; index2++)
+                            {
+                                if (rootendIndex[eqCalled, rootend] <= endpos && rootendRecIndex[eqCalled, index] == false)
+                                {
+                                    rootstartRecIndex[eqCalled, index] = true;
+                                    rootendRecIndex[eqCalled, index2] = true;
+                                    Mathfunc(rootstartIndex[eqCalled, index] + 1, rootendIndex[eqCalled, index2] - 1, true, eqCalled);
+                                    solution = slotpos[eqCalled, rootendIndex[eqCalled, index2] - 1]; // get solution value from the last slot inside of the scope
+                                    solution = Math.Sqrt(solution); // square root the solution
+                                    slotpos[eqCalled, rootendIndex[eqCalled, index2]] = slotpos[eqCalled, rootstartIndex[eqCalled, index]] = solution; // make the root slots equal the new solution
+                                    Debug.Log("//SQUARE ROOT DONE");
+                                    Debug.Log(solution);
+
+                                }
+                            }
+                        }
                     }
 
                     // POWER
@@ -412,13 +413,6 @@ public class GameManager : MonoBehaviour
                         pwrvar1 = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot]-1];
                         pwrvar2 = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot]+1];
                         solution = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot]-1] = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot]] = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot] + 1] = Math.Pow(pwrvar1, pwrvar2);//BigInteger.Pow(pwrvar1, (int)pwrvar2); // exponent is BigInteger ///https://stackoverflow.com/questions/30224589/biginteger-powbiginteger-biginteger
-                        /*
-                          BigInteger originalValue = value;
-                           while (exponent-- > 1)
-                               value = BigInteger.Multiply(value, originalValue);
-                               return value;;
-                           BigInteger Pow(BigInteger value, BigInteger exponent)
-                           */
                         PowRecDone = true;
                         Debug.Log("//POWER DONE SECOND");
                         Debug.Log(solution);
@@ -427,17 +421,24 @@ public class GameManager : MonoBehaviour
 
                 // POWER THEN ROOT
                 else if (pwrIndex[eqCalled, pwrslot] < rootstartIndex[eqCalled, rootstart])
-                {
-                    // POWER
-                    if (pwrIndex[eqCalled, pwrslot] > startpos && pwrIndex[eqCalled, pwrslot] < endpos && pwrIndex[eqCalled, pwrslot] > 1 && PowRecDone == false)
+                {  
+    
+                    for (int index = startpos; index < endpos; index++)
                     {
-                        pwrvar1 = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot] - 1];
-                        pwrvar2 = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot] + 1];
-                        solution = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot] - 1] = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot]] = slotpos[eqCalled, pwrIndex[eqCalled, pwrslot] + 1] = Math.Pow(pwrvar1, pwrvar2);
-                        PowRecDone = true;
-                        Debug.Log("//POWER DONE FIRST");
-                        Debug.Log(solution);
+                        if (pwrIndex[eqCalled, index] > 0 && pwrIndex[eqCalled, index] > startpos && pwrIndex[eqCalled, index] < endpos && pwrRecIndex[eqCalled, index] == false)
+                        {
+                            Debug.Log("exponentiation: [" + eqCalled + ", " + pwrIndex[eqCalled, index] + "]");
+                            Debug.Log(slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] + " / " + slotpos[eqCalled, pwrIndex[eqCalled, index] + 1]);
+                            pwrRecIndex[eqCalled, index] = true;
+                            pwrvar1 = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1];
+                            pwrvar2 = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1];
+                            solution = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] = slotpos[eqCalled, pwrIndex[eqCalled, index]] = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1] = Math.Pow(pwrvar1, pwrvar2);
+                            Debug.Log("exponentiation: " + solution);
+                            Debug.Log("POWER DONE FIRST");
+                        }
                     }
+
+    
 
                     // SQUARE ROOT
                     if (rootstartIndex[eqCalled, rootstart] >= startpos && rootendIndex[eqCalled, rootend] <= endpos && SqrtRecDone == false)
@@ -453,100 +454,76 @@ public class GameManager : MonoBehaviour
                 }
 
                 // DIVISION
-                if (divIndex[eqCalled, divslot] > startpos && divIndex[eqCalled, divslot] < endpos && DivRecDone == false)
-                {   
-                    Debug.Log("division: [" + eqCalled + ", " + multIndex[eqCalled, multslot] + "]");
-                    Debug.Log(slotpos[eqCalled, divIndex[eqCalled, divslot] - 1] + " / " + slotpos[eqCalled, divIndex[eqCalled, divslot] + 1]);
-                    divar1 = slotpos[eqCalled, divIndex[eqCalled, divslot] - 1];
-                    divar2 = slotpos[eqCalled, divIndex[eqCalled, divslot] + 1];
-                    solution = slotpos[eqCalled, divIndex[eqCalled, divslot] - 1] = slotpos[eqCalled, divIndex[eqCalled, divslot]] = slotpos[eqCalled, divIndex[eqCalled, divslot] + 1] = divar1 / divar2;
-                    DivRecDone = true;
-                    Debug.Log("division: " + solution);
-                    Debug.Log("//DIVISION DONE");
-                }
-                  
-                // MULTIPLICATION
-                if (multIndex[eqCalled, multslot] > startpos && multIndex[eqCalled, multslot] < endpos && MultRecDone == false)
+                for (int index = startpos; index < endpos; index++)
                 {
-                    for (int index = 1; index < 11; index++)
+                    if (divIndex[eqCalled, index] > 0 && divIndex[eqCalled, index] > startpos && divIndex[eqCalled, index] < endpos && divRecIndex[eqCalled, index] == false)
                     {
-                        if (multIndex[eqCalled, index] > 0)
-                        {
-                            Debug.Log("multiplication: [" + eqCalled + ", " + multIndex[eqCalled, index] + "]");
-                            Debug.Log(slotpos[eqCalled, multIndex[eqCalled, index] - 1] + " x " + slotpos[eqCalled, multIndex[eqCalled, multslot] + 1]);
-                            multvar1 = slotpos[eqCalled, multIndex[eqCalled, index] - 1];
-                            multvar2 = slotpos[eqCalled, multIndex[eqCalled, index] + 1];
-                            solution = slotpos[eqCalled, multIndex[eqCalled, index] - 1] = slotpos[eqCalled, multIndex[eqCalled, index]] = slotpos[eqCalled, multIndex[eqCalled, index] + 1] = multvar1 * multvar2;
-                            Debug.Log("multiplication: " + solution);
-                        }
+                        Debug.Log("division: [" + eqCalled + ", " + divIndex[eqCalled, index] + "]");
+                        Debug.Log(slotpos[eqCalled, divIndex[eqCalled, index] - 1] + " / " + slotpos[eqCalled, divIndex[eqCalled, divslot] + 1]);
+                        divRecIndex[eqCalled, index] = true;
+                        divar1 = slotpos[eqCalled, divIndex[eqCalled, index] - 1];
+                        divar2 = slotpos[eqCalled, divIndex[eqCalled, index] + 1];
+                        solution = slotpos[eqCalled, divIndex[eqCalled, index] - 1] = slotpos[eqCalled, divIndex[eqCalled, index]] = slotpos[eqCalled, divIndex[eqCalled, index] + 1] = divar1 / divar2;
+                        Debug.Log("division: " + solution);
+                        Debug.Log("DIVISION DONE");
                     }
-                    MultRecDone = true;
-                    Debug.Log("multiplication: " + solution);
-                    Debug.Log("//MULTIPLICATION DONE");
                 }
 
-                // ADDITION
-               if (AddRecDone == false)
-               {
-                    //make a thing that checks for the highest value in addIndex[eqCalled] and use that index to do math. this allows for x(1) to also have addition without breaking
-                    for (int index = 1; index < 11; index++)
+           
+
+                // MULTIPLICATION
+                for (int index = startpos; index < endpos; index++)
+                {
+                    if (multIndex[eqCalled, index] > 0 && multIndex[eqCalled, index] > startpos && multIndex[eqCalled, index] < endpos && multRecIndex[eqCalled, index] == false)
                     {
-                        if (addIndex[eqCalled, index] > 0)
+
+                        Debug.Log("multiplication: [" + eqCalled + ", " + multIndex[eqCalled, index] + "]");
+                        Debug.Log(slotpos[eqCalled, multIndex[eqCalled, index] - 1] + " x " + slotpos[eqCalled, multIndex[eqCalled, multslot] + 1]);
+                        multRecIndex[eqCalled, index] = true;
+                        multvar1 = slotpos[eqCalled, multIndex[eqCalled, index] - 1];
+                        multvar2 = slotpos[eqCalled, multIndex[eqCalled, index] + 1];
+                        solution = slotpos[eqCalled, multIndex[eqCalled, index] - 1] = slotpos[eqCalled, multIndex[eqCalled, index]] = slotpos[eqCalled, multIndex[eqCalled, index] + 1] = multvar1 * multvar2;
+                        Debug.Log("multiplication: " + solution);
+                        Debug.Log("//MULTIPLICATION DONE");
+                    }
+                }
+               
+            
+
+                // ADDITION
+                for (int index = startpos; index < endpos; index++)
+                {
+                    if (addIndex[eqCalled, index] > 0 && addRecIndex[eqCalled, index] == false)
+                    {
+                        if (addIndex[eqCalled, index] > startpos && addIndex[eqCalled, index] < endpos)
                         {
-                            if (addIndex[eqCalled, index] > startpos && addIndex[eqCalled, index] < endpos && AddRecDone == false)
-                            {       
-                            Debug.Log(index);
-                            Debug.Log("addition: [" + eqCalled + ", " + addIndex[eqCalled, index] + "]");
-                            Debug.Log(slotpos[eqCalled, addIndex[eqCalled, index] - 1] + " + " + slotpos[eqCalled, addIndex[eqCalled, index] + 1]);
-                            addvar1 = slotpos[eqCalled, addIndex[eqCalled, index] - 1];
-                            addvar2 = slotpos[eqCalled, addIndex[eqCalled, index] + 1];
-                            solution = slotpos[eqCalled, addIndex[eqCalled, index] - 1] = slotpos[eqCalled, addIndex[eqCalled, index]] = slotpos[eqCalled, addIndex[eqCalled, index] + 1] = (addvar1 + addvar2);
-                            Debug.Log("addition: " + solution);
-                            }
+                                Debug.Log(index);
+                                Debug.Log("addition: [" + eqCalled + ", " + addIndex[eqCalled, index] + "]");
+                                Debug.Log(slotpos[eqCalled, addIndex[eqCalled, index] - 1] + " + " + slotpos[eqCalled, addIndex[eqCalled, index] + 1]);
+                                addRecIndex[eqCalled, index] = true;
+                                addvar1 = slotpos[eqCalled, addIndex[eqCalled, index] - 1];
+                                addvar2 = slotpos[eqCalled, addIndex[eqCalled, index] + 1];
+                                solution = slotpos[eqCalled, addIndex[eqCalled, index] - 1] = slotpos[eqCalled, addIndex[eqCalled, index]] = slotpos[eqCalled, addIndex[eqCalled, index] + 1] = (addvar1 + addvar2);
+                                Debug.Log("addition: " + solution);
+                                Debug.Log("//ADDITION DONE");
                         }
                     }
-                    AddRecDone = true;
-                    Debug.Log("addition: " + solution);
-                    Debug.Log("//ADDITION DONE");
-                }  
-                // MULTIPLICATION
-                /*if (multIndex[eqCalled, multslot] > startpos && multIndex[eqCalled, multslot] < endpos && MultRecDone == false)
-                {   
-                    Debug.Log("multiplication: [" + eqCalled + ", " + multIndex[eqCalled, multslot] + "]");
-                    Debug.Log(slotpos[eqCalled, multIndex[eqCalled, multslot] - 1] + " x " + slotpos[eqCalled, multIndex[eqCalled, multslot] + 1]);
-                    multvar1 = slotpos[eqCalled, multIndex[eqCalled, multslot] - 1];
-                    multvar2 = slotpos[eqCalled, multIndex[eqCalled, multslot] + 1];
-                    solution = slotpos[eqCalled, multIndex[eqCalled, multslot] - 1] = slotpos[eqCalled, multIndex[eqCalled, multslot]] = slotpos[eqCalled, multIndex[eqCalled, multslot] + 1] = multvar1 * multvar2;
-                    MultRecDone = true;
-                    Debug.Log("multiplication: " + solution);
-                    Debug.Log("//MULTIPLICATION DONE");
                 }
-                
-                // ADDITION
-                if (addIndex[eqCalled, addslot] > startpos && addIndex[eqCalled, addslot] < endpos && AddRecDone == false)
-                {
-                    //make a thing that checks for the highest value in addIndex[eqCalled] and use that index to do math. this allows for x(1) to also have addition without breaking
-                    Debug.Log("addition: [" + eqCalled + ", " + addIndex[eqCalled, addslot] + "]");
-                    Debug.Log(slotpos[eqCalled, addIndex[eqCalled, addslot] - 1] + " + " + slotpos[eqCalled, addIndex[eqCalled, addslot] + 1]);
-                    addvar1 = slotpos[eqCalled, addIndex[eqCalled, addslot] - 1];
-                    addvar2 = slotpos[eqCalled, addIndex[eqCalled, addslot] + 1];
-                    solution = slotpos[eqCalled, addIndex[eqCalled, addslot] - 1] = slotpos[eqCalled, addIndex[eqCalled, addslot]] = slotpos[eqCalled, addIndex[eqCalled, addslot] + 1]/* = slotpos[eqCalled, multIndex[eqCalled, multslot] - 1] = slotpos[eqCalled, multIndex[eqCalled, multslot]] = slotpos[eqCalled, multIndex[eqCalled, multslot] + 1]*/ //= (addvar1 + addvar2);                                 //BigInteger.Add(addvar1, addvar2);
-                   /* AddRecDone = true;
-                    Debug.Log("addition: " + solution);
-                    Debug.Log("//ADDITION DONE");
-                }  */
-                
+
                 // SUBTRACTION
-                if (subIndex[eqCalled, subslot] > startpos && subIndex[eqCalled, subslot] < endpos && SubRecDone == false)
-                {   
-                    Debug.Log("subtraction: [" + eqCalled + ", " + subIndex[eqCalled, subslot] + "]");
-                    Debug.Log(slotpos[eqCalled, subIndex[eqCalled, subslot] - 1] + " - " + slotpos[eqCalled, subIndex[eqCalled, subslot] + 1]);
-                    subvar1 = slotpos[eqCalled, subIndex[eqCalled, subslot] - 1];
-                    subvar2 = slotpos[eqCalled, subIndex[eqCalled, subslot] + 1];
-                    solution = slotpos[eqCalled, subIndex[eqCalled, subslot]--] = slotpos[eqCalled, subIndex[eqCalled, subslot]] = slotpos[eqCalled, subIndex[eqCalled, subslot]++]/* = slotpos[eqCalled, addIndex[eqCalled, addslot]--] = slotpos[eqCalled, addIndex[eqCalled, addslot]] = slotpos[eqCalled, addIndex[eqCalled, addslot]++] = slotpos[eqCalled, multIndex[eqCalled, multslot]--] = slotpos[eqCalled, multIndex[eqCalled, multslot]] = slotpos[eqCalled, multIndex[eqCalled, multslot]++]*/ = subvar1 - subvar2;
-                    SubRecDone = true;
-                    Debug.Log("subtraction: " + solution);
-                    Debug.Log("//SUBTRACTION DONE");
+                for (int index = startpos; index < endpos; index++)
+                {
+                    if (subIndex[eqCalled, index] > 0 && subIndex[eqCalled, index] > startpos && subIndex[eqCalled, index] < endpos && subRecIndex[eqCalled, index] == false)
+                    {
+                            Debug.Log("subtraction: [" + eqCalled + ", " + subIndex[eqCalled, index] + "]");
+                            Debug.Log(slotpos[eqCalled, subIndex[eqCalled, index] - 1] + " - " + slotpos[eqCalled, subIndex[eqCalled, index] + 1]);
+                            subRecIndex[eqCalled, index] = true;
+                            subvar1 = slotpos[eqCalled, subIndex[eqCalled, index] - 1];
+                            subvar2 = slotpos[eqCalled, subIndex[eqCalled, index] + 1];
+                            solution = slotpos[eqCalled, subIndex[eqCalled, index]--] = slotpos[eqCalled, subIndex[eqCalled, index]] = slotpos[eqCalled, subIndex[eqCalled, index]++] = subvar1 - subvar2;
+                            Debug.Log("subtraction: " + solution);
+                            Debug.Log("//SUBTRACTION DONE");
+                    }
                 }
 
                 if (IsRecCall == true)
@@ -571,7 +548,7 @@ public class GameManager : MonoBehaviour
                 break;
             }
             
-            case 0: // empty val / index[#] = 0
+            case 1: // empty val / index[#] = 0
             {
                 Debug.Log("no equation found");
                 break;

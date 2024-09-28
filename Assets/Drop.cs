@@ -26,7 +26,9 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     public GameObject nine;
     
     public GameObject multiplication;
-    
+    public GameObject leftBracket;
+    public GameObject rightBracket;
+
     public List<GameObject> OutputNumbers;
     
     public GameObject OutputSlot;
@@ -60,6 +62,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                 //Debug.Log("temp eq pos is now: " + gameManager.TempEqPosStorage);
 
                 //gameManager.eqIndex[AssignEqSlot] = gameManager.TempEqStorage;
+                
             }
          }
     
@@ -255,9 +258,15 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                 RemoveSymbol();
 
             }
-            else if((gameManager.craftIndex[0, 0] == 4 && gameManager.craftIndex[1, 0] == 1) || (gameManager.craftIndex[0, 1] == 4 && gameManager.craftIndex[1, 0] == 1)) 
+            else if((gameManager.craftIndex[0, 0] == 4 && gameManager.craftIndex[1, 1] == 1) || (gameManager.craftIndex[0, 1] == 4 && gameManager.craftIndex[1, 0] == 1)) 
             {
                 Instantiate(multiplication, OutputSlotPos);
+                RemoveSymbol();
+            }
+            else if ((gameManager.craftIndex[0, 0] == 6 && gameManager.craftIndex[3, 1] == 3) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[3, 0] == 3))
+            {
+                Instantiate(leftBracket, OutputSlotPos);
+                Instantiate(rightBracket, OutputSlotPos);
                 RemoveSymbol();
             }
         }
@@ -321,7 +330,16 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
         
         //CraftCheck(); //works if uncommented, but i think it would be better to have the player confirm their choice with a button press
         if (IsNowEmpty == true)
-        {   
+        {
+            /*try
+            {
+                gameManager.craftIndex[SymbolType, CraftSlotPos] = 0;
+            }
+            catch
+            {
+                Debug.Log("boo");
+            }*/
+            
             gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = 0; //maybe it will work? YES IT DOES HAHA
             gameManager.eqIndex[AssignEqSlot] = gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = 0;
             
