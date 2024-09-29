@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     public double[] solutionIndex = {0, 0, 0, 0, 0, 0, 0}; // used ≡ to eqIndex
     
     //equation slots
-    public int[] eqIndex = {0, 0, 0, 0, 0, 0, 0}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1 [everything starts at 1]
+    public int[] eqIndex = {0, 0, 0, 0, 0, 0, 1}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1 [everything starts at 1]
     
     //crafting slots
     public int[,] craftIndex = { {0, 0, 0}, {0, 0, 0}, { 0, 0, 0 }, { 0, 0, 0 } }; //lets try starting from 0 // [0] = values, [1] = addition, [2] = subtraction, [3] = multiplication
@@ -310,7 +310,6 @@ public class GameManager : MonoBehaviour
                 subRecIndex[k, i] = false;
             }
         }
-
         solution = 0;
     }
 
@@ -382,6 +381,52 @@ public class GameManager : MonoBehaviour
                 // EXPONENTS
 
                 // ROOT THEN POWER
+                for (int expcheck = startpos; expcheck <= endpos; expcheck++)
+                {
+                    //Debug.Log("expcheck = "+expcheck);
+                    if (rootstartIndex[eqCalled, expcheck] > 0 || pwrIndex[eqCalled, expcheck] > 0)
+                    {
+                        if (rootstartIndex[eqCalled, expcheck] > pwrIndex[eqCalled, expcheck]) // ROOT FOUND FIRST
+                        {
+                            Debug.Log("Root Found");
+                            if (rootstartIndex[eqCalled, expcheck] > 0 && rootstartRecIndex[eqCalled, expcheck] == false) // ROOT FIRST IF TRYE
+                            {
+                                for (int index2=startpos; index2<=endpos; index2++)
+                                {
+                                    Debug.Log("index = "+index2);
+                                    if (rootendIndex[eqCalled, index2] > 0 && rootendRecIndex[eqCalled, expcheck] == false)
+                                    {
+                                        rootstartRecIndex[eqCalled, expcheck] = true;
+                                        rootendRecIndex[eqCalled, index2] = true;
+                                        Mathfunc(rootstartIndex[eqCalled, expcheck] + 1, rootendIndex[eqCalled, index2] - 1, true, eqCalled);
+                                        solution = Math.Sqrt(solution);
+                                        slotpos[eqCalled, rootendIndex[eqCalled, index2]] = slotpos[eqCalled, rootstartIndex[eqCalled, expcheck]] = solution;
+                                        Debug.Log("//SQUARE ROOT DONE");
+                                        Debug.Log(solution);
+                                    }
+                                }
+                            }
+                        }
+                        else if (rootstartIndex[eqCalled, expcheck] < pwrIndex[eqCalled, expcheck])
+                        {
+                            for (int index = startpos; index < endpos; index++)
+                            {
+                                if (pwrIndex[eqCalled, index] > 0 && pwrIndex[eqCalled, index] > startpos && pwrIndex[eqCalled, index] < endpos && pwrRecIndex[eqCalled, index] == false)
+                                {
+                                    Debug.Log("exponentiation: [" + eqCalled + ", " + pwrIndex[eqCalled, index] + "]");
+                                    Debug.Log(slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] + " ^ " + slotpos[eqCalled, pwrIndex[eqCalled, index] + 1]);
+                                    pwrRecIndex[eqCalled, index] = true;
+                                    pwrvar1 = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1];
+                                    pwrvar2 = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1];
+                                    solution = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] = slotpos[eqCalled, pwrIndex[eqCalled, index]] = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1] = Math.Pow(pwrvar1, pwrvar2);
+                                    Debug.Log("exponentiation: " + solution);
+                                    Debug.Log("POWER DONE");
+                                }
+                            }
+                        }
+                    }
+                }
+                /*
                 if (rootstartIndex[eqCalled, rootstart] < pwrIndex[eqCalled, pwrslot])
                 {
                     // SQUARE ROOT
@@ -391,7 +436,7 @@ public class GameManager : MonoBehaviour
                         {
                             for (int index2=index+1;index2<=endpos; index2++)
                             {
-                                if (rootendIndex[eqCalled, rootend] <= endpos && rootendRecIndex[eqCalled, index] == false)
+                                if (rootendIndex[eqCalled, ] <= endpos && rootendRecIndex[eqCalled, index] == false)
                                 {
                                     rootstartRecIndex[eqCalled, index] = true;
                                     rootendRecIndex[eqCalled, index2] = true;
@@ -418,26 +463,7 @@ public class GameManager : MonoBehaviour
                         Debug.Log(solution);
                     }
                 }
-
-                // POWER THEN ROOT
-                else if (pwrIndex[eqCalled, pwrslot] < rootstartIndex[eqCalled, rootstart])
-                {  
-    
-                    for (int index = startpos; index < endpos; index++)
-                    {
-                        if (pwrIndex[eqCalled, index] > 0 && pwrIndex[eqCalled, index] > startpos && pwrIndex[eqCalled, index] < endpos && pwrRecIndex[eqCalled, index] == false)
-                        {
-                            Debug.Log("exponentiation: [" + eqCalled + ", " + pwrIndex[eqCalled, index] + "]");
-                            Debug.Log(slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] + " / " + slotpos[eqCalled, pwrIndex[eqCalled, index] + 1]);
-                            pwrRecIndex[eqCalled, index] = true;
-                            pwrvar1 = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1];
-                            pwrvar2 = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1];
-                            solution = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] = slotpos[eqCalled, pwrIndex[eqCalled, index]] = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1] = Math.Pow(pwrvar1, pwrvar2);
-                            Debug.Log("exponentiation: " + solution);
-                            Debug.Log("POWER DONE FIRST");
-                        }
-                    }
-
+               
     
 
                     // SQUARE ROOT
@@ -452,14 +478,15 @@ public class GameManager : MonoBehaviour
                         Debug.Log(solution);
                     }
                 }
+                */
 
                 // DIVISION
                 for (int index = startpos; index < endpos; index++)
                 {
-                    if (divIndex[eqCalled, index] > 0 && divIndex[eqCalled, index] > startpos && divIndex[eqCalled, index] < endpos && divRecIndex[eqCalled, index] == false)
+                    if (divIndex[eqCalled, index] > 0 && divIndex[eqCalled, index] > startpos && divIndex[eqCalled, index] < endpos && divRecIndex[eqCalled, index] == false) // if checked position has one, is more than startpos and less than endpos and recursion matrix says false, then it returns true
                     {
                         Debug.Log("division: [" + eqCalled + ", " + divIndex[eqCalled, index] + "]");
-                        Debug.Log(slotpos[eqCalled, divIndex[eqCalled, index] - 1] + " / " + slotpos[eqCalled, divIndex[eqCalled, divslot] + 1]);
+                        Debug.Log(slotpos[eqCalled, divIndex[eqCalled, index] - 1] + " / " + slotpos[eqCalled, divIndex[eqCalled, index] + 1]);
                         divRecIndex[eqCalled, index] = true;
                         divar1 = slotpos[eqCalled, divIndex[eqCalled, index] - 1];
                         divar2 = slotpos[eqCalled, divIndex[eqCalled, index] + 1];
@@ -478,7 +505,7 @@ public class GameManager : MonoBehaviour
                     {
 
                         Debug.Log("multiplication: [" + eqCalled + ", " + multIndex[eqCalled, index] + "]");
-                        Debug.Log(slotpos[eqCalled, multIndex[eqCalled, index] - 1] + " x " + slotpos[eqCalled, multIndex[eqCalled, multslot] + 1]);
+                        Debug.Log(slotpos[eqCalled, multIndex[eqCalled, index] - 1] + " x " + slotpos[eqCalled, multIndex[eqCalled, index] + 1]);
                         multRecIndex[eqCalled, index] = true;
                         multvar1 = slotpos[eqCalled, multIndex[eqCalled, index] - 1];
                         multvar2 = slotpos[eqCalled, multIndex[eqCalled, index] + 1];
@@ -536,10 +563,14 @@ public class GameManager : MonoBehaviour
                 {
                     solutionIndex[eqCalled] = solution;
                     Debug.Log("\\\\---------- Mathfunc Done ----------//");
-                    solutionText.text = "" /*+ solutionIndex[0] + " "*/ +(solutionIndex[1]+solutionIndex[2]);
+                    solution = solutionIndex[1]+solutionIndex[2];
                     Debug.Log("solution: " + solution);
-                    gameProgression();
+                    solutionText.text = ""+solution;/*+ solutionIndex[0] + " "*/ //+(solutionIndex[1]+solutionIndex[2]);
+                    
+                    
+                    
                     slotposUpd();
+                    gameProgression();
                     EqReset(eqCalled); // maybe an issue?
                 }
                 
@@ -557,17 +588,34 @@ public class GameManager : MonoBehaviour
         
         try
         {
-            if (eqIndex[eqCalled] != 0 && eqIndex[eqCalled++] != 0 && IsRecCall == false ) // if next eq is not empty then run again with //&& eqIndex[eqCalled + 1] > 0
+            if (eqIndex[eqCalled] == 0 && eqIndex[eqCalled++] != 1 && IsRecCall == false ) // if next eq is not empty then run again with //&& eqIndex[eqCalled + 1] > 0
                 {
                     Debug.Log("//////////////////////////////////////////////////////////////// Next Equation Start");
                     Mathfunc(1, 10, false, eqCalled++);
                 }
+            /*if (eqIndex[eqCalled] == 0 && eqCalled < 4/*Index[eqCalled++] != 1*/ //&& IsRecCall == false ) // if next eq is not empty then run again with //&& eqIndex[eqCalled + 1] > 0
+               // {
+                    //Debug.Log("//////////////////////////////////////////////////////////////// Next Equation Start");
+                    //Mathfunc(1, 10, false, eqCalled++);
+               // }
         }
         
         catch
         {   
             
             Debug.Log("////////////////////////////////////////////////////////////// Equation after Eqslot[" + eqCalled + "] is fucked in some way");
+            
+           
+            /*
+            for (int index = eqCalled; index > 0; index--)
+                    {
+                        solution += solutionIndex[index];
+                        Debug.Log("solution: " + solution);
+                    }
+            */
+
+           
+                    
         }
 
         
@@ -643,13 +691,13 @@ public class GameManager : MonoBehaviour
         debugMenu.gameObject.SetActive(TildaDown);
         slotposUpd();
     }
-    
+    /*
     public void EqGridToggle(bool TabDown)
     {
         alphaGrid.gameObject.SetActive(TabDown);
         betaGrid.gameObject.SetActive(TabDown);
     }
-    
+    */
     public void PauseControl(bool EscToggle)
     {
             pausescreen.gameObject.SetActive(EscToggle);
@@ -672,7 +720,7 @@ public class GameManager : MonoBehaviour
             DebugControl(false);
         }
         
-        if(Input.GetKey(KeyCode.Mouse1))
+        /*if(Input.GetKey(KeyCode.Mouse1))
         {
             EqGridToggle(false);
         }
@@ -680,7 +728,7 @@ public class GameManager : MonoBehaviour
         {
             EqGridToggle(true);
         }
-        
+        */
         
         if (Input.GetKeyDown(KeyCode.H)) { TutorialControl(true, false); 
         }

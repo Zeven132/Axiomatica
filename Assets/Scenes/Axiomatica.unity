@@ -219,6 +219,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -464,6 +467,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -843,6 +849,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -1112,6 +1121,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -1814,6 +1826,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -2097,6 +2112,11 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &99428251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4948842757407879695, guid: 09390e488a0d12848a752ffdb8d3d298, type: 3}
+  m_PrefabInstance: {fileID: 623493690081274624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &108843281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,6 +2358,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -2853,6 +2876,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -3098,6 +3124,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -3359,6 +3388,9 @@ MonoBehaviour:
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers:
   - {fileID: 3631346254836550429, guid: 7db10fade0d37a14e87763b4522d2ef6, type: 3}
   - {fileID: 6434392351185532742, guid: 3c66f94d1679cbc4db56fd95e5497d73, type: 3}
@@ -3835,6 +3867,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -4654,6 +4689,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -5037,6 +5075,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -6267,6 +6308,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -7087,6 +7131,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -7478,6 +7525,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -7723,6 +7773,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -7972,6 +8025,9 @@ MonoBehaviour:
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
   multiplication: {fileID: 943325937}
+  leftBracket: {fileID: 99428251}
+  rightBracket: {fileID: 1049444779}
+  subtraction: {fileID: 1335955440}
   OutputNumbers:
   - {fileID: 3631346254836550429, guid: 7db10fade0d37a14e87763b4522d2ef6, type: 3}
   - {fileID: 6434392351185532742, guid: 3c66f94d1679cbc4db56fd95e5497d73, type: 3}
@@ -8473,6 +8529,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -8656,6 +8715,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -9017,6 +9079,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -9286,6 +9351,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -10196,6 +10264,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -10577,6 +10648,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -10822,6 +10896,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -11472,6 +11549,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -11716,6 +11796,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -11960,6 +12043,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -12611,6 +12697,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -12991,6 +13080,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -13844,6 +13936,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -14787,6 +14882,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -15168,6 +15266,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -15706,6 +15807,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -15951,6 +16055,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -16355,6 +16462,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -17080,6 +17190,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -18818,6 +18931,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -19196,6 +19312,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -19878,6 +19997,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -20027,6 +20149,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037290845}
   m_CullTransparentMesh: 1
+--- !u!1 &1049444779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7535529197545441848, guid: a5f8013d114a73b42a47978352dd3bec, type: 3}
+  m_PrefabInstance: {fileID: 8973831317893994235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050490289
 GameObject:
   m_ObjectHideFlags: 0
@@ -20357,6 +20484,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -22139,6 +22269,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -22858,6 +22991,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -23520,6 +23656,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -24017,6 +24156,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326423152}
   m_CullTransparentMesh: 1
+--- !u!1 &1335955440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3643709044253587829, guid: cb97aedf34912ad4b98e63316650e179, type: 3}
+  m_PrefabInstance: {fileID: 7472385205308325795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1369625508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3631346254836550429, guid: 7db10fade0d37a14e87763b4522d2ef6, type: 3}
@@ -24116,6 +24260,9 @@ MonoBehaviour:
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers:
   - {fileID: 3631346254836550429, guid: 7db10fade0d37a14e87763b4522d2ef6, type: 3}
   - {fileID: 6434392351185532742, guid: 3c66f94d1679cbc4db56fd95e5497d73, type: 3}
@@ -24314,6 +24461,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -25496,6 +25646,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -25740,6 +25893,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -26466,6 +26622,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -26952,6 +27111,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -27317,6 +27479,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -29335,6 +29500,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -30432,6 +30600,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -30978,6 +31149,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -31386,6 +31560,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -31630,6 +31807,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -32956,7 +33136,7 @@ MonoBehaviour:
   debugMenu: {fileID: 2072814948}
   alphaGrid: {fileID: 498778596}
   betaGrid: {fileID: 2132930963}
-  eqGrid3: {fileID: 0}
+  EquationX1: {fileID: 1570598955}
   lbrackTutText: {fileID: 798983121}
   rbrackTutText: {fileID: 616097045}
   rootTutText: {fileID: 694850991}
@@ -32967,6 +33147,7 @@ MonoBehaviour:
   subTutText: {fileID: 2065738486}
   StorageSlot: {fileID: 1377092611}
   one: {fileID: 3631346254836550429, guid: 7db10fade0d37a14e87763b4522d2ef6, type: 3}
+  two: {fileID: 1117740282}
   addition: {fileID: 451530268}
   solutionIndex:
   - 0
@@ -33096,6 +33277,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -33609,6 +33793,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -33974,6 +34161,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -34275,6 +34465,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -34659,6 +34852,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -34933,6 +35129,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -35202,6 +35401,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -35446,6 +35648,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -36246,6 +36451,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -36490,6 +36698,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -37343,6 +37554,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -37612,6 +37826,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -37967,6 +38184,9 @@ MonoBehaviour:
   eight: {fileID: 0}
   nine: {fileID: 0}
   multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}

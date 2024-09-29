@@ -28,6 +28,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     public GameObject multiplication;
     public GameObject leftBracket;
     public GameObject rightBracket;
+    public GameObject subtraction;
 
     public List<GameObject> OutputNumbers;
     
@@ -258,16 +259,22 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                 RemoveSymbol();
 
             }
-            else if((gameManager.craftIndex[0, 0] == 4 && gameManager.craftIndex[1, 1] == 1) || (gameManager.craftIndex[0, 1] == 4 && gameManager.craftIndex[1, 0] == 1)) 
+            else if((gameManager.craftIndex[0, 0] == 4 && gameManager.craftIndex[1, 1] == 1) || (gameManager.craftIndex[0, 1] == 4 && gameManager.craftIndex[1, 0] == 1)) // 4 | + = x
             {
                 Instantiate(multiplication, OutputSlotPos);
                 RemoveSymbol();
             }
-            else if ((gameManager.craftIndex[0, 0] == 6 && gameManager.craftIndex[3, 1] == 3) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[3, 0] == 3))
+            else if ((gameManager.craftIndex[0, 0] == 6 && gameManager.craftIndex[3, 1] == 3) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[3, 0] == 3)) // 6 | x = ( )
             {
                 Instantiate(leftBracket, OutputSlotPos);
                 Instantiate(rightBracket, OutputSlotPos);
                 RemoveSymbol();
+            }
+            else if ((gameManager.craftIndex[0, 0] == 1 && gameManager.craftIndex[2, 1] == 2) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[2, 0] == 2))
+            {
+                Instantiate(subtraction, OutputSlotPos);
+                RemoveSymbol();
+                
             }
         }
       /*  }

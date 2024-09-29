@@ -60,7 +60,12 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         //    }
         
         //Debug.Log(TutorialNumber);
-        
+
+        // experimental
+        /*
+        gameManager.alphaGrid.raycastTarget = false;
+        gameManager.betaGrid.raycastTarget = false;
+        */
         
         
         
@@ -68,16 +73,19 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnDrag(PointerEventData eventData)
     {
+
         transform.position = Input.mousePosition;
-        
- 
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("end drag");
+ 
         transform.SetParent(parentAfterDrag);
+        /*gameManager.alphaGrid.raycastTarget = true;
+        gameManager.betaGrid.raycastTarget = true;*/
         Image.raycastTarget = true;
+
         
         SymbolParent.IsNowEmpty = false;
         Debug.Log("Empty = false");
