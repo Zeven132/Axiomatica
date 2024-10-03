@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 using Random = System.Random;
 //using System.Diagnostics;
@@ -152,7 +153,7 @@ public class GameManager : MonoBehaviour
     public double progressIndex = 0;
     public double PrevProgressIndex = 0;
     public double progressStage = 0.6; // the log base that the progress index is calculated at
-    public double m = 2.5; 
+    public double m = 1; // prestege
     
     
     /*public BigInteger Pow(BigInteger value, BigInteger exponent)
@@ -201,25 +202,36 @@ public class GameManager : MonoBehaviour
         Debug.Log("FOR LOOP");
     }
     
+    public void prestige()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        m = 1 + record/10000;
+    
+    
+    
+    
+    }
+    
     public void gameProgression() // this is where game progression is controlled, ran just before temp values are reset
     { 
         record = (solution > record) ? record = solution : record = record; // shorthand if // 0 for now. fix later               // record is y, output is x
+        //m = record / 10000;
         if(record >= 970)
         {
-            progressIndex = Math.Pow(record*2, 0.6) + 70;
+            progressIndex = Math.Pow(record*2, 0.6) * m + 70;
         }
         else if (record >= 20)
         {
-            progressIndex = Math.Pow(record, 0.75) + 20;
+            progressIndex = Math.Pow(record, 0.75) * m + 20;
             EquationX1.gameObject.SetActive(true);
         }
         else if (record >= 8) 
         {
-            progressIndex = (Math.Pow(record, 0.75) + 20);//progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.8);
+            progressIndex = (Math.Pow(record, 0.75) * m + 20);//progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.8);
         }                                  //Math.Pow(record, (0.13 * record));//m * (Math.Log(record * progressStage)); //y=m(log(x*c)) m=22 c=0.6  //2.2        //(Math.Log(record, progressIndex + 1)); //progressIndex = (Math.Log((Math.Pow(record, progressIndex)+1), progressStage));
         else
         {
-            progressIndex = Math.Pow(1.7, record - 1);
+            progressIndex = (Math.Pow(1.7, record - 1)) * m;
         }
         
         targetText.text = "next = " + progressIndex;
@@ -282,7 +294,7 @@ public class GameManager : MonoBehaviour
         
         rootstartText.text = "dev build v1.10";
         
-        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
+        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+m+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
         
         
     }
