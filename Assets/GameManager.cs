@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
     public double progressIndex = 0;
     public double PrevProgressIndex = 0;
     public double progressStage = 0.6; // the log base that the progress index is calculated at
-    public double m = 1; // prestege
+    public double resetMultiplyer = 1; // prestege
     
     
     /*public BigInteger Pow(BigInteger value, BigInteger exponent)
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
     public void prestige()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        m = 1 + record/10000;
+       resetMultiplyer = 1 + record/10000;
     
     
     
@@ -218,20 +218,20 @@ public class GameManager : MonoBehaviour
         //m = record / 10000;
         if(record >= 970)
         {
-            progressIndex = Math.Pow(record*2, 0.6) * m + 70;
+            progressIndex = Math.Pow(record*2, 0.6) * resetMultiplyer + 70;
         }
         else if (record >= 20)
         {
-            progressIndex = Math.Pow(record, 0.75) * m + 20;
+            progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
             EquationX1.gameObject.SetActive(true);
         }
         else if (record >= 8) 
         {
-            progressIndex = (Math.Pow(record, 0.75) * m + 20);//progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.8);
+            progressIndex = (Math.Pow(record, 0.75) * resetMultiplyer + 20);//progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.8);
         }                                  //Math.Pow(record, (0.13 * record));//m * (Math.Log(record * progressStage)); //y=m(log(x*c)) m=22 c=0.6  //2.2        //(Math.Log(record, progressIndex + 1)); //progressIndex = (Math.Log((Math.Pow(record, progressIndex)+1), progressStage));
         else
         {
-            progressIndex = (Math.Pow(1.7, record - 1)) * m;
+            progressIndex = (Math.Pow(1.7, record - 1)) * resetMultiplyer;
         }
         
         targetText.text = "next = " + progressIndex;
@@ -294,7 +294,7 @@ public class GameManager : MonoBehaviour
         
         rootstartText.text = "dev build v1.10";
         
-        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+m+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
+        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
         
         
     }
@@ -392,7 +392,7 @@ public class GameManager : MonoBehaviour
 
                 // EXPONENTS
 
-                // ROOT THEN POWER
+                // ROOT OR POWER
                 for (int expcheck = startpos; expcheck <= endpos; expcheck++)
                 {
                     //Debug.Log("expcheck = "+expcheck);
