@@ -155,7 +155,8 @@ public class GameManager : MonoBehaviour
     public double progressIndex = 0;
     public double PrevProgressIndex = 0;
     public double progressStage = 0.6; // the log base that the progress index is calculated at
-    public double resetMultiplyer = 1; // prestege
+
+    
     
     // savedata shit
     [SerializeField]
@@ -172,6 +173,17 @@ public class GameManager : MonoBehaviour
     private bool EncryptionEnabled;
     private long SaveTime;
     private long LoadTime;
+
+    public double resetMultiplyer = 1;
+
+     // Start is called before the first frame update :3
+    void Start()
+    {
+        pausescreen.gameObject.SetActive(false);
+        TutorialControl(false, false);
+        PlayerStats = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
+        resetMultiplyer = PlayerStats.resetMultiplyer;
+    }
 
     public void ToggleEncryption(bool EncryptionEnabled)
     {
@@ -209,7 +221,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //SourceDataText.SetText(JsonConvert.SerializeObject(PlayerStats, Formatting.Indented));
+        SourceDataText.SetText(JsonConvert.SerializeObject(PlayerStats, Formatting.Indented));
     }
 
     public void ClearData()
@@ -218,16 +230,11 @@ public class GameManager : MonoBehaviour
         if (File.Exists(path))
         {
             File.Delete(path);
-            InputField.text = "Loaded data goes here";
+            InputField.text = "Loaded data goes` here";
         }
     }
 
-    // Start is called before the first frame update :3
-    void Start()
-    {
-        pausescreen.gameObject.SetActive(false);
-        TutorialControl(false, false);
-    }
+   
     
     public void GetSymbol (int symbolVal)
     {
@@ -254,13 +261,14 @@ public class GameManager : MonoBehaviour
     public void prestige()
     {
 
+        resetMultiplyer = 1 + record*10;
 
+        SourceDataText.text = "{\n\"resetMultiplyer\": "+resetMultiplyer+"\n}";
+        PlayerStats.resetMultiplyer = resetMultiplyer;
+        Debug.Log(PlayerStats.resetMultiplyer);
+        
+        SerializeJson();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-       resetMultiplyer = 1 + record/10000;
-    
-    
-    
-    
     }
     
     public void gameProgression() // this is where game progression is controlled, ran just before temp values are reset
@@ -387,7 +395,7 @@ public class GameManager : MonoBehaviour
             }
     }
 
-    public void Mathfunc(int startpos, int endpos, bool IsRecCall, int eqCalled) //todo: FIGURE OUT HOW TO MAKE EQUATIONS SNAPPABLE
+    public void Mathfunc(int startpos, int endpos, bool IsRecCall, int eqCalled)
     {   
         
         
