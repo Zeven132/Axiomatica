@@ -1,9 +1,11 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using System.IO;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
@@ -155,29 +157,76 @@ public class GameManager : MonoBehaviour
     public double progressStage = 0.6; // the log base that the progress index is calculated at
     public double resetMultiplyer = 1; // prestege
     
-    
-    /*public BigInteger Pow(BigInteger value, BigInteger exponent)
+    // savedata shit
+    [SerializeField]
+    private TextMeshProUGUI SourceDataText;
+    [SerializeField]
+    private TMP_InputField InputField;
+    [SerializeField]
+    private TextMeshProUGUI SaveTimeText;
+    [SerializeField]
+    private TextMeshProUGUI LoadTimeText;
+
+    private PlayerStats PlayerStats = new PlayerStats();
+    private IDataService DataService = new JsonDataService();
+    private bool EncryptionEnabled;
+    private long SaveTime;
+    private long LoadTime;
+
+    public void ToggleEncryption(bool EncryptionEnabled)
     {
-        BigInteger originalValue = value;
-        while (exponent-- > 1)
-            value = BigInteger.Multiply(value, originalValue);
-        return value;
-    }*/
-    
+        this.EncryptionEnabled = EncryptionEnabled;
+    }
+
+    public void SerializeJson()
+    {
+        long startTime = DateTime.Now.Ticks;
+        if (DataService.SaveData("/player-stats.json", PlayerStats, EncryptionEnabled))
+        {
+            SaveTime = DateTime.Now.Ticks - startTime;
+            SaveTimeText.SetText($"Save Time: {(SaveTime / TimeSpan.TicksPerMillisecond):N4}ms");
+
+            startTime = DateTime.Now.Ticks;
+            try
+            {
+                PlayerStats data = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
+                LoadTime = DateTime.Now.Ticks - startTime;
+                InputField.text = "Loaded from file:\r\n" + JsonConvert.SerializeObject(data, Formatting.Indented);
+                LoadTimeText.SetText($"Load Time: {(LoadTime / TimeSpan.TicksPerMillisecond):N4}ms");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Could not read file! Show something on the UI here!");
+                InputField.text = "<color=#ff0000>Error reading save file!</color>";
+            }
+        }
+        else
+        {
+            Debug.LogError("Could not save file! Show something on the UI about it!");
+            InputField.text = "<color=#ff0000>Error saving data!</color>";
+        }
+    }
+
+    private void Awake()
+    {
+        //SourceDataText.SetText(JsonConvert.SerializeObject(PlayerStats, Formatting.Indented));
+    }
+
+    public void ClearData()
+    {
+        string path = Application.persistentDataPath + "/player-stats.json";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            InputField.text = "Loaded data goes here";
+        }
+    }
+
     // Start is called before the first frame update :3
     void Start()
     {
         pausescreen.gameObject.SetActive(false);
         TutorialControl(false, false);
-        /*
-        Debug.Log("1: "+m * (Math.Log(1 * progressStage)));
-        Debug.Log("2: "+m * (Math.Log(2 * progressStage)));
-        Debug.Log("3: "+m * (Math.Log(3 * progressStage)));
-        Debug.Log("4: "+m * (Math.Log(4 * progressStage)));
-        Debug.Log("5: "+m * (Math.Log(5 * progressStage)));
-        Debug.Log("6: "+m * (Math.Log(6 * progressStage)));
-        Debug.Log("7: "+m * (Math.Log(7 * progressStage)));
-        */
     }
     
     public void GetSymbol (int symbolVal)
@@ -204,6 +253,8 @@ public class GameManager : MonoBehaviour
     
     public void prestige()
     {
+
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        resetMultiplyer = 1 + record/10000;
     
