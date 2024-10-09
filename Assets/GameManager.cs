@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI rootstartText;
     public TextMeshProUGUI rootendText;
     public TextMeshProUGUI lbrackText;
+    public TextMeshProUGUI prestigeWarning;
 
     public TextMeshProUGUI SlotdispText;
     public TextMeshProUGUI SymboldispText;
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
     public Transform StorageSlot;
     public GameObject one;
     public GameObject two;
+    public GameObject three;
     public GameObject addition;
     
     //slots
@@ -183,6 +185,12 @@ public class GameManager : MonoBehaviour
         TutorialControl(false, false);
         PlayerStats = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
         resetMultiplyer = PlayerStats.resetMultiplyer;
+        
+        targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
+        if (resetMultiplyer > 1)
+        {
+            Intro.gameObject.SetActive(false);
+        }
     }
 
     public void ToggleEncryption(bool EncryptionEnabled)
@@ -245,7 +253,9 @@ public class GameManager : MonoBehaviour
             break;
         case 2:
             Instantiate(two, StorageSlot);
-
+            break;
+        case 3:
+            Instantiate(three, StorageSlot);
             break;
         }
 
@@ -260,21 +270,35 @@ public class GameManager : MonoBehaviour
     
     public void prestige()
     {
+        if(1+Math.Sqrt(record/250) > resetMultiplyer)
+        {
+            resetMultiplyer = 1 + Math.Sqrt(record/250);
+            SourceDataText.text = "{\n\"resetMultiplyer\": "+resetMultiplyer+"\n}";
+            PlayerStats.resetMultiplyer = resetMultiplyer;
+            Debug.Log(PlayerStats.resetMultiplyer);
+            SerializeJson();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            StartCoroutine(ResetWarning());
+        }
 
-        resetMultiplyer = 1 + record*10;
-
-        SourceDataText.text = "{\n\"resetMultiplyer\": "+resetMultiplyer+"\n}";
-        PlayerStats.resetMultiplyer = resetMultiplyer;
-        Debug.Log(PlayerStats.resetMultiplyer);
         
-        SerializeJson();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    IEnumerator ResetWarning()
+    {
+        prestigeWarning.text = "It would be silly to let you do that wouldn't it?\nThink about this: I could have, but made this just so you couldn't";
+        yield return new WaitForSecondsRealtime(5);
+        prestigeWarning.text = "";
     }
     
     public void gameProgression() // this is where game progression is controlled, ran just before temp values are reset
     { 
         record = (solution > record) ? record = solution : record = record; // shorthand if // 0 for now. fix later               // record is y, output is x
         //m = record / 10000;
+        
         if(record >= 970)
         {
             progressIndex = Math.Pow(record*2, 0.6) * resetMultiplyer + 70;
@@ -293,13 +317,23 @@ public class GameManager : MonoBehaviour
             progressIndex = (Math.Pow(1.7, record - 1)) * resetMultiplyer;
         }
         
-        targetText.text = "next = " + progressIndex;
+        
         progressIndex = Math.Round(progressIndex);
         
         
         if (progressIndex > PrevProgressIndex)
             {
-                if (record > 500)
+                if (resetMultiplyer > 4)
+                {
+                    for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
+                    {   
+                        if (prev % 4 == 0) // gives quarter, but 4x value; saves time with crafting 
+                        {
+                            GetSymbol(3);
+                        }
+                    }
+                }
+                else if (record > 200 || resetMultiplyer > 2)
                 {
                     for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
                     {   
@@ -355,7 +389,7 @@ public class GameManager : MonoBehaviour
         
         pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
         
-        
+        targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
     }
 
     public void EqReset(int CurrentEq)
