@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
     public int[] eqIndex = {0, 0, 0, 0, 0, 0, 1}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1 [everything starts at 1]
     
     //crafting slots
-    public int[,] craftIndex = { {0, 0, 0}, {0, 0, 0}, { 0, 0, 0 }, { 0, 0, 0 } }; //lets try starting from 0 // [0] = values, [1] = addition, [2] = subtraction, [3] = multiplication
+    public int[,] craftIndex = { {0, 0, 0}, {0, 0, 0}, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }  }; //lets try starting from 0 // [0] = values, [1] = addition, [2] = subtraction, [3] = multiplication, [4] = division, [5] = exponentiation, [6] = left bracket, [7] = right bracket, [8] = rootstart, [9] = rootend
     
     // symbol types in order of operation. used as X in [#, X]
     public int lbrack;
@@ -387,7 +387,7 @@ public class GameManager : MonoBehaviour
         
         rootstartText.text = "dev build v1.10";
         
-        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1];
+        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1]+"\n"+craftIndex[2, 0]+" "+craftIndex[2,1];
         
         targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
     }

@@ -29,6 +29,12 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     public GameObject leftBracket;
     public GameObject rightBracket;
     public GameObject subtraction;
+    public GameObject division;
+    public GameObject rootStart;
+    public GameObject rootEnd;
+    public GameObject exponentiation;
+
+
 
     public List<GameObject> OutputNumbers;
     
@@ -214,41 +220,49 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             
         if(CraftSlot1.transform.childCount == 1 && CraftSlot2.transform.childCount == 1)
         {
-            if (gameManager.craftIndex[0, 0] == gameManager.craftIndex[0, 1] && (gameManager.craftIndex[0, 0] > 0 || gameManager.craftIndex[0, 1] > 0 ))
+            if (gameManager.craftIndex[0, 0] == gameManager.craftIndex[0, 1] && (gameManager.craftIndex[0, 0] > 0 || gameManager.craftIndex[0, 1] > 0))
             {      
                 switch(gameManager.craftIndex[0, 0]) // merge type recipies
                 {   
                     case 1:
                         
                         Instantiate(two, OutputSlotPos);
+                        RemoveSymbol();
                         
                         break;
                     case 2:
                         
                         Instantiate(three, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 3:
                         
                         Instantiate(four, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 4:
                         
                         Instantiate(five, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 5:
                         
                         Instantiate(six, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 6:
                         
                         Instantiate(seven, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 7:
                         
                         Instantiate(eight, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 8:
                         Instantiate(nine, OutputSlotPos);
+                        RemoveSymbol();
                         break;
                     case 9:
                         //RemoveSymbol();
@@ -256,7 +270,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                         break;
 
                 }
-                RemoveSymbol();
+                
 
             }
             else if((gameManager.craftIndex[0, 0] == 4 && gameManager.craftIndex[1, 1] == 1) || (gameManager.craftIndex[0, 1] == 4 && gameManager.craftIndex[1, 0] == 1)) // 4 | + = x
@@ -266,21 +280,40 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             }
             else if ((gameManager.craftIndex[0, 0] == 6 && gameManager.craftIndex[3, 1] == 3) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[3, 0] == 3)) // 6 | x = ( )
             {
-                Instantiate(leftBracket, OutputSlotPos);
-                Instantiate(rightBracket, OutputSlotPos);
-                RemoveSymbol();
-            }
-            else if ((gameManager.craftIndex[0, 0] == 1 && gameManager.craftIndex[2, 1] == 2) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[2, 0] == 2))
-            {
                 Instantiate(subtraction, OutputSlotPos);
                 RemoveSymbol();
                 
+            }
+            else if ((gameManager.craftIndex[2, 0] == 2 && gameManager.craftIndex[2, 1] == 2)) // - | - = /
+            {
+                Instantiate(division, OutputSlotPos);
+                RemoveSymbol();   
+            }
+            else if ((gameManager.craftIndex[4, 0] == 4 && gameManager.craftIndex[3, 1] == 3))
+            {
+                Instantiate(rootStart, OutputSlotPos);
+                RemoveSymbol();
+            }
+            else if ((gameManager.craftIndex[3, 0] == 3 && gameManager.craftIndex[4, 1] == 4))
+            {
+                Instantiate(rootEnd, OutputSlotPos);
+                RemoveSymbol();
+            }
+            else if ((gameManager.craftIndex[8, 0] == 8 && gameManager.craftIndex[9, 1] == 9))
+            {
+                Instantiate(leftBracket, OutputSlotPos);
+                RemoveSymbol();
+            }
+            else if (gameManager.craftIndex[9, 0] == 9 && gameManager.craftIndex[8, 1] == 8)
+            {
+                Instantiate(rightBracket, OutputSlotPos);
+                RemoveSymbol();
             }
         }
       /*  }
         catch
         {
-            Debug.Log("Craft Try Failed (?)");
+            Debug.Log("Craft Try Failed (?)"); 
             CraftCheck();
         }*/
     }
@@ -299,8 +332,14 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                 Destroy(CraftSlot2.transform.GetChild(0).gameObject);
             }
 
-            gameManager.craftIndex[0, 0] = gameManager.craftIndex[0, 1] = 0;
-            gameManager.craftIndex[1, 0] = gameManager.craftIndex[1, 1] = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                gameManager.craftIndex[i, 0] = 0;
+                gameManager.craftIndex[i, 1] = 0;
+                gameManager.craftIndex[0, 0] = 0;
+                gameManager.craftIndex[0, 1] = 0;
+
+            }
             Debug.Log("Removed");
 
         }
@@ -331,6 +370,18 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
         Instantiate(CraftSlot2, CraftingGridTrans);
         */
     }
+
+    void CraftValReset()
+    {
+        if (CraftSlot1.transform.childCount == 0 && CraftSlot2.transform.childCount == 0)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                gameManager.craftIndex[i, 0] = 0;
+                gameManager.craftIndex[i, 1] = 0;
+            }
+        }
+    }
     
     void Update()
     {   
@@ -352,6 +403,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             
             
         }
+        //CraftValReset();
     }
 
 
