@@ -14,6 +14,12 @@ using Random = System.Random;
 //using System.Numerics; // huge credit to https://linuxhint.com/biginteger-csharp/ for the tutorial
 //using UnityEngine.UIElements;
 
+
+//todo: you have to: get shift hotkey to work fully, equation progression, that one bug if you drag a symbol into nothing it resets the solt but the symbol is still there
+
+
+
+
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
@@ -81,6 +87,7 @@ public class GameManager : MonoBehaviour
     public GameObject two;
     public GameObject three;
     public GameObject addition;
+    public GameObject BVSymbol;
     
     //slots
     public double[,] slotpos = { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }; // may have to switch the arrays when eq are switched
@@ -88,6 +95,7 @@ public class GameManager : MonoBehaviour
     
     public double[] solutionIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     public double[] solutionIndex2 = new double[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    public double[] solutionIndex3 = new double[13] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     
     //equation slots
     public int[] eqIndex = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1 [everything starts at 1]
@@ -109,26 +117,26 @@ public class GameManager : MonoBehaviour
     public int subslot;
     
     // index types in same order. used as X in [X, #]
-    public int[,] lbrackIndex       = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] rbrackIndex      = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] rootstartIndex  = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] rootendIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] pwrIndex      = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] divIndex     = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] multIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] addIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
-    public int[,] subIndex  = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] lbrackIndex       = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] rbrackIndex      = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] rootstartIndex  = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] rootendIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] pwrIndex      = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] divIndex     = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] multIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] addIndex   = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    public int[,] subIndex  = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
     
     // Recursion indexes for each symbol, switches equivilent position to true if the exact slot is used
-    public bool[,] lbrackRecIndex       = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] rbrackRecIndex      = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] rootstartRecIndex  = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] rootendRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] pwrRecIndex      = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] divRecIndex     = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] multRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] addRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
-    public bool[,] subRecIndex  = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] lbrackRecIndex       = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] rbrackRecIndex      = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] rootstartRecIndex  = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] rootendRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] pwrRecIndex      = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] divRecIndex     = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] multRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] addRecIndex   = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
+    public bool[,] subRecIndex  = { {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false}, {false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false},{false, false, false, false, false, false, false, false, false, false, false} };
    
      // variables used for computation
     private double pwrvar1 = -1; // the x in (x^y)
@@ -193,36 +201,16 @@ public class GameManager : MonoBehaviour
     {
         pausescreen.gameObject.SetActive(false);
         TutorialControl(false, false);
+        debugMenu.gameObject.SetActive(false);
         PlayerStats = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
         resetMultiplyer = PlayerStats.resetMultiplyer;
         
         targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
-        if (resetMultiplyer > 1)
-        {
-            Intro.gameObject.SetActive(false);
+        if (resetMultiplyer > 1) {Intro.gameObject.SetActive(false);
         }
-
-        Debug.Log(eqIndex.Length);
-        Debug.Log(eqIndex2.Length);
-
-        Debug.Log(solutionIndex2.Length);
-
-        Debug.Log(eqIndex[0]);
-        Debug.Log(eqIndex[1]);
-        Debug.Log(eqIndex[2]);
-        Debug.Log(eqIndex[3]);
-        Debug.Log(eqIndex[4]);
-
-        Debug.Log(eqIndex2[0]);
-        Debug.Log(eqIndex2[1]);
-        Debug.Log(eqIndex2[2]);
-        Debug.Log(eqIndex2[3]);
-        Debug.Log(eqIndex2[4]);
     }
 
-    public void ToggleEncryption(bool EncryptionEnabled)
-    {
-        this.EncryptionEnabled = EncryptionEnabled;
+    public void ToggleEncryption(bool EncryptionEnabled) {this.EncryptionEnabled = EncryptionEnabled;
     }
 
     public void SerializeJson()
@@ -254,9 +242,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        SourceDataText.SetText(JsonConvert.SerializeObject(PlayerStats, Formatting.Indented));
+    private void Awake() {SourceDataText.SetText(JsonConvert.SerializeObject(PlayerStats, Formatting.Indented));
     }
 
     public void ClearData()
@@ -337,22 +323,21 @@ public class GameManager : MonoBehaviour
         //m = record / 10000;
         if (record >= 100000)
         {
-            EquationX5.gameObject.SetActive(true);
+            EquationUnlock(5);
         }
         if (record >= 25000)
         {
-            EquationX4.gameObject.SetActive(true);
+            EquationUnlock(4);
         }
         if (record >= 10000)
         {
-            EquationX3.gameObject.SetActive(true);
+            EquationUnlock(3);
         }
         else if (record >= 3000)
         {
             
             progressIndex = Math.Pow(record*2, 0.5) * resetMultiplyer + 70;
-            EquationX2.gameObject.SetActive(true);
-            EquationX1.gameObject.SetActive(true);
+            EquationUnlock(2);
         }
         if(record >= 970)
         {
@@ -362,6 +347,11 @@ public class GameManager : MonoBehaviour
         else if (record >= 500)
         {
             EquationX1.gameObject.SetActive(true);
+            progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
+        }
+        if (record == 247)
+        {
+            Instantiate(BVSymbol, StorageSlot);
             progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
         }
         else if (record >= 20)
@@ -438,9 +428,20 @@ public class GameManager : MonoBehaviour
                 EquationX2.gameObject.SetActive(true);
                 break;
             case 3:
-                EquationX1.gameObject.SetActive(true);
-                EquationX2.gameObject.SetActive(true);
+                EquationUnlock(2);
                 EquationX3.gameObject.SetActive(true);
+                break;
+            case 4:
+                EquationUnlock(3);;
+                EquationX4.gameObject.SetActive(true);
+                break;
+            case 5:
+                EquationUnlock(4);
+                EquationX5.gameObject.SetActive(true);
+                break;
+            case 6:
+                EquationUnlock(5);
+                EquationX6.gameObject.SetActive(true);
                 break;
 
         
@@ -459,18 +460,76 @@ public class GameManager : MonoBehaviour
 
     public void slotposUpd()
     {
-        slotpos1Text.text = ""+slotpos[0, 1]+" "+slotpos[0, 2]+" "+slotpos[0, 3]+" "+slotpos[0, 4]+" "+slotpos[0, 5]+" "+slotpos[0, 6]+" "+slotpos[0, 7]+" "+slotpos[0, 8]+" "+slotpos[0, 9]+" "+slotpos[0, 10]+"\n"+slotpos[1, 1]+" "+slotpos[1, 2]+" "+slotpos[1, 3]+" "+slotpos[1, 4]+" "+slotpos[1, 5]+" "+slotpos[1, 6]+" "+slotpos[1, 7]+" "+slotpos[1, 8]+" "+slotpos[1, 9]+" "+slotpos[1, 10]+"\n"+slotpos[2, 1]+" "+slotpos[2, 2]+" "+slotpos[2, 3]+" "+slotpos[2, 4]+" "+slotpos[2, 5]+" "+slotpos[2, 6]+" "+slotpos[2, 7]+" "+slotpos[2, 8]+" "+slotpos[2, 9]+" "+slotpos[2, 10]+"\n"+slotpos[3, 1]+" "+slotpos[3, 2]+" "+slotpos[3, 3]+" "+slotpos[3, 4]+" "+slotpos[3, 5]+" "+slotpos[3, 6]+" "+slotpos[3, 7]+" "+slotpos[3, 8]+" "+slotpos[3, 9]+" "+slotpos[3, 10]+"\n"+slotpos[4, 1]+" "+slotpos[4, 2]+" "+slotpos[4, 3]+" "+slotpos[4, 4]+" "+slotpos[4, 5]+" "+slotpos[4, 6]+" "+slotpos[4, 7]+" "+slotpos[4, 8]+" "+slotpos[4, 9]+" "+slotpos[4, 10]+"\n"+slotpos[5, 1]+" "+slotpos[5, 2]+" "+slotpos[5, 3]+" "+slotpos[5, 4]+" "+slotpos[5, 5]+" "+slotpos[5, 6]+" "+slotpos[5, 7]+" "+slotpos[5, 8]+" "+slotpos[5, 9]+" "+slotpos[5, 10];
+        
+        slotpos1Text.text = ""+slotpos[0, 1]+" "+slotpos[0, 2]+" "+slotpos[0, 3]+" "+slotpos[0, 4]+" "+slotpos[0, 5]+" "+slotpos[0, 6]+" "+slotpos[0, 7]+" "+slotpos[0, 8]+" "+slotpos[0, 9]+" "+slotpos[0, 10]
+        +"\n"+slotpos[1, 1]+" "+slotpos[1, 2]+" "+slotpos[1, 3]+" "+slotpos[1, 4]+" "+slotpos[1, 5]+" "+slotpos[1, 6]+" "+slotpos[1, 7]+" "+slotpos[1, 8]+" "+slotpos[1, 9]+" "+slotpos[1, 10]
+        +"\n"+slotpos[2, 1]+" "+slotpos[2, 2]+" "+slotpos[2, 3]+" "+slotpos[2, 4]+" "+slotpos[2, 5]+" "+slotpos[2, 6]+" "+slotpos[2, 7]+" "+slotpos[2, 8]+" "+slotpos[2, 9]+" "+slotpos[2, 10]
+        +"\n"+slotpos[3, 1]+" "+slotpos[3, 2]+" "+slotpos[3, 3]+" "+slotpos[3, 4]+" "+slotpos[3, 5]+" "+slotpos[3, 6]+" "+slotpos[3, 7]+" "+slotpos[3, 8]+" "+slotpos[3, 9]+" "+slotpos[3, 10]
+        +"\n"+slotpos[4, 1]+" "+slotpos[4, 2]+" "+slotpos[4, 3]+" "+slotpos[4, 4]+" "+slotpos[4, 5]+" "+slotpos[4, 6]+" "+slotpos[4, 7]+" "+slotpos[4, 8]+" "+slotpos[4, 9]+" "+slotpos[4, 10]
+        +"\n"+slotpos[5, 1]+" "+slotpos[5, 2]+" "+slotpos[5, 3]+" "+slotpos[5, 4]+" "+slotpos[5, 5]+" "+slotpos[5, 6]+" "+slotpos[5, 7]+" "+slotpos[5, 8]+" "+slotpos[5, 9]+" "+slotpos[5, 10]
+        +"\n"+slotpos[6, 1]+" "+slotpos[6, 2]+" "+slotpos[6, 3]+" "+slotpos[6, 4]+" "+slotpos[6, 5]+" "+slotpos[6, 6]+" "+slotpos[6, 7]+" "+slotpos[6, 8]+" "+slotpos[6, 9]+" "+slotpos[6, 10]
+        +"\n"+slotpos[7, 1]+" "+slotpos[7, 2]+" "+slotpos[7, 3]+" "+slotpos[7, 4]+" "+slotpos[7, 5]+" "+slotpos[7, 6]+" "+slotpos[7, 7]+" "+slotpos[7, 8]+" "+slotpos[7, 9]+" "+slotpos[7, 10]
         ;
-        eqSlotText.text = "row 0 |"+eqIndex[0]+"|"+solutionIndex[0]+"|\nrow 1 |"+eqIndex[1]+"|"+solutionIndex[1]+"|"+ "\nrow 2 |"+eqIndex[2]+"|"+solutionIndex[2]+"|\nrow 3 |#|#|";//+" "+eqIndex[3];//+" "+eqIndex[3];
-        //solutionIndexText.text = "" + solutionIndex[0]+"\n"+solutionIndex[1]+"\n"+solutionIndex[2];//+" "+solutionIndex[3];
+        eqSlotText.text = "row 0 |"+eqIndex[0]+"|"+solutionIndex[0]
+        +"|\nrow 1 |"+eqIndex[1]+"|"+solutionIndex[1]
+        +"|\nrow 2 |"+eqIndex[2]+"|"+solutionIndex[2]
+        +"|\nrow 3 |"+eqIndex2[3]+"|"+solutionIndex2[3]
+        +"|\nrow 4 |"+eqIndex2[4]+"|"+solutionIndex2[4]
+        +"|\nrow 5 |"+eqIndex2[5]+"|"+solutionIndex2[5]
+        ;
+        pwrslotText.text = "\t-- internal symbol slot data --\n---------------------------------------\nLbrack 1 = "+lbrackIndex[1, 1]+" "+lbrackIndex[1, 2]+" "+lbrackIndex[1, 3]+" "+lbrackIndex[1, 4]+" "+lbrackIndex[1, 5]+" "+lbrackIndex[1, 6]+" "+lbrackIndex[1, 7]+" "+lbrackIndex[1, 8]+" "+lbrackIndex[1, 9]+" "+lbrackIndex[1, 10]
+        +"\nLbrack 2 = "+lbrackIndex[2, 1]+" "+lbrackIndex[2, 2]+" "+lbrackIndex[2, 3]+" "+lbrackIndex[2, 4]+" "+lbrackIndex[2, 5]+" "+lbrackIndex[2, 6]+" "+lbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+lbrackIndex[2, 9]+" "+lbrackIndex[2, 10]
+        +"\nLbrack 3 = "+lbrackIndex[3, 1]+" "+lbrackIndex[3, 2]+" "+lbrackIndex[3, 3]+" "+lbrackIndex[3, 4]+" "+lbrackIndex[3, 5]+" "+lbrackIndex[3, 6]+" "+lbrackIndex[3, 7]+" "+lbrackIndex[3, 8]+" "+lbrackIndex[3, 9]+" "+lbrackIndex[3, 10]
         
+        +"\n---------------------------------------\nRbrack 1 = "+rbrackIndex[1, 1]+" "+rbrackIndex[1, 2]+" "+rbrackIndex[1, 3]+" "+rbrackIndex[1, 4]+" "+rbrackIndex[1, 5]+" "+rbrackIndex[1, 6]+" "+rbrackIndex[1, 7]+" "+rbrackIndex[1, 8]+" "+rbrackIndex[1, 9]+" "+rbrackIndex[1, 10]
+        +"\nRbrack 2 = "+rbrackIndex[2, 1]+" "+rbrackIndex[2, 2]+" "+rbrackIndex[2, 3]+" "+rbrackIndex[2, 4]+" "+rbrackIndex[2, 5]+" "+rbrackIndex[2, 6]+" "+rbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+rbrackIndex[2, 9]+" "+rbrackIndex[2, 10]
+        +"\nRbrack 3 = "+rbrackIndex[3, 1]+" "+rbrackIndex[3, 2]+" "+rbrackIndex[3, 3]+" "+rbrackIndex[3, 4]+" "+rbrackIndex[3, 5]+" "+rbrackIndex[3, 6]+" "+rbrackIndex[3, 7]+" "+rbrackIndex[3, 8]+" "+rbrackIndex[3, 9]+" "+rbrackIndex[3, 10]
+       
+        +"\n---------------------------------------\nRootstart 1 = "+rootstartIndex[1, 1]+" "+rootstartIndex[1, 2]+" "+rootstartIndex[1, 3]+" "+rootstartIndex[1, 4]+" "+rootstartIndex[1, 5]+" "+rootstartIndex[1, 6]+" "+rootstartIndex[1, 7]+" "+rootstartIndex[1, 8]+" "+rootstartIndex[1, 9]+" "+rootstartIndex[1, 10]
+        +"\nRootstart 2 = "+rootstartIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootstartIndex[2, 3]+" "+rootstartIndex[2, 4]+" "+rootstartIndex[2, 5]+" "+rootstartIndex[2, 6]+" "+rootstartIndex[2, 7]+" "+rootstartIndex[2, 8]+" "+rootstartIndex[2, 9]+" "+rootstartIndex[2, 10]
+        +"\nRootstart 3 = "+rootstartIndex[3, 1]+" "+rootendIndex[3, 2]+" "+rootstartIndex[3, 3]+" "+rootstartIndex[3, 4]+" "+rootstartIndex[3, 5]+" "+rootstartIndex[3, 6]+" "+rootstartIndex[3, 7]+" "+rootstartIndex[3, 8]+" "+rootstartIndex[3, 9]+" "+rootstartIndex[3, 10]
         
-      
-        pwrslotText.text = "\t-- internal symbol slot data --\n---------------------------------------\nLbrack 1 = "+lbrackIndex[1, 1]+" "+lbrackIndex[1, 2]+" "+lbrackIndex[1, 3]+" "+lbrackIndex[1, 4]+" "+lbrackIndex[1, 5]+" "+lbrackIndex[1, 6]+" "+lbrackIndex[1, 7]+" "+lbrackIndex[1, 8]+" "+lbrackIndex[1, 9]+" "+lbrackIndex[1, 10]+"\nLbrack 2 = "+lbrackIndex[2, 1]+" "+lbrackIndex[2, 2]+" "+lbrackIndex[2, 3]+" "+lbrackIndex[2, 4]+" "+lbrackIndex[2, 5]+" "+lbrackIndex[2, 6]+" "+lbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+lbrackIndex[2, 9]+" "+lbrackIndex[2, 10]+"\nLbrack 3 = "+lbrackIndex[3, 1]+" "+lbrackIndex[3, 2]+" "+lbrackIndex[3, 3]+" "+lbrackIndex[3, 4]+" "+lbrackIndex[3, 5]+" "+lbrackIndex[3, 6]+" "+lbrackIndex[3, 7]+" "+lbrackIndex[3, 8]+" "+lbrackIndex[3, 9]+" "+lbrackIndex[3, 10]+"\n---------------------------------------\nRbrack 1 = "+rbrackIndex[1, 1]+" "+rbrackIndex[1, 2]+" "+rbrackIndex[1, 3]+" "+rbrackIndex[1, 4]+" "+rbrackIndex[1, 5]+" "+rbrackIndex[1, 6]+" "+rbrackIndex[1, 7]+" "+rbrackIndex[1, 8]+" "+rbrackIndex[1, 9]+" "+rbrackIndex[1, 10]+"\nRbrack 2 = "+rbrackIndex[2, 1]+" "+rbrackIndex[2, 2]+" "+rbrackIndex[2, 3]+" "+rbrackIndex[2, 4]+" "+rbrackIndex[2, 5]+" "+rbrackIndex[2, 6]+" "+rbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+rbrackIndex[2, 9]+" "+rbrackIndex[2, 10]+"\n---------------------------------------\nRootstart 1 = "+rootstartIndex[1, 1]+" "+rootstartIndex[1, 2]+" "+rootstartIndex[1, 3]+" "+rootstartIndex[1, 4]+" "+rootstartIndex[1, 5]+" "+rootstartIndex[1, 6]+" "+rootstartIndex[1, 7]+" "+rootstartIndex[1, 8]+" "+rootstartIndex[1, 9]+" "+rootstartIndex[1, 10]+"\nRootstart 2 = "+rootstartIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootstartIndex[2, 3]+" "+rootstartIndex[2, 4]+" "+rootstartIndex[2, 5]+" "+rootstartIndex[2, 6]+" "+rootstartIndex[2, 7]+" "+rootstartIndex[2, 8]+" "+rootstartIndex[2, 9]+" "+rootstartIndex[2, 10]+"\n---------------------------------------\nRootend 1 = "+rootendIndex[1, 1]+" "+rootendIndex[1, 2]+" "+rootendIndex[1, 3]+" "+rootendIndex[1, 4]+" "+rootendIndex[1, 5]+" "+rootendIndex[1, 6]+" "+rootendIndex[1, 7]+" "+rootendIndex[1, 8]+" "+rootendIndex[1, 9]+" "+rootendIndex[1, 10]+"\nRootend 2 = "+rootendIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootendIndex[2, 3]+" "+rootendIndex[2, 4]+" "+rootendIndex[2, 5]+" "+rootendIndex[2, 6]+" "+rootendIndex[2, 7]+" "+rootendIndex[2, 8]+" "+rootendIndex[2, 9]+" "+rootendIndex[2, 10]+"\n---------------------------------------\nPwrslot 1 = "+pwrIndex[1, 1]+" "+pwrIndex[1, 2]+" "+pwrIndex[1, 3]+" "+pwrIndex[1, 4]+" "+pwrIndex[1, 5]+" "+pwrIndex[1, 6]+" "+pwrIndex[1, 7]+" "+pwrIndex[1, 8]+" "+pwrIndex[1, 9]+" "+pwrIndex[1, 10]+"\nPwrslot 2 = "+pwrIndex[2, 1]+" "+pwrIndex[2, 2]+" "+pwrIndex[2, 3]+" "+pwrIndex[2, 4]+" "+pwrIndex[2, 5]+" "+pwrIndex[2, 6]+" "+pwrIndex[2, 7]+" "+pwrIndex[2, 8]+" "+pwrIndex[2, 9]+" "+pwrIndex[2, 10]+"\n---------------------------------------\nDivslot 1 = "+divIndex[1, 1]+" "+divIndex[1, 2]+" "+divIndex[1, 3]+" "+divIndex[1, 4]+" "+divIndex[1, 5]+" "+divIndex[1, 6]+" "+divIndex[1, 7]+" "+divIndex[1, 8]+" "+divIndex[1, 9]+" "+divIndex[1, 10]+"\nDivslot 2 = "+divIndex[2, 1]+" "+divIndex[2, 2]+" "+divIndex[2, 3]+" "+divIndex[2, 4]+" "+divIndex[2, 5]+" "+divIndex[2, 6]+" "+divIndex[2, 7]+" "+divIndex[2, 8]+" "+divIndex[2, 9]+" "+divIndex[2, 10]+"\n---------------------------------------\nMultslot 1 = "+multIndex[1, 1]+" "+multIndex[1, 2]+" "+multIndex[1, 3]+" "+multIndex[1, 4]+" "+multIndex[1, 5]+" "+multIndex[1, 6]+" "+multIndex[1, 7]+" "+multIndex[1, 8]+" "+multIndex[1, 9]+" "+multIndex[1, 10]+"\nMultslot 2 = "+multIndex[2, 1]+" "+multIndex[2, 2]+" "+multIndex[2, 3]+" "+multIndex[2, 4]+" "+multIndex[2, 5]+" "+multIndex[2, 6]+" "+multIndex[2, 7]+" "+multIndex[2, 8]+" "+multIndex[2, 9]+" "+multIndex[2, 10]+"\n---------------------------------------\nAddslot 1 = "+""+addIndex[1, 1]+" "+addIndex[1, 2]+" "+addIndex[1, 3]+" "+addIndex[1, 4]+" "+addIndex[1, 5]+" "+addIndex[1, 6]+" "+addIndex[1, 7]+" "+addIndex[1, 8]+" "+addIndex[1, 9]+" "+addIndex[1, 10]+"\nAddslot 2 = "+addIndex[2, 1]+" "+addIndex[2, 2]+" "+addIndex[2, 3]+" "+addIndex[2, 4]+" "+addIndex[2, 5]+" "+addIndex[2, 6]+" "+addIndex[2, 7]+" "+addIndex[2, 8]+" "+addIndex[2, 9]+" "+addIndex[2, 10]+"\n---------------------------------------\nSubslot 1 = "+subIndex[1, 1]+" "+subIndex[1, 2]+" "+subIndex[1, 3]+" "+subIndex[1, 4]+" "+subIndex[1, 5]+" "+subIndex[1, 6]+" "+subIndex[1, 7]+" "+subIndex[1, 8]+" "+subIndex[1, 9]+" "+subIndex[1, 10]+"\nSubslot 2 = "+subIndex[2, 1]+" "+subIndex[2, 2]+" "+subIndex[2, 3]+" "+subIndex[2, 4]+" "+subIndex[2, 5]+" "+subIndex[2, 6]+" "+subIndex[2, 7]+" "+subIndex[2, 8]+" "+subIndex[2, 9]+" "+subIndex[2, 10]+"\n---------------------------------------";
+        +"\n---------------------------------------\nRootend 1 = "+rootendIndex[1, 1]+" "+rootendIndex[1, 2]+" "+rootendIndex[1, 3]+" "+rootendIndex[1, 4]+" "+rootendIndex[1, 5]+" "+rootendIndex[1, 6]+" "+rootendIndex[1, 7]+" "+rootendIndex[1, 8]+" "+rootendIndex[1, 9]+" "+rootendIndex[1, 10]
+        +"\nRootend 2 = "+rootendIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootendIndex[2, 3]+" "+rootendIndex[2, 4]+" "+rootendIndex[2, 5]+" "+rootendIndex[2, 6]+" "+rootendIndex[2, 7]+" "+rootendIndex[2, 8]+" "+rootendIndex[2, 9]+" "+rootendIndex[2, 10]
+        +"\nRootend 3 = "+rootendIndex[3, 1]+" "+rootendIndex[3, 2]+" "+rootendIndex[3, 3]+" "+rootendIndex[3, 4]+" "+rootendIndex[3, 5]+" "+rootendIndex[3, 6]+" "+rootendIndex[3, 7]+" "+rootendIndex[3, 8]+" "+rootendIndex[3, 9]+" "+rootendIndex[3, 10]
+
+        +"\n---------------------------------------\nPwrslot 1 = "+pwrIndex[1, 1]+" "+pwrIndex[1, 2]+" "+pwrIndex[1, 3]+" "+pwrIndex[1, 4]+" "+pwrIndex[1, 5]+" "+pwrIndex[1, 6]+" "+pwrIndex[1, 7]+" "+pwrIndex[1, 8]+" "+pwrIndex[1, 9]+" "+pwrIndex[1, 10]
+        +"\nPwrslot 2 = "+pwrIndex[2, 1]+" "+pwrIndex[2, 2]+" "+pwrIndex[2, 3]+" "+pwrIndex[2, 4]+" "+pwrIndex[2, 5]+" "+pwrIndex[2, 6]+" "+pwrIndex[2, 7]+" "+pwrIndex[2, 8]+" "+pwrIndex[2, 9]+" "+pwrIndex[2, 10]
+        +"\nPwrslot 3 = "+pwrIndex[3, 1]+" "+pwrIndex[3, 2]+" "+pwrIndex[3, 3]+" "+pwrIndex[3, 4]+" "+pwrIndex[3, 5]+" "+pwrIndex[3, 6]+" "+pwrIndex[3, 7]+" "+pwrIndex[3, 8]+" "+pwrIndex[3, 9]+" "+pwrIndex[3, 10]
         
-        rootstartText.text = "dev build v1.13";
+        +"\n---------------------------------------\nDivslot 1 = "+divIndex[1, 1]+" "+divIndex[1, 2]+" "+divIndex[1, 3]+" "+divIndex[1, 4]+" "+divIndex[1, 5]+" "+divIndex[1, 6]+" "+divIndex[1, 7]+" "+divIndex[1, 8]+" "+divIndex[1, 9]+" "+divIndex[1, 10]
+        +"\nDivslot 2 = "+divIndex[2, 1]+" "+divIndex[2, 2]+" "+divIndex[2, 3]+" "+divIndex[2, 4]+" "+divIndex[2, 5]+" "+divIndex[2, 6]+" "+divIndex[2, 7]+" "+divIndex[2, 8]+" "+divIndex[2, 9]+" "+divIndex[2, 10]
+        +"\nDivslot 2 = "+divIndex[3, 1]+" "+divIndex[3, 2]+" "+divIndex[3, 3]+" "+divIndex[3, 4]+" "+divIndex[3, 5]+" "+divIndex[3, 6]+" "+divIndex[3, 7]+" "+divIndex[3, 8]+" "+divIndex[3, 9]+" "+divIndex[3, 10]
         
-        pauseCountText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\n\t-- crafting slot data --\n---------------------------------------\n"+craftIndex[0, 0]+" "+craftIndex[0,1]+"\n"+craftIndex[1, 0]+" "+craftIndex[1,1]+"\n"+craftIndex[2, 0]+" "+craftIndex[2,1]+"\n"+craftIndex[3, 0]+" "+craftIndex[3,1]+"\n"+craftIndex[4, 0]+" "+craftIndex[4,1]+"\n"+craftIndex[5, 0]+" "+craftIndex[5,1]+"\n"+craftIndex[6, 0]+" "+craftIndex[6,1]+"\n"+craftIndex[7, 0]+" "+craftIndex[7,1];
+        +"\n---------------------------------------\nMultslot 1 = "+multIndex[1, 1]+" "+multIndex[1, 2]+" "+multIndex[1, 3]+" "+multIndex[1, 4]+" "+multIndex[1, 5]+" "+multIndex[1, 6]+" "+multIndex[1, 7]+" "+multIndex[1, 8]+" "+multIndex[1, 9]+" "+multIndex[1, 10]
+        +"\nMultslot 2 = "+multIndex[2, 1]+" "+multIndex[2, 2]+" "+multIndex[2, 3]+" "+multIndex[2, 4]+" "+multIndex[2, 5]+" "+multIndex[2, 6]+" "+multIndex[2, 7]+" "+multIndex[2, 8]+" "+multIndex[2, 9]+" "+multIndex[2, 10]
+        +"\nMultslot 3 = "+multIndex[3, 1]+" "+multIndex[3, 2]+" "+multIndex[3, 3]+" "+multIndex[3, 4]+" "+multIndex[3, 5]+" "+multIndex[3, 6]+" "+multIndex[3, 7]+" "+multIndex[3, 8]+" "+multIndex[3, 9]+" "+multIndex[3, 10]
+        
+        +"\n---------------------------------------\nAddslot 1 = "+""+addIndex[1, 1]+" "+addIndex[1, 2]+" "+addIndex[1, 3]+" "+addIndex[1, 4]+" "+addIndex[1, 5]+" "+addIndex[1, 6]+" "+addIndex[1, 7]+" "+addIndex[1, 8]+" "+addIndex[1, 9]+" "+addIndex[1, 10]
+        +"\nAddslot 2 = "+addIndex[2, 1]+" "+addIndex[2, 2]+" "+addIndex[2, 3]+" "+addIndex[2, 4]+" "+addIndex[2, 5]+" "+addIndex[2, 6]+" "+addIndex[2, 7]+" "+addIndex[2, 8]+" "+addIndex[2, 9]+" "+addIndex[2, 10]
+        +"\nAddslot 3 = "+addIndex[3, 1]+" "+addIndex[3, 2]+" "+addIndex[3, 3]+" "+addIndex[3, 4]+" "+addIndex[3, 5]+" "+addIndex[3, 6]+" "+addIndex[3, 7]+" "+addIndex[3, 8]+" "+addIndex[3, 9]+" "+addIndex[3, 10]
+       
+        +"\n---------------------------------------\nSubslot 1 = "+subIndex[1, 1]+" "+subIndex[1, 2]+" "+subIndex[1, 3]+" "+subIndex[1, 4]+" "+subIndex[1, 5]+" "+subIndex[1, 6]+" "+subIndex[1, 7]+" "+subIndex[1, 8]+" "+subIndex[1, 9]+" "+subIndex[1, 10]
+        +"\nSubslot 2 = "+subIndex[2, 1]+" "+subIndex[2, 2]+" "+subIndex[2, 3]+" "+subIndex[2, 4]+" "+subIndex[2, 5]+" "+subIndex[2, 6]+" "+subIndex[2, 7]+" "+subIndex[2, 8]+" "+subIndex[2, 9]+" "+subIndex[2, 10]
+        +"\nSubslot 3 = "+subIndex[3, 1]+" "+subIndex[3, 2]+" "+subIndex[3, 3]+" "+subIndex[3, 4]+" "+subIndex[3, 5]+" "+subIndex[3, 6]+" "+subIndex[3, 7]+" "+subIndex[3, 8]+" "+subIndex[3, 9]+" "+subIndex[3, 10]
+        
+        +"\n---------------------------------------";
+        
+        rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage;
+        
+        pauseCountText.text = "\t-- crafting slot data --\n---------------------------------------\n"
+        +"\nValue:\t\t"+craftIndex[0, 0]+"\t"+craftIndex[0,1]
+        +"\nAddition:\t\t"+craftIndex[1, 0]+"\t"+craftIndex[1,1]
+        +"\nSubtraction:\t"+craftIndex[2, 0]+"\t"+craftIndex[2,1]
+        +"\nMultiplication\t"+craftIndex[3, 0]+"\t"+craftIndex[3,1]
+        +"\nDivision:\t\t"+craftIndex[4, 0]+"\t"+craftIndex[4,1]
+        +"\nExponentiation:\t"+craftIndex[5, 0]+"\t"+craftIndex[5,1]
+        +"\nLeft Bracket:\t"+craftIndex[6, 0]+"\t"+craftIndex[6,1]
+        +"\nRight Bracket:\t"+craftIndex[7, 0]+"\t"+craftIndex[7,1]
+        +"\nRoot Start:\t"+craftIndex[8, 0]+"\t"+craftIndex[8,1]
+        +"\nRoot End:\t\t"+craftIndex[9, 0]+"\t"+craftIndex[9,1]
+        +"\n---------------------------------------"
+        ;
         
         targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
     }
@@ -691,18 +750,20 @@ public class GameManager : MonoBehaviour
 
                 if (IsRecCall == false)
                 {
-                    solutionIndex2[eqCalled] = solution;
+                    if (eqCalled < 6)
+                    {
+                        solutionIndex2[eqCalled] = solution;
+                    }
+                    else
+                    {
+                        solutionIndex3[eqCalled] = solution;
+                    }
+                   
                     Debug.Log("\\\\---------- Mathfunc Done ----------//");
-                    solution = (solutionIndex2[1]+solutionIndex2[2]+solutionIndex2[3]+solutionIndex2[4]+solutionIndex2[5]);
+                    solution = (solutionIndex2[1]+solutionIndex2[2]+solutionIndex2[3]+solutionIndex2[4]+solutionIndex2[5]+solutionIndex3[6]);
                     //solution = solution+solutionIndex[4];
                     Debug.Log("solution: " + solution);
                     solutionText.text = ""+solution;/*+ solutionIndex[0] + " "*/ //+(solutionIndex[1]+solutionIndex[2]);
-                    
-                    if (solution == 247)
-                    {
-                        QuitToDesktop();
-                    }
-                    
                     
                     slotposUpd();
                     gameProgression();
@@ -720,38 +781,12 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
-        
-        //try
-        //{
-            if ((eqCalled + 1) < 10)//if (eqIndex[eqCalled] == 0 && eqIndex[eqCalled+1] != 1 && IsRecCall == false ) // if next eq is not empty then run again with //&& eqIndex[eqCalled + 1] > 0
+
+            if ((eqCalled + 1) < 10)
                 {
                     Debug.Log("//////////////////////////////////////////////////////////////// Next Equation Start");
                     Mathfunc(1, 10, false, eqCalled+1);
                 }
-            /*if (eqIndex[eqCalled] == 0 && eqCalled < 4/*Index[eqCalled++] != 1*/ //&& IsRecCall == false ) // if next eq is not empty then run again with //&& eqIndex[eqCalled + 1] > 0
-               // {
-                    //Debug.Log("//////////////////////////////////////////////////////////////// Next Equation Start");
-                    //Mathfunc(1, 10, false, eqCalled++);
-               // }
-        //}
-        
-        //catch
-       // {   
-            
-           // Debug.Log("////////////////////////////////////////////////////////////// Equation after Eqslot[" + eqCalled + "] is fucked in some way");
-            
-           
-            /*
-            for (int index = eqCalled; index > 0; index--)
-                    {
-                        solution += solutionIndex[index];
-                        Debug.Log("solution: " + solution);
-                    }
-            */
-
-           
-                    
-        //}
 
         
                     
@@ -801,8 +836,7 @@ public class GameManager : MonoBehaviour
             }
         }
         else
-        {
-                    
+        {     
             lbrackTutText.gameObject.SetActive(antiState);
             rbrackTutText.gameObject.SetActive(antiState);
             rootTutText.gameObject.SetActive(antiState);
@@ -811,7 +845,6 @@ public class GameManager : MonoBehaviour
             multTutText.gameObject.SetActive(antiState);
             addTutText.gameObject.SetActive(antiState);
             subTutText.gameObject.SetActive(antiState);
-
         }
     }
     
@@ -826,77 +859,30 @@ public class GameManager : MonoBehaviour
         debugMenu.gameObject.SetActive(TildaDown);
         slotposUpd();
     }
-    /*
-    public void EqGridToggle(bool TabDown)
-    {
-        alphaGrid.gameObject.SetActive(TabDown);
-        betaGrid.gameObject.SetActive(TabDown);
-    }
-    */
-    public void PauseControl(bool EscToggle)
-    {
-            pausescreen.gameObject.SetActive(EscToggle);
+
+    public void PauseControl(bool EscToggle) {pausescreen.gameObject.SetActive(EscToggle);
     }
 
     // Update is called once per frame ----------------------------------------------------------------- VOID UPDATE --
     void Update()
     {
-        
-            
-        if (Input.GetKey(KeyCode.BackQuote)) 
-       
-        { 
-            DebugControl(true); 
+        if (Input.GetKeyDown(KeyCode.BackQuote)) {DebugControl(true); 
         }
-        
-        else
-        
-        {
-            DebugControl(false);
+        if (Input.GetKeyUp(KeyCode.BackQuote)) {DebugControl(false);
         }
-        
-        /*if(Input.GetKey(KeyCode.Mouse1))
-        {
-            EqGridToggle(false);
-        }
-        else
-        {
-            EqGridToggle(true);
-        }
-        */
-        
         if (Input.GetKeyDown(KeyCode.H)) { TutorialControl(true, false); 
         }
-        
         if (Input.GetKeyUp(KeyCode.H)) { TutorialControl(false, false);
         }
-        
-        if (Input.GetKeyDown(KeyCode.Return))
-            {
-                Mathfunc(1, 10, false, 1);
-            }
-            
-       // else { TutorialControl(false, false);
-     //   }
-          
+        if (Input.GetKeyDown(KeyCode.Return)) {Mathfunc(1, 10, false, 1);
+        }
         if (Input.GetKeyDown(KeyCode.Escape)) // if odd amt of esc presses then it pauses
         {
             pauseToggle++;
-            
-            if(pauseToggle % 2 == 0)
-            {
-            
-              PauseControl(false); // game is now unpaused below this line ---------------------- UNPAUSED \/
-              
-
+            if(pauseToggle % 2 == 0) {PauseControl(false); // game is now unpaused below this line ---------------------- UNPAUSED \/
             }
-           
-            else
-           
-            {
-              PauseControl(true); // game is now paused below this line
+            else {PauseControl(true); // game is now paused below this line
             }
-            
         }
     }
 }

@@ -60,7 +60,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     
     public void  OnPointerEnter(PointerEventData eventData) //if mouse enters an equation
          {   
-            if (eqSlotDetermine == true)
+            if (eqSlotDetermine == true && Input.GetMouseButton(0) == false)
             {
                 //Debug.Log("Assign Equation Slot: " + AssignEqSlot);
                 AssignEqSlot = EqSlotNum; // in slot 1's case: 1
@@ -97,7 +97,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                    // Debug.Log("slot pos is now: " + SlotObjN);
                     Debug.Log("assigned slotpos:                     " + gameManager.TempEqPosStorage + ", " + SlotObjN + " with value of " + gameManager.tempdragstorage);
                      // case 1 in eq 1 // slotpos = 1, 1
-
+                    
                     switch (drag.SymbolType)
                     {
                         case 1:
@@ -227,7 +227,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             
         if(CraftSlot1.transform.childCount == 1 && CraftSlot2.transform.childCount == 1)
         {
-            if (gameManager.craftIndex[0, 0] == gameManager.craftIndex[0, 1] && (gameManager.craftIndex[0, 0] > 0 || gameManager.craftIndex[0, 1] > 0))
+            if (gameManager.craftIndex[0, 0] == gameManager.craftIndex[0, 1] && (gameManager.craftIndex[0, 0] > 0 && gameManager.craftIndex[0, 1] > 0))
             {      
                 switch(gameManager.craftIndex[0, 0]) // merge type recipies
                 {   
@@ -394,6 +394,12 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             }
         }
     }
+
+    public void IsEmpty()
+    {
+        gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = 0; //maybe it will work? YES IT DOES HAHA
+        gameManager.eqIndex2[AssignEqSlot] = gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = 0;
+    }
     
     void Update()
     {   
@@ -401,19 +407,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
         //CraftCheck(); //works if uncommented, but i think it would be better to have the player confirm their choice with a button press
         if (IsNowEmpty == true)
         {
-            /*try
-            {
-                gameManager.craftIndex[SymbolType, CraftSlotPos] = 0;
-            }
-            catch
-            {
-                Debug.Log("boo");
-            }*/
-            
-            gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = 0; //maybe it will work? YES IT DOES HAHA
-            gameManager.eqIndex2[AssignEqSlot] = gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = 0;
-            
-            
+            IsEmpty();
         }
         //CraftValReset();
     }

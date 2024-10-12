@@ -20,31 +20,28 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public Drop currenteqtype;
     
     public GameObject InventorySlot;
+
     
     [HideInInspector] public Transform parentAfterDrag;
     
     
-    public void  OnPointerEnter(PointerEventData eventData) //if mouse enters an equation
+    public void  OnPointerEnter(PointerEventData eventData)
          {   
             if (Input.GetKey("left shift"))
             {
+                SymbolParent = GetComponentInParent<Drop>();
+                SymbolParent.IsEmpty();
+                parentAfterDrag = transform.parent;
                 transform.SetParent(InventorySlot.transform);
+                transform.SetAsLastSibling(); 
             }
          }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("begin drag");
-        /*
-        if (OutputSlot.childCount == 0)
-        {
-            Debug.Log("good");
-        
-        }
-        */
         SymbolParent = GetComponentInParent<Drop>();
         SymbolParent.IsNowEmpty = true;
-        Debug.Log("Empty = true");
         
         //gameManager.tempdragstorage = SymbolParent.GetComponentInParent(typeof(Drop)) as Drop;
         //gameManager.eqIndex[drop.EqSlotNum] = 0;
@@ -55,14 +52,17 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         Image.raycastTarget = false;
+
         
         gameManager.tempdragstorage = Value;
         gameManager.TutorialDesc = TutorialNumber;
         gameManager.TempMergeStorage = CanMerge;
+        gameManager.TempEqStorage = EqType;
+        
         
                 //if (currenteqtype.eqSlotDetermine == true)
         //    {
-                gameManager.TempEqStorage = EqType;
+                
         //    }
         
         //Debug.Log(TutorialNumber);
@@ -72,31 +72,110 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         gameManager.alphaGrid.raycastTarget = false;
         gameManager.betaGrid.raycastTarget = false;
         */
-        
-        
-        
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //Debug.Log("end drag");
- 
-        transform.SetParent(parentAfterDrag);
-        /*gameManager.alphaGrid.raycastTarget = true;
-        gameManager.betaGrid.raycastTarget = true;*/
-        Image.raycastTarget = true;
+        Debug.Log("end drag");
+        if (SymbolParent.transform == parentAfterDrag.transform)
+        {
+            Debug.Log("///////////////////////////yipee");
+            transform.SetParent(parentAfterDrag);
+            Image.raycastTarget = true;
+            SymbolParent.IsNowEmpty = false;
+            Debug.Log("Empty = false");
 
-        
-        SymbolParent.IsNowEmpty = false;
-        Debug.Log("Empty = false");
-        
-        //Drop.CraftCheck();
+            gameManager.slotpos[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.tempdragstorage;
+
+            switch (SymbolType)
+            {
+                case 1:
+                    gameManager.addslot = SymbolParent.SlotObjN;
+                    gameManager.addIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.addslot;
+                    Debug.Log("addslot: " + gameManager.addslot);
+                    break;
+
+                case 2:
+                    gameManager.subslot = SymbolParent.SlotObjN;
+                    gameManager.subIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.subslot;
+                    Debug.Log("subslot: " + gameManager.subslot);
+                    break;
+
+                case 3:
+                    gameManager.multslot = SymbolParent.SlotObjN;
+                    gameManager.multIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.multslot;
+                    Debug.Log("multslot: " + gameManager.multslot);
+                    break;
+
+                case 4:
+                    gameManager.divslot = SymbolParent.SlotObjN;
+                    gameManager.divIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.divslot;
+                    Debug.Log("divslot: " + gameManager.divslot);
+                    break;
+
+                case 5:
+                    gameManager.pwrslot = SymbolParent.SlotObjN;
+                    gameManager.pwrIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.pwrslot;
+                    Debug.Log("pwrslot: " + gameManager.pwrslot);
+                    break;
+
+                case 6:
+                    gameManager.lbrack = SymbolParent.SlotObjN;
+                    gameManager.lbrackIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.lbrack;
+                    Debug.Log("lbrack: " + gameManager.lbrack);
+                    break;
+
+                case 7:
+                    gameManager.rbrack = SymbolParent.SlotObjN;
+                    gameManager.rbrackIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rbrack;
+                    Debug.Log("rbrack: " + gameManager.rbrack);
+                    break;
+
+                case 8:
+                    gameManager.rootstart = SymbolParent.SlotObjN;
+                    gameManager.rootstartIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rootstart;
+                    Debug.Log("rootstart: " + gameManager.rootstart);
+                    break;
+
+                case 9:
+                    gameManager.rootend = SymbolParent.SlotObjN;
+                    gameManager.rootendIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rootend;
+                    Debug.Log("rootend: " + gameManager.rootend);
+                    break;
+                    
+                default:
+                    break;
+            }
+
+                
+
+        }
+        else
+        {
+
+            
+            transform.SetParent(parentAfterDrag);
+            
+            /*gameManager.alphaGrid.raycastTarget = true;
+            gameManager.betaGrid.raycastTarget = true;*/
+            Image.raycastTarget = true;
+
+            
+            SymbolParent.IsNowEmpty = false;
+            Debug.Log("Empty = false");
+            
+            //Drop.CraftCheck();
+
+        }
+
+
+ 
+
        
         
         
