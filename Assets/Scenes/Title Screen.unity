@@ -2911,7 +2911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Build v1.12]'
+  m_text: '[Build v1.13]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
   m_sharedMaterial: {fileID: -7130737770211262945, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
@@ -3042,7 +3042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90e2d9910c0c4f9aac93fa2000c2aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Execute: {fileID: 2064360581}
 --- !u!61 &2064360579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3111,6 +3110,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &2064360581
 MonoBehaviour:

@@ -14,6 +14,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     public bool IsNowEmpty = false;
     public bool CraftSlot;
     public int CraftSlotPos;
+    public bool isInvSlot;
     
     public GameObject one; // IM SORRY BUT ITS 12:02 AT NIGHT AND IM TIRED
     public GameObject two;
@@ -77,7 +78,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     {
         if (eqSlotDetermine == true)
         {
-            gameManager.eqIndex[AssignEqSlot] = gameManager.TempEqStorage;
+            gameManager.eqIndex2[AssignEqSlot] = gameManager.TempEqStorage;
         }
         
         if (transform.childCount == 0 && gameManager.TempMergeStorage == false)
@@ -191,6 +192,12 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
 
 
         }
+        else if (isInvSlot == true)
+        {
+            GameObject dropped = eventData.pointerDrag;
+            Drag drag = dropped.GetComponent<Drag>();
+            drag.parentAfterDrag = transform;
+        }
     gameManager.slotposUpd();
     }
     //else// if (gameManager.TempMergeStorage == false)
@@ -278,7 +285,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
                 Instantiate(multiplication, OutputSlotPos);
                 RemoveSymbol();
             }
-            else if ((gameManager.craftIndex[0, 0] == 6 && gameManager.craftIndex[3, 1] == 3) || (gameManager.craftIndex[0, 1] == 6 && gameManager.craftIndex[3, 0] == 3)) // 6 | x = ( )
+            else if ((gameManager.craftIndex[0, 0] == 9 && gameManager.craftIndex[3, 1] == 3) || (gameManager.craftIndex[0, 1] == 9 && gameManager.craftIndex[3, 0] == 3)) // 6 | x = ( )
             {
                 Instantiate(subtraction, OutputSlotPos);
                 RemoveSymbol();
@@ -307,6 +314,11 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             else if (gameManager.craftIndex[9, 0] == 9 && gameManager.craftIndex[8, 1] == 8)
             {
                 Instantiate(rightBracket, OutputSlotPos);
+                RemoveSymbol();
+            }
+            else if ((gameManager.craftIndex[6, 0] == 6 && gameManager.craftIndex[7, 1] == 7) || gameManager.craftIndex[6, 1] == 6 && gameManager.craftIndex[7, 0] == 7)
+            {
+                Instantiate(exponentiation, OutputSlotPos);
                 RemoveSymbol();
             }
         }
@@ -399,7 +411,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
             }*/
             
             gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = 0; //maybe it will work? YES IT DOES HAHA
-            gameManager.eqIndex[AssignEqSlot] = gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = 0;
+            gameManager.eqIndex2[AssignEqSlot] = gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = 0;
             
             
         }

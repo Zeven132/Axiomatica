@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Numerics;
 using Vector3 = UnityEngine.Vector3; // bugfix credit: Ardenian     https://forum.unity.com/threads/ambiguous-reference-between-two-references.885529/
-public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler
 {
     public GameManager gameManager;
     public Image Image;
@@ -19,12 +19,18 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public double tempDragStorageStorage; //dont laugh at me
     public Drop currenteqtype;
     
-    //public GameObject OutputSlot;
+    public GameObject InventorySlot;
     
     [HideInInspector] public Transform parentAfterDrag;
     
     
-    
+    public void  OnPointerEnter(PointerEventData eventData) //if mouse enters an equation
+         {   
+            if (Input.GetKey("left shift"))
+            {
+                transform.SetParent(InventorySlot.transform);
+            }
+         }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -109,6 +115,8 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         //OutputSlot = GameObject.Find("OutputSlot");
         currenteqtype = GetComponent<Drop>();
           
+        InventorySlot = GameObject.Find("Inventory Slot");
+
         Image = GetComponent<Image>();
         startPosition = transform.position;
     }
