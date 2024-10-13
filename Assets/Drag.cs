@@ -27,7 +27,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     
     public void  OnPointerEnter(PointerEventData eventData)
          {   
-            if (Input.GetKey("left shift"))
+            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 21)
             {
                 SymbolParent = GetComponentInParent<Drop>();
                 SymbolParent.IsEmpty();

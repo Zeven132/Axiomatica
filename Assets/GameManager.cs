@@ -86,7 +86,11 @@ public class GameManager : MonoBehaviour
     public GameObject one;
     public GameObject two;
     public GameObject three;
+    public GameObject four;
+    public GameObject five;
     public GameObject addition;
+    public GameObject multiplication;
+
     public GameObject BVSymbol;
     
     //slots
@@ -98,7 +102,7 @@ public class GameManager : MonoBehaviour
     public double[] solutionIndex3 = new double[13] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     
     //equation slots
-    public int[] eqIndex = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1 [everything starts at 1]
+    public int[] eqIndex = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1
     public int[] eqIndex2 = new int[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     
@@ -213,7 +217,7 @@ public class GameManager : MonoBehaviour
     public void ToggleEncryption(bool EncryptionEnabled) {this.EncryptionEnabled = EncryptionEnabled;
     }
 
-    public void SerializeJson()
+    public void SerializeJson() // credit for entire save/load file system: https://www.youtube.com/watch?v=mntS45g8OK4
     {
         long startTime = DateTime.Now.Ticks;
         if (DataService.SaveData("/player-stats.json", PlayerStats, EncryptionEnabled))
@@ -271,14 +275,33 @@ public class GameManager : MonoBehaviour
         case 3:
             Instantiate(three, StorageSlot);
             break;
+        case 4:
+            Instantiate(four, StorageSlot);
+            break;
+        case 5:
+            Instantiate(five, StorageSlot);
+            break;
+        }
+        if (symbolVal < 5)
+        {
+            Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
+            if (rnd.Next(10) == 1) // 1/10 chance
+                {
+                    Instantiate(addition, StorageSlot);
+                }
+            symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
+        }
+        else
+        {
+            Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
+            if (rnd.Next(25) == 1) // 1/25 chance
+                {
+                    Instantiate(multiplication, StorageSlot);
+                }
+            symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
         }
 
-        Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
-        if (rnd.Next(10) == 1) // 1/10 chance
-            {
-                Instantiate(addition, StorageSlot);
-            }
-        symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
+
     }
     
     public void prestige()
@@ -336,22 +359,17 @@ public class GameManager : MonoBehaviour
         else if (record >= 3000)
         {
             
-            progressIndex = Math.Pow(record*2, 0.5) * resetMultiplyer + 70;
+            progressIndex = Math.Pow(record, 0.5) * resetMultiplyer + 70;
             EquationUnlock(2);
         }
         if(record >= 970)
         {
-            progressIndex = Math.Pow(record*2, 0.5) * resetMultiplyer + 70;
+            progressIndex = Math.Pow(record, 0.5) * resetMultiplyer + 70;
             EquationX1.gameObject.SetActive(true);
         }
         else if (record >= 500)
         {
             EquationX1.gameObject.SetActive(true);
-            progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
-        }
-        if (record == 247)
-        {
-            Instantiate(BVSymbol, StorageSlot);
             progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
         }
         else if (record >= 20)
@@ -374,11 +392,33 @@ public class GameManager : MonoBehaviour
         
         if (progressIndex > PrevProgressIndex)
             {
-                if (resetMultiplyer > 4)
+                if (resetMultiplyer > 16)
                 {
                     for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
                     {   
-                        if (prev % 4 == 0) // gives quarter, but 4x value; saves time with crafting 
+                        if (prev % 8 == 0) // gives eighth, but 8x value; saves time with crafting while providing same value 
+                        {
+                            GetSymbol(5);
+                        }
+                    }
+
+                }
+                else if (resetMultiplyer > 10)
+                {
+                    for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
+                    {   
+                        if (prev % 8 == 0) // gives eighth, but 8x value; saves time with crafting while providing same value 
+                        {
+                            GetSymbol(4);
+                        }
+                    }
+
+                }
+                else if (resetMultiplyer > 4)
+                {
+                    for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
+                    {   
+                        if (prev % 4 == 0) // gives quarter, but 4x value
                         {
                             GetSymbol(3);
                         }
@@ -388,7 +428,7 @@ public class GameManager : MonoBehaviour
                 {
                     for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
                     {   
-                        if (prev % 2 == 0) // gives half, but double value; saves time with crafting 
+                        if (prev % 2 == 0) // gives half, but double value
                         {
                             GetSymbol(2);
                         }
@@ -411,6 +451,12 @@ public class GameManager : MonoBehaviour
         {
             Intro.gameObject.SetActive(false);
 
+        }
+
+        if (record == 247)
+        {
+            Instantiate(BVSymbol, StorageSlot);
+            progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
         }
         
         
@@ -532,6 +578,7 @@ public class GameManager : MonoBehaviour
         ;
         
         targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
+        symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
     }
 
     public void EqReset(int CurrentEq)
