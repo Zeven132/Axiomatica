@@ -11,11 +11,11 @@ using UnityEngine.SceneManagement;
 
 using Random = System.Random;
 //using System.Diagnostics;
-//using System.Numerics; // huge credit to https://linuxhint.com/biginteger-csharp/ for the tutorial
+
 //using UnityEngine.UIElements;
 
 
-//todo: you have to: get shift hotkey to work fully, equation progression, that one bug if you drag a symbol into nothing it resets the solt but the symbol is still there
+//todo: you have to: that one bug if you drag a symbol into nothing it resets the solt but the symbol is still there, comment code
 
 
 
@@ -61,7 +61,8 @@ public class GameManager : MonoBehaviour
     public Image debugMenu;
     public Image alphaGrid;
     public Image betaGrid;
-
+    
+    // Equations
     public Image EquationX1;
     public Image EquationX2;
     public Image EquationX3;
@@ -81,7 +82,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI divTutText;
     public TextMeshProUGUI subTutText;
     
-    // crafting
+    // Crafting
     public Transform StorageSlot;
     public GameObject one;
     public GameObject two;
@@ -93,23 +94,26 @@ public class GameManager : MonoBehaviour
 
     public GameObject BVSymbol;
     
-    //slots
-    public double[,] slotpos = { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }; // may have to switch the arrays when eq are switched
-    public double[,] slotposStored = { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+    // Slot numeric values
+    public double[,] slotpos = new double [12, 11]; // used during calculation
+    public double[,] slotposStored = new double [12, 11]; // stored to change values back after calculation
     
-    public double[] solutionIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    public double[] solutionIndex2 = new double[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    public double[] solutionIndex3 = new double[13] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    // Solutions
+    public double[] solutionIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // only works for [1] - [2]
+    public double[] solutionIndex2 = new double[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; //same here; works until [6]
+    public double[] solutionIndex3 = new double[13] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // works completely iirc
     
-    //equation slots
-    public int[] eqIndex = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // val 0 = none, 1 = normal,    in decending order // these are types not values // starts counting at 1
-    public int[] eqIndex2 = new int[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    // Squation slots
+    public int[] eqIndex = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // basically depricated but could be used in the future to allow for different type of equations
+    public int[] eqIndex2 = new int[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // if 0 then normal, if 1 then ignored
 
     
-    //crafting slots
-    public int[,] craftIndex = { {0, 0, 0, 0}, {0, 0, 0, 0}, { 0, 0, 0, 0}, { 0, 0, 0, 0}, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }  }; //lets try starting from 0 // [0] = values, [1] = addition, [2] = subtraction, [3] = multiplication, [4] = division, [5] = exponentiation, [6] = left bracket, [7] = right bracket, [8] = rootstart, [9] = rootend
+    // Crafting slots
+    public int[,] craftIndex = { {0, 0, 0, 0}, {0, 0, 0, 0}, { 0, 0, 0, 0}, { 0, 0, 0, 0}, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }  }; 
+    //[0] = values, [1] = addition, [2] = subtraction, [3] = multiplication, [4] = division, [5] = exponentiation, [6] = left bracket, [7] = right bracket, [8] = rootstart, [9] = rootend
+    // [x, n] = x if there is a symbol there
     
-    // symbol types in order of operation. used as X in [#, X]
+    // Symbol types in order of operation. used as X in [#, X]
     public int lbrack;
     public int rbrack;
     public int rootstart;
@@ -156,9 +160,9 @@ public class GameManager : MonoBehaviour
     public double solution = 0; // the most recent solution
     
     // temp vaulues for storage
-    public double tempdragstorage;
+    public double tempdragstorage; //numeric value
     public int TutorialDesc = 0;
-    public bool TempMergeStorage;
+    public bool TempMergeStorage; //unused
     public int TempEqStorage; // type
     public int TempEqPosStorage; // eq slot
     
@@ -182,7 +186,7 @@ public class GameManager : MonoBehaviour
 
     
     
-    // savedata shit
+    // savedata serialization
     [SerializeField]
     private TextMeshProUGUI SourceDataText;
     [SerializeField]
@@ -214,10 +218,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ToggleEncryption(bool EncryptionEnabled) {this.EncryptionEnabled = EncryptionEnabled;
+    public void ToggleEncryption(bool EncryptionEnabled) {this.EncryptionEnabled = EncryptionEnabled; // encryption is unused
     }
 
-    public void SerializeJson() // credit for entire save/load file system: https://www.youtube.com/watch?v=mntS45g8OK4
+    public void SerializeJson()                                                                             // credit for entire save/load file system: https://www.youtube.com/watch?v=mntS45g8OK4
     {
         long startTime = DateTime.Now.Ticks;
         if (DataService.SaveData("/player-stats.json", PlayerStats, EncryptionEnabled))
@@ -262,7 +266,7 @@ public class GameManager : MonoBehaviour
 
    
     
-    public void GetSymbol (int symbolVal)
+    public void GetSymbol (int symbolVal) // used to spawn symbols for the player to use. called each iteration of a for-loop
     {
 
         switch (symbolVal)
@@ -289,19 +293,16 @@ public class GameManager : MonoBehaviour
                 {
                     Instantiate(addition, StorageSlot);
                 }
-            symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
+            
         }
         else
         {
-            Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
+            Random rnd = new Random();
             if (rnd.Next(25) == 1) // 1/25 chance
                 {
                     Instantiate(multiplication, StorageSlot);
                 }
-            symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
         }
-
-
     }
     
     public void prestige()
@@ -319,18 +320,16 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(ResetWarning());
         }
-
-        
     }
 
-    IEnumerator ResetWarning()
+    IEnumerator ResetWarning() //called if player attempts to prestige to get a lower resetmult than they already have 
     {
         prestigeWarning.text = "It would be silly to do that, you would just waste time by decreasing the multiplyer.\n If you're trying to get yourself out of a softlock and you've already closed and opened the game, fair enough: press [~] and click [FORCE PRESTIGE]";
         yield return new WaitForSecondsRealtime(12);
         prestigeWarning.text = "";
     }
 
-    public void ForcePrestige()
+    public void ForcePrestige() //debug menu yellow button
     {
         resetMultiplyer = 1 + Math.Sqrt(record/250);
         SourceDataText.text = "{\n\"resetMultiplyer\": "+resetMultiplyer+"\n}";
@@ -343,10 +342,7 @@ public class GameManager : MonoBehaviour
     public void gameProgression() // this is where game progression is controlled, ran just before temp values are reset
     { 
         record = (solution > record) ? record = solution : record = record; // shorthand if // 0 for now. fix later               // record is y, output is x
-        //m = record / 10000;
-        if (record >= 100000)
-        {
-            EquationUnlock(5);
+        if (record >= 100000){EquationUnlock(5);
         }
         if (record >= 25000)
         {
@@ -385,8 +381,6 @@ public class GameManager : MonoBehaviour
         {
             progressIndex = (Math.Pow(1.7, record - 1)) * resetMultiplyer;
         }
-        
-        
         progressIndex = Math.Round(progressIndex);
         
         
@@ -443,6 +437,7 @@ public class GameManager : MonoBehaviour
                     }
                 }  
                 PrevProgressIndex = progressIndex;  
+                symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
             }
         //for (int i = (int) progressIndex)
 
@@ -504,7 +499,7 @@ public class GameManager : MonoBehaviour
         Mathfunc(1, 10, false, 1);
     }
 
-    public void slotposUpd()
+    public void slotposUpd() //updates debug menu along with some text
     {
         
         slotpos1Text.text = ""+slotpos[0, 1]+" "+slotpos[0, 2]+" "+slotpos[0, 3]+" "+slotpos[0, 4]+" "+slotpos[0, 5]+" "+slotpos[0, 6]+" "+slotpos[0, 7]+" "+slotpos[0, 8]+" "+slotpos[0, 9]+" "+slotpos[0, 10]
@@ -618,35 +613,24 @@ public class GameManager : MonoBehaviour
             }
     }
 
-    public void Mathfunc(int startpos, int endpos, bool IsRecCall, int eqCalled)
+    // Calculator //
+    public void Mathfunc(int startpos, int endpos, bool IsRecCall, int eqCalled) 
     {   
-        
-        
-        if (IsRecCall == false)
-        {
-            Debug.Log("//---------- Mathfunc Called ----------\\\\");
+        if (IsRecCall == false){Debug.Log("//---------- Mathfunc Called ----------\\\\");
         }
-        else
-        {
-            Debug.Log("      //--- Called Recursively ---\\\\");
+        else{Debug.Log("      //--- Called Recursively ---\\\\");
         }
-        Debug.Log(eqCalled);
         Debug.Log("calling slots: " + startpos + " to " + endpos);
         Debug.Log("called recursively?: " + IsRecCall);
         //Debug.Log("Equation SLOT called: " + eqCalled + " // Equation TYPE called: " + eqIndex[eqCalled]);
         switch (eqIndex2[eqCalled]) //checks for current eq slot
         {
-
             case 0: //normal type
             {
-        
-                if(IsRecCall == false)
-                {
-                    EqPreset();
+                if(IsRecCall == false){EqPreset();
                 }
 
                 // BRACKETS
-            
                 for (int index=startpos;index<endpos;index++) // check all possible positions within bounds for left brackets 
                 {
                     if (lbrackIndex[eqCalled, index] > 0 && lbrackRecIndex[eqCalled, index] == false)
@@ -667,16 +651,12 @@ public class GameManager : MonoBehaviour
                             }
                         }
                     }
-                    //&&  <= endpos && rbrackIndex[eqCalled, rbrack] > lbrackIndex[eqCalled, lbrack] && B) // if brackets are used within scope
                 }
             
-
-
                 // EXPONENTS
                 // ROOT OR POWER
-                for (int expcheck = startpos; expcheck <= endpos; expcheck++)
+                for (int expcheck = startpos; expcheck <= endpos; expcheck++) // check all possible positions within bounds for rootstart AND power
                 {
-                    //Debug.Log("expcheck = "+expcheck);
                     if (rootstartIndex[eqCalled, expcheck] > 0 || pwrIndex[eqCalled, expcheck] > 0)
                     {
                         if (rootstartIndex[eqCalled, expcheck] > pwrIndex[eqCalled, expcheck]) // ROOT FOUND FIRST
@@ -689,18 +669,18 @@ public class GameManager : MonoBehaviour
                                     Debug.Log("index = "+index2);
                                     if (rootendIndex[eqCalled, index2] > 0 && rootendRecIndex[eqCalled, expcheck] == false)
                                     {
-                                        rootstartRecIndex[eqCalled, expcheck] = true;
-                                        rootendRecIndex[eqCalled, index2] = true;
-                                        Mathfunc(rootstartIndex[eqCalled, expcheck] + 1, rootendIndex[eqCalled, index2] - 1, true, eqCalled);
-                                        solution = Math.Sqrt(solution);
-                                        slotpos[eqCalled, rootendIndex[eqCalled, index2]] = slotpos[eqCalled, rootstartIndex[eqCalled, expcheck]] = solution;
+                                        rootstartRecIndex[eqCalled, expcheck] = true; //record found rootstart into recusion index
+                                        rootendRecIndex[eqCalled, index2] = true; //record found rootend into recusion index
+                                        Mathfunc(rootstartIndex[eqCalled, expcheck] + 1, rootendIndex[eqCalled, index2] - 1, true, eqCalled); //call calculator recursively with the bounds within the root.
+                                        solution = Math.Sqrt(solution); // once solved 
+                                        slotpos[eqCalled, rootendIndex[eqCalled, index2]] = slotpos[eqCalled, rootstartIndex[eqCalled, expcheck]] = solution; // surrounding rootstart and rootend also assigned solution to allow other symbols to calculate off of this solution
                                         Debug.Log("//SQUARE ROOT DONE");
                                         Debug.Log(solution);
                                     }
                                 }
                             }
                         }
-                        else if (rootstartIndex[eqCalled, expcheck] < pwrIndex[eqCalled, expcheck])
+                        else if (rootstartIndex[eqCalled, expcheck] < pwrIndex[eqCalled, expcheck]) // POWER FOUND FIRST
                         {
                             for (int index = startpos; index < endpos; index++)
                             {
@@ -719,17 +699,17 @@ public class GameManager : MonoBehaviour
                         }
                     }
                 }
-
+                // BASIC OPERATORS: since they are identical, I will only comment division
                 // DIVISION
-                for (int index = startpos; index < endpos; index++)
+                for (int index = startpos; index < endpos; index++) // check every slot inbounds for division
                 {
                     if (divIndex[eqCalled, index] > 0 && divIndex[eqCalled, index] > startpos && divIndex[eqCalled, index] < endpos && divRecIndex[eqCalled, index] == false) // if checked position has one, is more than startpos and less than endpos and recursion matrix says false, then it returns true
                     {
                         Debug.Log("division: [" + eqCalled + ", " + divIndex[eqCalled, index] + "]");
                         Debug.Log(slotpos[eqCalled, divIndex[eqCalled, index] - 1] + " / " + slotpos[eqCalled, divIndex[eqCalled, index] + 1]);
-                        divRecIndex[eqCalled, index] = true;
-                        divar1 = slotpos[eqCalled, divIndex[eqCalled, index] - 1];
-                        divar2 = slotpos[eqCalled, divIndex[eqCalled, index] + 1];
+                        divRecIndex[eqCalled, index] = true; // record division slot to recursion index
+                        divar1 = slotpos[eqCalled, divIndex[eqCalled, index] - 1]; // find slotval to the left of division symbol
+                        divar2 = slotpos[eqCalled, divIndex[eqCalled, index] + 1]; // find slotval to the right of division symbol
                         solution = slotpos[eqCalled, divIndex[eqCalled, index] - 1] = slotpos[eqCalled, divIndex[eqCalled, index]] = slotpos[eqCalled, divIndex[eqCalled, index] + 1] = divar1 / divar2;
                         Debug.Log("division: " + solution);
                         Debug.Log("DIVISION DONE");
@@ -756,20 +736,17 @@ public class GameManager : MonoBehaviour
                 // ADDITION
                 for (int index = startpos; index < endpos; index++)
                 {
-                    if (addIndex[eqCalled, index] > 0 && addRecIndex[eqCalled, index] == false)
+                    if (addIndex[eqCalled, index] > 0 && addIndex[eqCalled, index] > startpos && addIndex[eqCalled, index] < endpos && addRecIndex[eqCalled, index] == false)
                     {
-                        if (addIndex[eqCalled, index] > startpos && addIndex[eqCalled, index] < endpos)
-                        {
-                                Debug.Log(index);
-                                Debug.Log("addition: [" + eqCalled + ", " + addIndex[eqCalled, index] + "]");
-                                Debug.Log(slotpos[eqCalled, addIndex[eqCalled, index] - 1] + " + " + slotpos[eqCalled, addIndex[eqCalled, index] + 1]);
-                                addRecIndex[eqCalled, index] = true;
-                                addvar1 = slotpos[eqCalled, addIndex[eqCalled, index] - 1];
-                                addvar2 = slotpos[eqCalled, addIndex[eqCalled, index] + 1];
-                                solution = slotpos[eqCalled, addIndex[eqCalled, index] - 1] = slotpos[eqCalled, addIndex[eqCalled, index]] = slotpos[eqCalled, addIndex[eqCalled, index] + 1] = (addvar1 + addvar2);
-                                Debug.Log("addition: " + solution);
-                                Debug.Log("//ADDITION DONE");
-                        }
+                        Debug.Log(index);
+                        Debug.Log("addition: [" + eqCalled + ", " + addIndex[eqCalled, index] + "]");
+                        Debug.Log(slotpos[eqCalled, addIndex[eqCalled, index] - 1] + " + " + slotpos[eqCalled, addIndex[eqCalled, index] + 1]);
+                        addRecIndex[eqCalled, index] = true;
+                        addvar1 = slotpos[eqCalled, addIndex[eqCalled, index] - 1];
+                        addvar2 = slotpos[eqCalled, addIndex[eqCalled, index] + 1];
+                        solution = slotpos[eqCalled, addIndex[eqCalled, index] - 1] = slotpos[eqCalled, addIndex[eqCalled, index]] = slotpos[eqCalled, addIndex[eqCalled, index] + 1] = (addvar1 + addvar2);
+                        Debug.Log("addition: " + solution);
+                        Debug.Log("//ADDITION DONE");
                     }
                 }
 
@@ -778,14 +755,14 @@ public class GameManager : MonoBehaviour
                 {
                     if (subIndex[eqCalled, index] > 0 && subIndex[eqCalled, index] > startpos && subIndex[eqCalled, index] < endpos && subRecIndex[eqCalled, index] == false)
                     {
-                            Debug.Log("subtraction: [" + eqCalled + ", " + subIndex[eqCalled, index] + "]");
-                            Debug.Log(slotpos[eqCalled, subIndex[eqCalled, index] - 1] + " - " + slotpos[eqCalled, subIndex[eqCalled, index] + 1]);
-                            subRecIndex[eqCalled, index] = true;
-                            subvar1 = slotpos[eqCalled, subIndex[eqCalled, index] - 1];
-                            subvar2 = slotpos[eqCalled, subIndex[eqCalled, index] + 1];
-                            solution = slotpos[eqCalled, subIndex[eqCalled, index]--] = slotpos[eqCalled, subIndex[eqCalled, index]] = slotpos[eqCalled, subIndex[eqCalled, index]++] = subvar1 - subvar2;
-                            Debug.Log("subtraction: " + solution);
-                            Debug.Log("//SUBTRACTION DONE");
+                        Debug.Log("subtraction: [" + eqCalled + ", " + subIndex[eqCalled, index] + "]");
+                        Debug.Log(slotpos[eqCalled, subIndex[eqCalled, index] - 1] + " - " + slotpos[eqCalled, subIndex[eqCalled, index] + 1]);
+                        subRecIndex[eqCalled, index] = true;
+                        subvar1 = slotpos[eqCalled, subIndex[eqCalled, index] - 1];
+                        subvar2 = slotpos[eqCalled, subIndex[eqCalled, index] + 1];
+                        solution = slotpos[eqCalled, subIndex[eqCalled, index]--] = slotpos[eqCalled, subIndex[eqCalled, index]] = slotpos[eqCalled, subIndex[eqCalled, index]++] = subvar1 - subvar2;
+                        Debug.Log("subtraction: " + solution);
+                        Debug.Log("//SUBTRACTION DONE");
                     }
                 }
 
@@ -795,30 +772,18 @@ public class GameManager : MonoBehaviour
 
                 }
 
-                if (IsRecCall == false)
+                if (IsRecCall == false) // ran if eq solved and all recursion done
                 {
-                    if (eqCalled < 6)
-                    {
-                        solutionIndex2[eqCalled] = solution;
-                    }
-                    else
-                    {
-                        solutionIndex3[eqCalled] = solution;
-                    }
-                   
+                    solution = (eqCalled < 6) ? solutionIndex2[eqCalled] = solution : solutionIndex3[eqCalled] = solution;
                     Debug.Log("\\\\---------- Mathfunc Done ----------//");
-                    solution = (solutionIndex2[1]+solutionIndex2[2]+solutionIndex2[3]+solutionIndex2[4]+solutionIndex2[5]+solutionIndex3[6]);
-                    //solution = solution+solutionIndex[4];
+                    solution = (solutionIndex2[1]+solutionIndex2[2]+solutionIndex2[3]+solutionIndex2[4]+solutionIndex2[5]+solutionIndex3[6]+solutionIndex3[7]+solutionIndex3[8]+solutionIndex3[9]);
                     Debug.Log("solution: " + solution);
-                    solutionText.text = ""+solution;/*+ solutionIndex[0] + " "*/ //+(solutionIndex[1]+solutionIndex[2]);
+                    solutionText.text = ""+solution;
                     
-                    slotposUpd();
-                    gameProgression();
-                    EqReset(eqCalled); // maybe an issue?
+                    slotposUpd(); //updates debug menu
+                    gameProgression(); //gives player symbols
+                    EqReset(eqCalled); //resets slot values, must be done last
                 }
-                
-                
-                    
                 break;
             }
             
@@ -829,16 +794,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-            if ((eqCalled + 1) < 10)
+            if ((eqCalled + 1) < 10 && IsRecCall == false)
                 {
                     Debug.Log("//////////////////////////////////////////////////////////////// Next Equation Start");
                     Mathfunc(1, 10, false, eqCalled+1);
-                }
-
-        
-                    
+                }              
     }
-    
     
     public void TutorialControl(bool state, bool antiState)
     {
@@ -895,7 +856,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void QuitToDesktop()
+    public void QuitToDesktop() // self explainitory
     {
         Debug.Log("!!! QUIT CALLED !!!");
         Application.Quit();
@@ -910,7 +871,7 @@ public class GameManager : MonoBehaviour
     public void PauseControl(bool EscToggle) {pausescreen.gameObject.SetActive(EscToggle);
     }
 
-    // Update is called once per frame ----------------------------------------------------------------- VOID UPDATE --
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.BackQuote)) {DebugControl(true); 
@@ -926,9 +887,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) // if odd amt of esc presses then it pauses
         {
             pauseToggle++;
-            if(pauseToggle % 2 == 0) {PauseControl(false); // game is now unpaused below this line ---------------------- UNPAUSED \/
+            if(pauseToggle % 2 == 0) {PauseControl(false);
             }
-            else {PauseControl(true); // game is now paused below this line
+            else {PauseControl(true);
             }
         }
     }
