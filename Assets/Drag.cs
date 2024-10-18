@@ -18,60 +18,36 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public int TutorialNumber;
     public double tempDragStorageStorage; //dont laugh at me
     public Drop currenteqtype;
-    
     public GameObject InventorySlot;
-
-    
     [HideInInspector] public Transform parentAfterDrag;
-    
-    
-    public void  OnPointerEnter(PointerEventData eventData)
-         {   
-            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 21)
+
+    public void  OnPointerEnter(PointerEventData eventData) // shift hotkey
+         {  
+            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 21) //if left shift down and inventory not full
             {
-                SymbolParent = GetComponentInParent<Drop>();
+                SymbolParent = GetComponentInParent<Drop>(); // get slot and set values to 0
                 SymbolParent.IsEmpty();
                 parentAfterDrag = transform.parent;
-                transform.SetParent(InventorySlot.transform);
-                transform.SetAsLastSibling(); 
+                transform.SetParent(InventorySlot.transform); // change parent of symbol to inventory
+                transform.SetAsLastSibling();
             }
          }
-    
+   
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("begin drag");
         SymbolParent = GetComponentInParent<Drop>();
-        SymbolParent.IsNowEmpty = true;
-        
-        //gameManager.tempdragstorage = SymbolParent.GetComponentInParent(typeof(Drop)) as Drop;
-        //gameManager.eqIndex[drop.EqSlotNum] = 0;
-        //Drop.EqSlotNum = 0;
-        
-        
-        parentAfterDrag = transform.parent;
+        SymbolParent.IsNowEmpty = true; // sets previous parents values to 0
+       
+        parentAfterDrag = transform.parent; // removing parent and setting to layer ontop of everything
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         Image.raycastTarget = false;
-
-        
-        gameManager.tempdragstorage = Value;
+     
+        gameManager.tempdragstorage = Value; //storing values
         gameManager.TutorialDesc = TutorialNumber;
         gameManager.TempMergeStorage = CanMerge;
         gameManager.TempEqStorage = EqType;
-        
-        
-                //if (currenteqtype.eqSlotDetermine == true)
-        //    {
-                
-        //    }
-        
-        //Debug.Log(TutorialNumber);
-
-        // experimental
-        /*
-        gameManager.alphaGrid.raycastTarget = false;
-        gameManager.betaGrid.raycastTarget = false;
-        */
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -82,17 +58,15 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("end drag");
-        if (SymbolParent.transform == parentAfterDrag.transform)
+        if (SymbolParent.transform == parentAfterDrag.transform) // condition met if player drags into nothing
         {
-            Debug.Log("///////////////////////////yipee");
+            Debug.Log("drag failed");
             transform.SetParent(parentAfterDrag);
             Image.raycastTarget = true;
             SymbolParent.IsNowEmpty = false;
             Debug.Log("Empty = false");
-
             gameManager.slotpos[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.tempdragstorage;
-
-            switch (SymbolType)
+            switch (SymbolType) // sets symbol types
             {
                 case 1:
                     gameManager.addslot = SymbolParent.SlotObjN;
@@ -147,55 +121,26 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
                     gameManager.rootendIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rootend;
                     Debug.Log("rootend: " + gameManager.rootend);
                     break;
-                    
+                   
                 default:
                     break;
             }
-
-                
-
         }
         else
         {
-
-            
             transform.SetParent(parentAfterDrag);
-            
-            /*gameManager.alphaGrid.raycastTarget = true;
-            gameManager.betaGrid.raycastTarget = true;*/
             Image.raycastTarget = true;
-
-            
             SymbolParent.IsNowEmpty = false;
             Debug.Log("Empty = false");
-            
-            //Drop.CraftCheck();
-
         }
-
-
- 
-
-       
-        
-        
-
-        
     }
-    
+   
     void Start()
     {
         gameManager = GameObject.Find("Game Manager")
         .GetComponent<GameManager>();
-        /*
-        Drop drop = GameObject.Find("Slot1");
-        .GetComponent<Drop>();
-        */
-        //OutputSlot = GameObject.Find("OutputSlot");
         currenteqtype = GetComponent<Drop>();
-          
         InventorySlot = GameObject.Find("Inventory Slot");
-
         Image = GetComponent<Image>();
         startPosition = transform.position;
     }
