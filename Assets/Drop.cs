@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
+public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public GameManager gameManager;
     public int SlotObjN; //object Slot number
@@ -53,13 +53,22 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     public bool stopInstantly = false;
    
     public void  OnPointerEnter(PointerEventData eventData) //if mouse enters an equation
-         {  
-            if (eqSlotDetermine == true && Input.GetMouseButton(0) == false)
-            {
-                AssignEqSlot = EqSlotNum; // in slot 1's case: 1
-                gameManager.TempEqPosStorage = AssignEqSlot;
-            }
-         }
+    {  
+        if (eqSlotDetermine == true && (Input.GetMouseButton(0) || Input.GetKey("left shift")))
+        {
+            AssignEqSlot = EqSlotNum;
+            gameManager.TempEqPosStorage = AssignEqSlot;
+            Debug.Log(gameManager.TempEqPosStorage);
+        }
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (eqSlotDetermine == true && Input.GetMouseButton(0) == false )
+        {
+            gameManager.TempEqPosStorage = 0;
+            Debug.Log(gameManager.TempEqPosStorage);
+        }
+    }
          
     public void OnDrop(PointerEventData eventData) //on symbol dropped
     {

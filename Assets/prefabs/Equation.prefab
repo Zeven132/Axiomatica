@@ -200,6 +200,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -209,6 +210,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -444,6 +453,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -453,6 +463,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -486,6 +504,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &6977357282435663518
 MonoBehaviour:
@@ -712,6 +731,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -721,6 +741,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -754,6 +782,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &4990256742902644949
 MonoBehaviour:
@@ -980,6 +1009,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -989,6 +1019,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -1022,6 +1060,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &7005180910339040860
 MonoBehaviour:
@@ -1248,6 +1287,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -1257,6 +1297,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -1290,6 +1338,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &2944992422443079069
 MonoBehaviour:
@@ -1516,6 +1565,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -1525,6 +1575,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -1558,6 +1616,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &721929827647196998
 MonoBehaviour:
@@ -1784,6 +1843,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -1793,6 +1853,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -1826,6 +1894,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &588863625270060975
 MonoBehaviour:
@@ -2223,6 +2292,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!1 &3911804674184740314
 GameObject:
@@ -2425,6 +2495,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -2434,6 +2505,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -2467,6 +2546,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &3136665348008263650
 MonoBehaviour:
@@ -2827,6 +2907,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -2836,6 +2917,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -2869,6 +2958,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &571710423577841620
 MonoBehaviour:
@@ -3229,6 +3319,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 0
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -3238,6 +3329,14 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
@@ -3271,6 +3370,7 @@ MonoBehaviour:
   TutorialNumber: 0
   tempDragStorageStorage: 0
   currenteqtype: {fileID: 0}
+  InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!114 &4089487407170653970
 MonoBehaviour:
@@ -3308,6 +3408,7 @@ GameObject:
   - component: {fileID: 4423267135194899881}
   - component: {fileID: 3154514356464186808}
   - component: {fileID: 3382746380393106291}
+  - component: {fileID: 9404421281322996}
   m_Layer: 5
   m_Name: Alpha Equation Grid
   m_TagString: Untagged
@@ -3406,3 +3507,51 @@ MonoBehaviour:
   m_Spacing: {x: 65, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &9404421281322996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508702626470561572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e16721d3ac00467e985611bf648ad29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  SlotObjN: 0
+  EqSlotNum: 1
+  Number: 
+  eqSlotDetermine: 1
+  IsNowEmpty: 0
+  CraftSlot: 0
+  CraftSlotPos: 0
+  isInvSlot: 0
+  one: {fileID: 0}
+  two: {fileID: 0}
+  three: {fileID: 0}
+  four: {fileID: 0}
+  five: {fileID: 0}
+  six: {fileID: 0}
+  seven: {fileID: 0}
+  eight: {fileID: 0}
+  nine: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
+  OutputNumbers: []
+  OutputSlot: {fileID: 0}
+  OutputSlotPos: {fileID: 0}
+  CraftSlot1: {fileID: 0}
+  CraftSlot2: {fileID: 0}
+  CraftingGrid: {fileID: 0}
+  CraftingGridTrans: {fileID: 0}
+  CraftSlot1Trans: {fileID: 0}
+  CraftSlot2Trans: {fileID: 0}
+  stopInstantly: 0

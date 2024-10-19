@@ -23,7 +23,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void  OnPointerEnter(PointerEventData eventData) // shift hotkey
          {  
-            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 21) //if left shift down and inventory not full
+            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 21 && Input.GetMouseButton(0) == false) //if left shift down and inventory not full
             {
                 SymbolParent = GetComponentInParent<Drop>(); // get slot and set values to 0
                 SymbolParent.IsEmpty();
@@ -35,7 +35,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
    
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("begin drag");
+        Debug.Log("begin drag --------------------\\");
         SymbolParent = GetComponentInParent<Drop>();
         SymbolParent.IsNowEmpty = true; // sets previous parents values to 0
        
@@ -57,10 +57,10 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("end drag");
+        Debug.Log("end drag --------------------/");
         if (SymbolParent.transform == parentAfterDrag.transform) // condition met if player drags into nothing
         {
-            Debug.Log("drag failed");
+            Debug.Log("!!! drag failed !!!");
             transform.SetParent(parentAfterDrag);
             Image.raycastTarget = true;
             SymbolParent.IsNowEmpty = false;

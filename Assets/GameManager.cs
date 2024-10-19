@@ -201,14 +201,13 @@ public class GameManager : MonoBehaviour
         PlayerStats = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
         resetMultiplyer = PlayerStats.resetMultiplyer;
         targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
-        if (resetMultiplyer > 1) {Intro.gameObject.SetActive(false);
-        }
+        if (resetMultiplyer > 1) {Intro.gameObject.SetActive(false);}
     }
 
     public void ToggleEncryption(bool EncryptionEnabled) {this.EncryptionEnabled = EncryptionEnabled; // encryption is unused
     }
 
-    public void SerializeJson()                                                                             // credit for entire save/load file system: https://www.youtube.com/watch?v=mntS45g8OK4
+    public void SerializeJson() // credit for entire save/load file system: https://www.youtube.com/watch?v=mntS45g8OK4
     {
         long startTime = DateTime.Now.Ticks;
         if (DataService.SaveData("/player-stats.json", PlayerStats, EncryptionEnabled))
@@ -273,18 +272,12 @@ public class GameManager : MonoBehaviour
         if (symbolVal < 5)
         {
             Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
-            if (rnd.Next(10) == 1) // 1/10 chance
-                {
-                    Instantiate(addition, StorageSlot);
-                }
+            if (rnd.Next(10) == 1) {Instantiate(addition, StorageSlot);} // 1/10 chance
         }
         else
         {
             Random rnd = new Random();
-            if (rnd.Next(25) == 1) // 1/25 chance
-                {
-                    Instantiate(multiplication, StorageSlot);
-                }
+            if (rnd.Next(25) == 1) {Instantiate(multiplication, StorageSlot);} // 1/25 chance
         }
     }
    
@@ -299,10 +292,7 @@ public class GameManager : MonoBehaviour
             SerializeJson();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        else
-        {
-            StartCoroutine(ResetWarning());
-        }
+        else {StartCoroutine(ResetWarning());}
     }
 
     IEnumerator ResetWarning() //called if player attempts to prestige to get a lower resetmult than they already have
@@ -365,7 +355,6 @@ public class GameManager : MonoBehaviour
                             GetSymbol(5);
                         }
                     }
-
                 }
                 else if (resetMultiplyer > 10)
                 {
@@ -376,7 +365,6 @@ public class GameManager : MonoBehaviour
                             GetSymbol(4);
                         }
                     }
-
                 }
                 else if (resetMultiplyer > 4)
                 {
@@ -413,7 +401,6 @@ public class GameManager : MonoBehaviour
         {
             Intro.gameObject.SetActive(false);
         }
-
     }
 
     public void EquationUnlock(int upToX) // makes unlocked equations active
@@ -447,23 +434,20 @@ public class GameManager : MonoBehaviour
     }
 
     // Runs the math function
-    public void UpdateScore()
-    {
-        Mathfunc(1, 10, false, 1);
-    }
+    public void UpdateScore(){Mathfunc(1, 10, false, 1);}
 
     public void slotposUpd() //updates debug menu along with some text //there must be a better way to do this (i cant be fucked to figure it out though lmao, hi reader :3c)
     {
-       
-        slotpos1Text.text = ""+slotpos[0, 1]+" "+slotpos[0, 2]+" "+slotpos[0, 3]+" "+slotpos[0, 4]+" "+slotpos[0, 5]+" "+slotpos[0, 6]+" "+slotpos[0, 7]+" "+slotpos[0, 8]+" "+slotpos[0, 9]+" "+slotpos[0, 10]
-        +"\n"+slotpos[1, 1]+" "+slotpos[1, 2]+" "+slotpos[1, 3]+" "+slotpos[1, 4]+" "+slotpos[1, 5]+" "+slotpos[1, 6]+" "+slotpos[1, 7]+" "+slotpos[1, 8]+" "+slotpos[1, 9]+" "+slotpos[1, 10]
-        +"\n"+slotpos[2, 1]+" "+slotpos[2, 2]+" "+slotpos[2, 3]+" "+slotpos[2, 4]+" "+slotpos[2, 5]+" "+slotpos[2, 6]+" "+slotpos[2, 7]+" "+slotpos[2, 8]+" "+slotpos[2, 9]+" "+slotpos[2, 10]
-        +"\n"+slotpos[3, 1]+" "+slotpos[3, 2]+" "+slotpos[3, 3]+" "+slotpos[3, 4]+" "+slotpos[3, 5]+" "+slotpos[3, 6]+" "+slotpos[3, 7]+" "+slotpos[3, 8]+" "+slotpos[3, 9]+" "+slotpos[3, 10]
-        +"\n"+slotpos[4, 1]+" "+slotpos[4, 2]+" "+slotpos[4, 3]+" "+slotpos[4, 4]+" "+slotpos[4, 5]+" "+slotpos[4, 6]+" "+slotpos[4, 7]+" "+slotpos[4, 8]+" "+slotpos[4, 9]+" "+slotpos[4, 10]
-        +"\n"+slotpos[5, 1]+" "+slotpos[5, 2]+" "+slotpos[5, 3]+" "+slotpos[5, 4]+" "+slotpos[5, 5]+" "+slotpos[5, 6]+" "+slotpos[5, 7]+" "+slotpos[5, 8]+" "+slotpos[5, 9]+" "+slotpos[5, 10]
-        +"\n"+slotpos[6, 1]+" "+slotpos[6, 2]+" "+slotpos[6, 3]+" "+slotpos[6, 4]+" "+slotpos[6, 5]+" "+slotpos[6, 6]+" "+slotpos[6, 7]+" "+slotpos[6, 8]+" "+slotpos[6, 9]+" "+slotpos[6, 10]
-        +"\n"+slotpos[7, 1]+" "+slotpos[7, 2]+" "+slotpos[7, 3]+" "+slotpos[7, 4]+" "+slotpos[7, 5]+" "+slotpos[7, 6]+" "+slotpos[7, 7]+" "+slotpos[7, 8]+" "+slotpos[7, 9]+" "+slotpos[7, 10]
-        ;
+        slotpos1Text.text = "";
+        for (int i=0;i<8; i++) //for each row
+        {
+            for(int k=1;k<11;k++) // for each element
+            {
+                slotpos1Text.text += slotpos[i,k]+" ";
+            }
+            slotpos1Text.text += "\n";
+        }
+        
         eqSlotText.text = "row 0 |"+eqIndex[0]+"|"+solutionIndex[0]
         +"|\nrow 1 |"+eqIndex[1]+"|"+solutionIndex[1]
         +"|\nrow 2 |"+eqIndex[2]+"|"+solutionIndex[2]
@@ -471,44 +455,98 @@ public class GameManager : MonoBehaviour
         +"|\nrow 4 |"+eqIndex2[4]+"|"+solutionIndex2[4]
         +"|\nrow 5 |"+eqIndex2[5]+"|"+solutionIndex2[5]
         ;
-        pwrslotText.text = "\t-- internal symbol slot data --\n---------------------------------------\nLbrack 1 = "+lbrackIndex[1, 1]+" "+lbrackIndex[1, 2]+" "+lbrackIndex[1, 3]+" "+lbrackIndex[1, 4]+" "+lbrackIndex[1, 5]+" "+lbrackIndex[1, 6]+" "+lbrackIndex[1, 7]+" "+lbrackIndex[1, 8]+" "+lbrackIndex[1, 9]+" "+lbrackIndex[1, 10]
-        +"\nLbrack 2 = "+lbrackIndex[2, 1]+" "+lbrackIndex[2, 2]+" "+lbrackIndex[2, 3]+" "+lbrackIndex[2, 4]+" "+lbrackIndex[2, 5]+" "+lbrackIndex[2, 6]+" "+lbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+lbrackIndex[2, 9]+" "+lbrackIndex[2, 10]
-        +"\nLbrack 3 = "+lbrackIndex[3, 1]+" "+lbrackIndex[3, 2]+" "+lbrackIndex[3, 3]+" "+lbrackIndex[3, 4]+" "+lbrackIndex[3, 5]+" "+lbrackIndex[3, 6]+" "+lbrackIndex[3, 7]+" "+lbrackIndex[3, 8]+" "+lbrackIndex[3, 9]+" "+lbrackIndex[3, 10]
-       
-        +"\n---------------------------------------\nRbrack 1 = "+rbrackIndex[1, 1]+" "+rbrackIndex[1, 2]+" "+rbrackIndex[1, 3]+" "+rbrackIndex[1, 4]+" "+rbrackIndex[1, 5]+" "+rbrackIndex[1, 6]+" "+rbrackIndex[1, 7]+" "+rbrackIndex[1, 8]+" "+rbrackIndex[1, 9]+" "+rbrackIndex[1, 10]
-        +"\nRbrack 2 = "+rbrackIndex[2, 1]+" "+rbrackIndex[2, 2]+" "+rbrackIndex[2, 3]+" "+rbrackIndex[2, 4]+" "+rbrackIndex[2, 5]+" "+rbrackIndex[2, 6]+" "+rbrackIndex[2, 7]+" "+rbrackIndex[2, 8]+" "+rbrackIndex[2, 9]+" "+rbrackIndex[2, 10]
-        +"\nRbrack 3 = "+rbrackIndex[3, 1]+" "+rbrackIndex[3, 2]+" "+rbrackIndex[3, 3]+" "+rbrackIndex[3, 4]+" "+rbrackIndex[3, 5]+" "+rbrackIndex[3, 6]+" "+rbrackIndex[3, 7]+" "+rbrackIndex[3, 8]+" "+rbrackIndex[3, 9]+" "+rbrackIndex[3, 10]
-       
-        +"\n---------------------------------------\nRootstart 1 = "+rootstartIndex[1, 1]+" "+rootstartIndex[1, 2]+" "+rootstartIndex[1, 3]+" "+rootstartIndex[1, 4]+" "+rootstartIndex[1, 5]+" "+rootstartIndex[1, 6]+" "+rootstartIndex[1, 7]+" "+rootstartIndex[1, 8]+" "+rootstartIndex[1, 9]+" "+rootstartIndex[1, 10]
-        +"\nRootstart 2 = "+rootstartIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootstartIndex[2, 3]+" "+rootstartIndex[2, 4]+" "+rootstartIndex[2, 5]+" "+rootstartIndex[2, 6]+" "+rootstartIndex[2, 7]+" "+rootstartIndex[2, 8]+" "+rootstartIndex[2, 9]+" "+rootstartIndex[2, 10]
-        +"\nRootstart 3 = "+rootstartIndex[3, 1]+" "+rootendIndex[3, 2]+" "+rootstartIndex[3, 3]+" "+rootstartIndex[3, 4]+" "+rootstartIndex[3, 5]+" "+rootstartIndex[3, 6]+" "+rootstartIndex[3, 7]+" "+rootstartIndex[3, 8]+" "+rootstartIndex[3, 9]+" "+rootstartIndex[3, 10]
-       
-        +"\n---------------------------------------\nRootend 1 = "+rootendIndex[1, 1]+" "+rootendIndex[1, 2]+" "+rootendIndex[1, 3]+" "+rootendIndex[1, 4]+" "+rootendIndex[1, 5]+" "+rootendIndex[1, 6]+" "+rootendIndex[1, 7]+" "+rootendIndex[1, 8]+" "+rootendIndex[1, 9]+" "+rootendIndex[1, 10]
-        +"\nRootend 2 = "+rootendIndex[2, 1]+" "+rootendIndex[2, 2]+" "+rootendIndex[2, 3]+" "+rootendIndex[2, 4]+" "+rootendIndex[2, 5]+" "+rootendIndex[2, 6]+" "+rootendIndex[2, 7]+" "+rootendIndex[2, 8]+" "+rootendIndex[2, 9]+" "+rootendIndex[2, 10]
-        +"\nRootend 3 = "+rootendIndex[3, 1]+" "+rootendIndex[3, 2]+" "+rootendIndex[3, 3]+" "+rootendIndex[3, 4]+" "+rootendIndex[3, 5]+" "+rootendIndex[3, 6]+" "+rootendIndex[3, 7]+" "+rootendIndex[3, 8]+" "+rootendIndex[3, 9]+" "+rootendIndex[3, 10]
 
-        +"\n---------------------------------------\nPwrslot 1 = "+pwrIndex[1, 1]+" "+pwrIndex[1, 2]+" "+pwrIndex[1, 3]+" "+pwrIndex[1, 4]+" "+pwrIndex[1, 5]+" "+pwrIndex[1, 6]+" "+pwrIndex[1, 7]+" "+pwrIndex[1, 8]+" "+pwrIndex[1, 9]+" "+pwrIndex[1, 10]
-        +"\nPwrslot 2 = "+pwrIndex[2, 1]+" "+pwrIndex[2, 2]+" "+pwrIndex[2, 3]+" "+pwrIndex[2, 4]+" "+pwrIndex[2, 5]+" "+pwrIndex[2, 6]+" "+pwrIndex[2, 7]+" "+pwrIndex[2, 8]+" "+pwrIndex[2, 9]+" "+pwrIndex[2, 10]
-        +"\nPwrslot 3 = "+pwrIndex[3, 1]+" "+pwrIndex[3, 2]+" "+pwrIndex[3, 3]+" "+pwrIndex[3, 4]+" "+pwrIndex[3, 5]+" "+pwrIndex[3, 6]+" "+pwrIndex[3, 7]+" "+pwrIndex[3, 8]+" "+pwrIndex[3, 9]+" "+pwrIndex[3, 10]
-       
-        +"\n---------------------------------------\nDivslot 1 = "+divIndex[1, 1]+" "+divIndex[1, 2]+" "+divIndex[1, 3]+" "+divIndex[1, 4]+" "+divIndex[1, 5]+" "+divIndex[1, 6]+" "+divIndex[1, 7]+" "+divIndex[1, 8]+" "+divIndex[1, 9]+" "+divIndex[1, 10]
-        +"\nDivslot 2 = "+divIndex[2, 1]+" "+divIndex[2, 2]+" "+divIndex[2, 3]+" "+divIndex[2, 4]+" "+divIndex[2, 5]+" "+divIndex[2, 6]+" "+divIndex[2, 7]+" "+divIndex[2, 8]+" "+divIndex[2, 9]+" "+divIndex[2, 10]
-        +"\nDivslot 2 = "+divIndex[3, 1]+" "+divIndex[3, 2]+" "+divIndex[3, 3]+" "+divIndex[3, 4]+" "+divIndex[3, 5]+" "+divIndex[3, 6]+" "+divIndex[3, 7]+" "+divIndex[3, 8]+" "+divIndex[3, 9]+" "+divIndex[3, 10]
-       
-        +"\n---------------------------------------\nMultslot 1 = "+multIndex[1, 1]+" "+multIndex[1, 2]+" "+multIndex[1, 3]+" "+multIndex[1, 4]+" "+multIndex[1, 5]+" "+multIndex[1, 6]+" "+multIndex[1, 7]+" "+multIndex[1, 8]+" "+multIndex[1, 9]+" "+multIndex[1, 10]
-        +"\nMultslot 2 = "+multIndex[2, 1]+" "+multIndex[2, 2]+" "+multIndex[2, 3]+" "+multIndex[2, 4]+" "+multIndex[2, 5]+" "+multIndex[2, 6]+" "+multIndex[2, 7]+" "+multIndex[2, 8]+" "+multIndex[2, 9]+" "+multIndex[2, 10]
-        +"\nMultslot 3 = "+multIndex[3, 1]+" "+multIndex[3, 2]+" "+multIndex[3, 3]+" "+multIndex[3, 4]+" "+multIndex[3, 5]+" "+multIndex[3, 6]+" "+multIndex[3, 7]+" "+multIndex[3, 8]+" "+multIndex[3, 9]+" "+multIndex[3, 10]
-       
-        +"\n---------------------------------------\nAddslot 1 = "+""+addIndex[1, 1]+" "+addIndex[1, 2]+" "+addIndex[1, 3]+" "+addIndex[1, 4]+" "+addIndex[1, 5]+" "+addIndex[1, 6]+" "+addIndex[1, 7]+" "+addIndex[1, 8]+" "+addIndex[1, 9]+" "+addIndex[1, 10]
-        +"\nAddslot 2 = "+addIndex[2, 1]+" "+addIndex[2, 2]+" "+addIndex[2, 3]+" "+addIndex[2, 4]+" "+addIndex[2, 5]+" "+addIndex[2, 6]+" "+addIndex[2, 7]+" "+addIndex[2, 8]+" "+addIndex[2, 9]+" "+addIndex[2, 10]
-        +"\nAddslot 3 = "+addIndex[3, 1]+" "+addIndex[3, 2]+" "+addIndex[3, 3]+" "+addIndex[3, 4]+" "+addIndex[3, 5]+" "+addIndex[3, 6]+" "+addIndex[3, 7]+" "+addIndex[3, 8]+" "+addIndex[3, 9]+" "+addIndex[3, 10]
-       
-        +"\n---------------------------------------\nSubslot 1 = "+subIndex[1, 1]+" "+subIndex[1, 2]+" "+subIndex[1, 3]+" "+subIndex[1, 4]+" "+subIndex[1, 5]+" "+subIndex[1, 6]+" "+subIndex[1, 7]+" "+subIndex[1, 8]+" "+subIndex[1, 9]+" "+subIndex[1, 10]
-        +"\nSubslot 2 = "+subIndex[2, 1]+" "+subIndex[2, 2]+" "+subIndex[2, 3]+" "+subIndex[2, 4]+" "+subIndex[2, 5]+" "+subIndex[2, 6]+" "+subIndex[2, 7]+" "+subIndex[2, 8]+" "+subIndex[2, 9]+" "+subIndex[2, 10]
-        +"\nSubslot 3 = "+subIndex[3, 1]+" "+subIndex[3, 2]+" "+subIndex[3, 3]+" "+subIndex[3, 4]+" "+subIndex[3, 5]+" "+subIndex[3, 6]+" "+subIndex[3, 7]+" "+subIndex[3, 8]+" "+subIndex[3, 9]+" "+subIndex[3, 10]
-       
-        +"\n---------------------------------------";
-       
+        pwrslotText.text = "     -- internal symbol slot data --\n---------------------------------------\n lbrack\n";
+        for (int i=1;i<5; i++) // Left Bracket
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text +=lbrackIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n rbrack\n";
+        for (int i=1;i<5; i++) // Right Bracket
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += rbrackIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n rootstart\n";
+        for (int i=1;i<5; i++) // Root Start
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += rootstartIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n rootend\n";
+        for (int i=1;i<5; i++) // Root end
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += rootendIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n exponentiation\n";
+        for (int i=1;i<5; i++) // Power
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += pwrIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n division\n";
+        for (int i=1;i<5; i++) // Division
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += divIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n multiplication\n";
+        for (int i=1;i<5; i++) // Multiplication
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += multIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n addition\n";
+        for (int i=1;i<5; i++) // Addition
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += addIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------\n subtraction\n";
+        for (int i=1;i<5; i++) // Subtraction
+        {
+            pwrslotText.text += $"row {i}: ";
+            for(int k=1;k<11;k++)
+            {
+                pwrslotText.text += subIndex[i,k]+" ";
+            }
+            pwrslotText.text += "\n";
+        }
+        pwrslotText.text += "---------------------------------------";
         rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage;
        
         pauseCountText.text = "\t-- crafting slot data --\n---------------------------------------\n"
