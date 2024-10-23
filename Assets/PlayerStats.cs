@@ -5,4 +5,5 @@ using System.Collections.Generic;
 public class PlayerStats 
 {
     public double resetMultiplyer;
+    public float playTime;
 }
