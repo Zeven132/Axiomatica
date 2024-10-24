@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI pauseCountText;
     public TextMeshProUGUI symbolClaimText;
     public TextMeshProUGUI ExtraInfoText;
+    public TextMeshProUGUI endTime;
    
     // Misc Images
     public Image TutorialList;
@@ -91,6 +92,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject BVSymbol;
     public GameObject WinScreen;
+    public GameObject InventorySlot;
    
     // Slot numeric values
     public double[,] slotpos = new double [12, 11]; // used during calculation
@@ -165,6 +167,7 @@ public class GameManager : MonoBehaviour
    
     // misc
     public int pauseToggle = 0;
+    public bool gameWon = false;
 
     //variables used for other game mechanics other than calculation
     public double record = 0; // high score in current game
@@ -334,11 +337,16 @@ public class GameManager : MonoBehaviour
     // this is where game progression is controlled, ran just before temp values are reset
     public void gameProgression()
     {
-        record = (solution > record) ? record = solution : record = record; // shorthand if // 0 for now. fix later               // record is y, output is x
+        record = (solution > record) ? record = solution : record = record; // update record
         if (record >= 100000)
         {
-            //EquationUnlock(5);
-            WinScreen.SetActive(true);
+            EquationUnlock(5);
+            if (gameWon == false)
+            {
+                WinScreen.SetActive(true);
+                gameWon = true;
+                endTime.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}");
+            }
         }
         else if (record >= 25000){EquationUnlock(4);}
         else if (record >= 10000){EquationUnlock(3);}
@@ -792,7 +800,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (double.IsInfinity(solution) || double.IsNaN(solution)) // error-handling for NaNs and Infinities
                     {
-                        //Instantiate(BVSymbol, StorageSlot);
+                        
                         solution = 0;
                     }
                     solution = (eqCalled < 6) ? solutionIndex2[eqCalled] = solution : solutionIndex3[eqCalled] = solution; // error handling for broken array
@@ -882,12 +890,9 @@ public class GameManager : MonoBehaviour
         PlayerStats.playTime = playTime;
         Application.Quit();
     }
+    
 
-    public void DeleteWinScreen()
-    {
-        //uuuuoooogggghhhhhh ill do it laterrrrr,,,,,,
-    }
-   
+
     // debug menu controls
     public void DebugControl(bool TildaDown)
     {
@@ -906,7 +911,7 @@ public class GameManager : MonoBehaviour
     {
         //SaveTime =  - startTime;
         playTime = Time.timeSinceLevelLoad + PlayerStats.playTime;
-        SaveTimeText.SetText($"Play Time: {(playTime)}");
+        SaveTimeText.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}");
         if (Input.GetKeyDown(KeyCode.BackQuote)) {DebugControl(true);}
         if (Input.GetKeyUp(KeyCode.BackQuote)) {DebugControl(false);}
         if (Input.GetKeyDown(KeyCode.H)) { TutorialControl(true, false);}

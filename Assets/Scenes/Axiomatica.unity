@@ -219,6 +219,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -230,13 +231,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2294649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -388,7 +389,7 @@ GameObject:
   - component: {fileID: 4109646}
   - component: {fileID: 4109645}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: endTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,8 +436,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Total playtime:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
+  m_sharedMaterial: {fileID: -7130737770211262945, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -606,6 +607,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -617,13 +619,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &4647829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -780,7 +782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5767652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -793,11 +795,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1304213427}
+  m_Father: {fileID: 548757447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1222.3376, y: -541.31}
+  m_AnchoredPosition: {x: 420.80017, y: -387.5417}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5767653
@@ -1018,6 +1020,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -1029,13 +1032,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &12931532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1296,6 +1299,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -1307,13 +1311,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &21288549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1510,8 +1514,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You have won the game you can choose to continue playing if you want, but
-    be advised that there are no more new things to unlock.
+  m_text: "You have won the game! \nYou can choose to continue playing if you want,
+    but be advised that there are no more new things to unlock."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1818,6 +1822,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -1829,13 +1834,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &40518318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2096,6 +2101,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -2107,13 +2113,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &42895384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2456,6 +2462,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -2467,13 +2474,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &52685224
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2948,6 +2955,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -2959,13 +2967,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &69756381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3226,6 +3234,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -3237,13 +3246,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &79711038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3638,6 +3647,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -3649,13 +3659,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &96265139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4055,6 +4065,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -4066,13 +4077,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &103366567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4453,6 +4464,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -4464,13 +4476,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &117455264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4828,10 +4840,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810424841}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: DeleteWinScreen
-        m_Mode: 1
+      - m_Target: {fileID: 1559320161}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5019,6 +5031,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -5030,13 +5043,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &127055163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,6 +5556,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -5554,13 +5568,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &148704391
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5795,6 +5809,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -5806,13 +5821,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &148783358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6046,6 +6061,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -6057,13 +6073,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &151592874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6215,6 +6231,7 @@ MonoBehaviour:
   seven: {fileID: 233786058}
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -6235,13 +6252,13 @@ MonoBehaviour:
   - {fileID: 4828118107205286272, guid: 068efb4739fbc3f479388e4b1c6f1329, type: 3}
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 188524088}
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &152492717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6836,6 +6853,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -6847,13 +6865,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &161037988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7811,6 +7829,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192636764}
   m_CullTransparentMesh: 1
+--- !u!1 &193873088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193873089}
+  - component: {fileID: 193873092}
+  - component: {fileID: 193873091}
+  - component: {fileID: 193873090}
+  m_Layer: 5
+  m_Name: cheat1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &193873089
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193873088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &193873090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193873088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 193873091}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &193873091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193873088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 18189d217ee352549825012c2307dac2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &193873092
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193873088}
+  m_CullTransparentMesh: 1
 --- !u!1 &198842533
 GameObject:
   m_ObjectHideFlags: 0
@@ -7932,6 +8082,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -7943,13 +8094,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &198842538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8457,6 +8608,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -8468,13 +8620,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &235640414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10066,6 +10218,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -10077,13 +10230,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &344432698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10403,6 +10556,316 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352557794}
   m_CullTransparentMesh: 1
+--- !u!1 &353421350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353421351}
+  - component: {fileID: 353421353}
+  - component: {fileID: 353421352}
+  - component: {fileID: 353421354}
+  m_Layer: 5
+  m_Name: cheat menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &353421351
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353421350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 193873089}
+  - {fileID: 1836145420}
+  - {fileID: 1325060475}
+  - {fileID: 995162732}
+  - {fileID: 1363606511}
+  - {fileID: 598741782}
+  - {fileID: 1824727961}
+  - {fileID: 1297405801}
+  - {fileID: 360431067}
+  - {fileID: 2001523577}
+  - {fileID: 558856807}
+  - {fileID: 537857795}
+  - {fileID: 880465391}
+  - {fileID: 1322455264}
+  - {fileID: 956766422}
+  - {fileID: 1846496735}
+  - {fileID: 1059630949}
+  - {fileID: 1338444951}
+  - {fileID: 928644095}
+  m_Father: {fileID: 2072814946}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 468, y: 394}
+  m_SizeDelta: {x: 459.623, y: 11.8923}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &353421352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353421350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: cheat menu
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
+  m_sharedMaterial: {fileID: -7130737770211262945, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -0.38224033, w: -0.033552177}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &353421353
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353421350}
+  m_CullTransparentMesh: 1
+--- !u!114 &353421354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353421350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 20
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 40, y: 40}
+  m_Spacing: {x: 10, y: 10}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!1 &360431066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360431067}
+  - component: {fileID: 360431070}
+  - component: {fileID: 360431069}
+  - component: {fileID: 360431068}
+  m_Layer: 5
+  m_Name: cheat9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &360431067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360431066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &360431068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360431066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 360431069}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &360431069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360431066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2cbb468f773c1e94aad3c0841c3302b8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &360431070
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360431066}
+  m_CullTransparentMesh: 1
 --- !u!1 &361200081
 GameObject:
   m_ObjectHideFlags: 0
@@ -10524,6 +10987,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -10535,13 +10999,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &361200086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10941,6 +11405,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -10952,13 +11417,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &384967433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11407,6 +11872,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -11418,13 +11884,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &398930483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11832,6 +12298,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -11843,13 +12310,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &427536860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12394,6 +12861,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -12405,13 +12873,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &441238142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12647,6 +13115,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -12658,13 +13127,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &441667839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12904,6 +13373,7 @@ MonoBehaviour:
   seven: {fileID: 233786058}
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
+  addition: {fileID: 0}
   multiplication: {fileID: 943325937}
   leftBracket: {fileID: 99428251}
   rightBracket: {fileID: 1049444779}
@@ -12924,13 +13394,13 @@ MonoBehaviour:
   - {fileID: 4828118107205286272, guid: 068efb4739fbc3f479388e4b1c6f1329, type: 3}
   OutputSlot: {fileID: 457251404}
   OutputSlotPos: {fileID: 457251405}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 188524088}
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 188524089}
   CraftSlot2Trans: {fileID: 1036371156}
-  stopInstantly: 0
 --- !u!114 &457251409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13657,6 +14127,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -13668,13 +14139,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &498153736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13848,6 +14319,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -13859,13 +14331,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &511216169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14487,6 +14959,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -14498,13 +14971,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &523627663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14765,6 +15238,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -14776,13 +15250,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &527268856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14922,6 +15396,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527268851}
   m_CullTransparentMesh: 1
+--- !u!1 &537857794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 537857795}
+  - component: {fileID: 537857798}
+  - component: {fileID: 537857797}
+  - component: {fileID: 537857796}
+  m_Layer: 5
+  m_Name: cheat8 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &537857795
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537857794}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &537857796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537857794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 537857797}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &537857797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537857794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ecfaa378fd04da94ab4067a18be89c9f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &537857798
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537857794}
+  m_CullTransparentMesh: 1
 --- !u!224 &538024628 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3828586065197416402, guid: 9c5b638e7ee91b842b73e0b6b27825d0, type: 3}
@@ -15048,6 +15654,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -15059,13 +15666,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &539360629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15236,6 +15843,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 86191093}
+  - {fileID: 5767652}
   - {fileID: 439644134}
   - {fileID: 37008340}
   m_Father: {fileID: 2072814946}
@@ -15888,6 +16496,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -15899,13 +16508,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &557267847
 GameObject:
   m_ObjectHideFlags: 0
@@ -16039,6 +16648,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557267847}
+  m_CullTransparentMesh: 1
+--- !u!1 &558856806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558856807}
+  - component: {fileID: 558856810}
+  - component: {fileID: 558856809}
+  - component: {fileID: 558856808}
+  m_Layer: 5
+  m_Name: cheat8 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &558856807
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558856806}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &558856808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558856806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 558856809}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &558856809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558856806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6261d0b65ecc2334993f1d3b9f3a47ae, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &558856810
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558856806}
   m_CullTransparentMesh: 1
 --- !u!1 &590245814
 GameObject:
@@ -16297,6 +17038,138 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4590231964320639697, guid: 57985229041791241a552f0e29af2c3f, type: 3}
   m_PrefabInstance: {fileID: 4855566285540671248}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &598741781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598741782}
+  - component: {fileID: 598741785}
+  - component: {fileID: 598741784}
+  - component: {fileID: 598741783}
+  m_Layer: 5
+  m_Name: cheat6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &598741782
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598741781}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &598741783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598741781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 598741784}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &598741784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598741781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9e16af1d2a8fa864eb20941ec23df70e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &598741785
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598741781}
+  m_CullTransparentMesh: 1
 --- !u!224 &601137316 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4384664473189690475, guid: 09390e488a0d12848a752ffdb8d3d298, type: 3}
@@ -16423,6 +17296,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -16434,13 +17308,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &603313014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16675,6 +17549,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -16686,13 +17561,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &614054001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17064,6 +17939,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -17075,13 +17951,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &617081700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17317,6 +18193,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -17328,13 +18205,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &617171567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17595,6 +18472,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -17606,13 +18484,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &618206740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18253,6 +19131,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -18264,13 +19143,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &653206009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18639,6 +19518,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -18650,13 +19530,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &661209889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18891,6 +19771,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -18902,13 +19783,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &670160552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19550,6 +20431,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -19561,13 +20443,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &696009042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20068,6 +20950,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -20079,13 +20962,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &706374387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20456,6 +21339,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -20467,13 +21351,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &708904845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21088,6 +21972,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -21099,13 +21984,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &714412770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21715,6 +22600,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -21726,13 +22612,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &742138240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21866,6 +22752,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -21877,13 +22764,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &755230734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22118,6 +23005,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -22129,13 +23017,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &770603725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22802,6 +23690,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -22813,13 +23702,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &815975356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23080,6 +23969,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -23091,13 +23981,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &816497506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23469,6 +24359,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -23480,13 +24371,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &827194783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23747,6 +24638,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -23758,13 +24650,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &827954870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24428,6 +25320,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -24439,13 +25332,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &835578629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24681,6 +25574,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -24692,13 +25586,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &837635979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25094,6 +25988,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -25105,13 +26000,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &845882245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25641,6 +26536,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -25652,13 +26548,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &864914715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25919,6 +26815,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -25930,13 +26827,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &865369621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26341,6 +27238,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879416691}
+  m_CullTransparentMesh: 1
+--- !u!1 &880465390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880465391}
+  - component: {fileID: 880465394}
+  - component: {fileID: 880465393}
+  - component: {fileID: 880465392}
+  m_Layer: 5
+  m_Name: cheat8 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &880465391
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880465390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &880465392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880465390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 880465393}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &880465393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880465390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a65035d4755bb2c4facbb2256b45ae2d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &880465394
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880465390}
   m_CullTransparentMesh: 1
 --- !u!1 &880897436
 GameObject:
@@ -26785,6 +27814,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -26796,13 +27826,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &890164126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27549,6 +28579,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -27560,13 +28591,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &924747988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27839,6 +28870,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927383279}
+  m_CullTransparentMesh: 1
+--- !u!1 &928644094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928644095}
+  - component: {fileID: 928644098}
+  - component: {fileID: 928644097}
+  - component: {fileID: 928644096}
+  m_Layer: 5
+  m_Name: blockventureCheat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &928644095
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928644094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &928644096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928644094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 928644097}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &928644097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928644094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8fcf1921f9e5ac3469cecb6076f9d684, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &928644098
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928644094}
   m_CullTransparentMesh: 1
 --- !u!1 &930068040
 GameObject:
@@ -28605,6 +29768,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956711784}
   m_CullTransparentMesh: 1
+--- !u!1 &956766421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956766422}
+  - component: {fileID: 956766425}
+  - component: {fileID: 956766424}
+  - component: {fileID: 956766423}
+  m_Layer: 5
+  m_Name: cheat8 (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &956766422
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956766421}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &956766423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956766421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 956766424}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 16
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &956766424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956766421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 16e46ce327a6c27479341a456f460578, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &956766425
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956766421}
+  m_CullTransparentMesh: 1
 --- !u!1 &958944701
 GameObject:
   m_ObjectHideFlags: 0
@@ -28726,6 +30021,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -28737,13 +30033,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &958944706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29138,6 +30434,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -29149,13 +30446,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &980350280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29416,6 +30713,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -29427,13 +30725,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &982398293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29694,6 +30992,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -29705,13 +31004,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &984215996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29990,6 +31289,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992841945}
   m_CullTransparentMesh: 1
+--- !u!1 &995162731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 995162732}
+  - component: {fileID: 995162735}
+  - component: {fileID: 995162734}
+  - component: {fileID: 995162733}
+  m_Layer: 5
+  m_Name: cheat4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &995162732
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995162731}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &995162733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995162731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 995162734}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &995162734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995162731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1b9c41934597e9143a56c02d7c1629ec, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &995162735
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995162731}
+  m_CullTransparentMesh: 1
 --- !u!1 &1001331899
 GameObject:
   m_ObjectHideFlags: 0
@@ -30258,6 +31689,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -30269,13 +31701,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1003768154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30536,6 +31968,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -30547,13 +31980,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1016720559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30787,6 +32220,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -30798,13 +32232,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &1018293830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31072,6 +32506,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -31083,13 +32518,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1022797493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31764,6 +33199,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -31775,13 +33211,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1037290849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32261,6 +33697,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -32272,13 +33709,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1052822114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32417,6 +33854,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052822109}
+  m_CullTransparentMesh: 1
+--- !u!1 &1059630948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059630949}
+  - component: {fileID: 1059630952}
+  - component: {fileID: 1059630951}
+  - component: {fileID: 1059630950}
+  m_Layer: 5
+  m_Name: cheat8 (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1059630949
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059630948}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1059630950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059630948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1059630951}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 18
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1059630951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059630948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3c66ce7c8a3f54840a37ede0973e8cee, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1059630952
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059630948}
   m_CullTransparentMesh: 1
 --- !u!1 &1085770733
 GameObject:
@@ -33797,6 +35366,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -33808,13 +35378,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &1144964260
 GameObject:
   m_ObjectHideFlags: 0
@@ -34666,6 +36236,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -34677,13 +36248,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1201655569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35074,6 +36645,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -35085,13 +36657,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1218586216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35372,6 +36944,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -35383,13 +36956,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &1232589335
 GameObject:
   m_ObjectHideFlags: 0
@@ -35961,6 +37534,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -35972,13 +37546,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1265051618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36500,6 +38074,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -36511,13 +38086,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1283657544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36723,8 +38298,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 1023410175
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.23529412}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -36912,6 +38487,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -36923,13 +38499,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1285234330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37068,6 +38644,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285234325}
+  m_CullTransparentMesh: 1
+--- !u!1 &1297405800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297405801}
+  - component: {fileID: 1297405804}
+  - component: {fileID: 1297405803}
+  - component: {fileID: 1297405802}
+  m_Layer: 5
+  m_Name: cheat8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1297405801
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297405800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1297405802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297405800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1297405803}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1297405803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297405800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fa59f357852b01f41b9f9ff07e065472, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1297405804
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297405800}
   m_CullTransparentMesh: 1
 --- !u!1 &1301629222
 GameObject:
@@ -37233,7 +38941,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5767652}
   - {fileID: 4109644}
   - {fileID: 30513623}
   m_Father: {fileID: 1559320162}
@@ -37263,7 +38970,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congradulation, you have won the game!
+  m_text: Congratulations! you have won the game!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -37461,6 +39168,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -37472,13 +39180,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1310439088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37713,6 +39421,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -37724,13 +39433,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1315302252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37870,6 +39579,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315302248}
   m_CullTransparentMesh: 1
+--- !u!1 &1322455263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322455264}
+  - component: {fileID: 1322455267}
+  - component: {fileID: 1322455266}
+  - component: {fileID: 1322455265}
+  m_Layer: 5
+  m_Name: cheat8 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1322455264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322455263}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1322455265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322455263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1322455266}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1322455266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322455263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1ad553b308164af448eb6d17bd827d1e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1322455267
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322455263}
+  m_CullTransparentMesh: 1
 --- !u!1 &1322975159
 GameObject:
   m_ObjectHideFlags: 0
@@ -37938,6 +39779,138 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1325060474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325060475}
+  - component: {fileID: 1325060478}
+  - component: {fileID: 1325060477}
+  - component: {fileID: 1325060476}
+  m_Layer: 5
+  m_Name: cheat3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1325060475
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325060474}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1325060476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325060474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1325060477}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1325060477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325060474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 189cbf6767574c545b8b378fafea3a70, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1325060478
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325060474}
+  m_CullTransparentMesh: 1
 --- !u!1 &1326423152
 GameObject:
   m_ObjectHideFlags: 0
@@ -38090,6 +40063,270 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3643709044253587829, guid: cb97aedf34912ad4b98e63316650e179, type: 3}
   m_PrefabInstance: {fileID: 7472385205308325795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1338444950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338444951}
+  - component: {fileID: 1338444954}
+  - component: {fileID: 1338444953}
+  - component: {fileID: 1338444952}
+  m_Layer: 5
+  m_Name: cheat8 (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1338444951
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338444950}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1338444952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338444950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1338444953}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 19
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1338444953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338444950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1e390fda88960de489c35d0b75a3d532, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1338444954
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338444950}
+  m_CullTransparentMesh: 1
+--- !u!1 &1363606510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363606511}
+  - component: {fileID: 1363606514}
+  - component: {fileID: 1363606513}
+  - component: {fileID: 1363606512}
+  m_Layer: 5
+  m_Name: cheat5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1363606511
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363606510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1363606512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363606510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1363606513}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1363606513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363606510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b23593197df869b478e99159a75d78e8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1363606514
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363606510}
+  m_CullTransparentMesh: 1
 --- !u!1 &1364309055
 GameObject:
   m_ObjectHideFlags: 0
@@ -38325,6 +40562,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -38336,13 +40574,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1377030067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38576,6 +40814,7 @@ MonoBehaviour:
   seven: {fileID: 233786058}
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -38596,13 +40835,13 @@ MonoBehaviour:
   - {fileID: 4828118107205286272, guid: 068efb4739fbc3f479388e4b1c6f1329, type: 3}
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 188524088}
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1377092614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38782,6 +41021,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -38793,13 +41033,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1378429022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39171,6 +41411,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -39182,13 +41423,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1385444129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39672,6 +41913,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -39683,13 +41925,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1414676327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39970,6 +42212,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -39981,13 +42224,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &1423415243
 GameObject:
   m_ObjectHideFlags: 0
@@ -40218,6 +42461,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -40229,13 +42473,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1440594965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40435,7 +42679,7 @@ MonoBehaviour:
   m_text: '
 
 
-    Zaya Cole
+    Zakk Cole
 
 
 
@@ -41206,6 +43450,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -41217,13 +43462,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1496992249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41458,6 +43703,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -41469,13 +43715,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1502896436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41893,7 +44139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 995, y: -103}
+  m_AnchoredPosition: {x: 1119, y: -688}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525595475
@@ -42089,6 +44335,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -42100,13 +44347,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1527322923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42711,6 +44958,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -42722,13 +44970,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &1537799391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43002,6 +45250,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -43013,13 +45262,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1540542296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43375,6 +45624,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -43386,13 +45636,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1548076479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44934,6 +47184,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -44945,13 +47196,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1600176521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45818,6 +48069,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -45829,13 +48081,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1634589536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46461,6 +48713,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -46472,13 +48725,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1660730095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46749,6 +49002,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -46760,13 +49014,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1670094049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47160,6 +49414,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -47171,13 +49426,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1671752420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47492,6 +49747,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -47503,13 +49759,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1685107239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48050,6 +50306,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -48061,13 +50318,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1691882297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48328,6 +50585,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -48339,13 +50597,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1693458330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48606,6 +50864,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -48617,13 +50876,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1697414511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49156,6 +51415,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -49167,13 +51427,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1709179762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49589,6 +51849,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -49600,13 +51861,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1732460377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49841,6 +52102,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -49852,13 +52114,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1735218671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50524,6 +52786,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -50535,13 +52798,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &1764082408
 GameObject:
   m_ObjectHideFlags: 0
@@ -51259,6 +53522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810424840}
   - component: {fileID: 1810424841}
+  - component: {fileID: 1810424842}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -51316,6 +53580,7 @@ MonoBehaviour:
   pauseCountText: {fileID: 152538486}
   symbolClaimText: {fileID: 889257858}
   ExtraInfoText: {fileID: 1691569199}
+  endTime: {fileID: 4109645}
   TutorialList: {fileID: 1627043845}
   Intro: {fileID: 1405198331}
   debugMenu: {fileID: 2072814948}
@@ -51347,6 +53612,7 @@ MonoBehaviour:
   multiplication: {fileID: 943325937}
   BVSymbol: {fileID: 328328976}
   WinScreen: {fileID: 1559320161}
+  InventorySlot: {fileID: 2020958766}
   solutionIndex:
   - 0
   - 0
@@ -51387,6 +53653,7 @@ MonoBehaviour:
   TempEqStorage: 0
   TempEqPosStorage: 0
   pauseToggle: 0
+  gameWon: 0
   record: 0
   progressIndex: 0
   PrevProgressIndex: 0
@@ -51396,6 +53663,55 @@ MonoBehaviour:
   SaveTimeText: {fileID: 1284306125}
   playTime: 0
   resetMultiplyer: 1
+--- !u!114 &1810424842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810424839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e16721d3ac00467e985611bf648ad29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  SlotObjN: 0
+  EqSlotNum: 0
+  Number: 
+  eqSlotDetermine: 0
+  IsNowEmpty: 0
+  CraftSlot: 0
+  CraftSlotPos: 0
+  isInvSlot: 0
+  one: {fileID: 1369625508}
+  two: {fileID: 1117740282}
+  three: {fileID: 1769730000}
+  four: {fileID: 506810310}
+  five: {fileID: 1465478351}
+  six: {fileID: 883005467}
+  seven: {fileID: 233786058}
+  eight: {fileID: 42925880}
+  nine: {fileID: 473153630}
+  addition: {fileID: 451530268}
+  multiplication: {fileID: 943325937}
+  leftBracket: {fileID: 99428251}
+  rightBracket: {fileID: 1049444779}
+  subtraction: {fileID: 1335955440}
+  division: {fileID: 2119632241}
+  rootStart: {fileID: 593880117}
+  rootEnd: {fileID: 141606990}
+  exponentiation: {fileID: 1214712164}
+  OutputNumbers: []
+  OutputSlot: {fileID: 0}
+  OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 2020958766}
+  CraftSlot1: {fileID: 7273485292205209502, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+  CraftSlot2: {fileID: 63205287689193639, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+  CraftingGrid: {fileID: 0}
+  CraftingGridTrans: {fileID: 0}
+  CraftSlot1Trans: {fileID: 0}
+  CraftSlot2Trans: {fileID: 0}
 --- !u!1 &1810857987
 GameObject:
   m_ObjectHideFlags: 0
@@ -51491,6 +53807,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -51502,13 +53819,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1810857991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51758,6 +54075,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814307589}
   m_CullTransparentMesh: 1
+--- !u!1 &1824727960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824727961}
+  - component: {fileID: 1824727964}
+  - component: {fileID: 1824727963}
+  - component: {fileID: 1824727962}
+  m_Layer: 5
+  m_Name: cheat7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1824727961
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824727960}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1824727962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824727960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1824727963}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1824727963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824727960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 92f5789fee1329b4f91d13821d751e1b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1824727964
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824727960}
+  m_CullTransparentMesh: 1
 --- !u!1 &1826067205
 GameObject:
   m_ObjectHideFlags: 0
@@ -51950,7 +54399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Windows Build v1.14- 18/10/2024 - 9:28PM
+  m_text: Windows Build v1.15- 24/10/2024 - 11:11PM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
   m_sharedMaterial: {fileID: -7130737770211262945, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
@@ -52148,6 +54597,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -52159,13 +54609,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1833833992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52304,6 +54754,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833833987}
+  m_CullTransparentMesh: 1
+--- !u!1 &1836145419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836145420}
+  - component: {fileID: 1836145423}
+  - component: {fileID: 1836145422}
+  - component: {fileID: 1836145421}
+  m_Layer: 5
+  m_Name: cheat2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1836145420
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836145419}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1836145421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836145419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1836145422}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1836145422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836145419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9924421b37e5a044ca2e376d1990aff5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1836145423
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836145419}
   m_CullTransparentMesh: 1
 --- !u!1 &1837146445
 GameObject:
@@ -52800,6 +55382,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -52811,13 +55394,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &1844246101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53014,6 +55597,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845653088}
   m_CullTransparentMesh: 1
+--- !u!1 &1846496734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846496735}
+  - component: {fileID: 1846496738}
+  - component: {fileID: 1846496737}
+  - component: {fileID: 1846496736}
+  m_Layer: 5
+  m_Name: cheat8 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1846496735
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846496734}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1846496736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846496734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1846496737}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 17
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1846496737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846496734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3abbf4a2fe97a6a43bb941ecd4defe0f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1846496738
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846496734}
+  m_CullTransparentMesh: 1
 --- !u!1 &1855203340
 GameObject:
   m_ObjectHideFlags: 0
@@ -53109,6 +55824,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -53120,13 +55836,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1855203344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53360,6 +56076,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -53371,13 +56088,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!114 &1859650974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53652,6 +56369,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -53663,13 +56381,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1901815729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53935,6 +56653,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -53946,13 +56665,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1929515193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54213,6 +56932,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -54224,13 +56944,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1942328196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54491,6 +57211,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -54502,13 +57223,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1948886705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54769,6 +57490,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -54780,13 +57502,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1960450281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55182,6 +57904,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -55193,13 +57916,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1964253856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55434,6 +58157,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -55445,13 +58169,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1964653898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56125,6 +58849,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -56136,13 +58861,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &1999665886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56282,6 +59007,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999665881}
   m_CullTransparentMesh: 1
+--- !u!1 &2001523576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001523577}
+  - component: {fileID: 2001523580}
+  - component: {fileID: 2001523579}
+  - component: {fileID: 2001523578}
+  m_Layer: 5
+  m_Name: cheat8 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2001523577
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001523576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353421351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2001523578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001523576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2001523579}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810424842}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: SpawnCheatSymbol
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2001523579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001523576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 43339df935037b344bf219ca6656d624, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2001523580
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001523576}
+  m_CullTransparentMesh: 1
 --- !u!1 &2003534617
 GameObject:
   m_ObjectHideFlags: 0
@@ -56403,6 +59260,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -56414,13 +59272,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2003534622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56837,7 +59695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1342.8829, y: -421.34772}
+  m_AnchoredPosition: {x: 1343.5, y: -421.47}
   m_SizeDelta: {x: 107.0391, y: 430.6898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020958768
@@ -56932,6 +59790,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -56943,13 +59802,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &2024287024
 GameObject:
   m_ObjectHideFlags: 0
@@ -57322,6 +60181,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -57333,13 +60193,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2031534930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57682,6 +60542,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -57693,13 +60554,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2042273700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57934,6 +60795,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -57945,13 +60807,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2053513197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58212,6 +61074,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -58223,13 +61086,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2056760888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58627,6 +61490,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -58638,13 +61502,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2067491300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58966,6 +61830,7 @@ RectTransform:
   - {fileID: 192636765}
   - {fileID: 1119042207}
   - {fileID: 127055164}
+  - {fileID: 353421351}
   - {fileID: 548757447}
   - {fileID: 1539402335}
   - {fileID: 152538484}
@@ -59269,6 +62134,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -59280,13 +62146,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2100608677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59547,6 +62413,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -59558,13 +62425,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2103406624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59836,6 +62703,7 @@ MonoBehaviour:
   seven: {fileID: 233786058}
   eight: {fileID: 42925880}
   nine: {fileID: 473153630}
+  addition: {fileID: 0}
   multiplication: {fileID: 943325937}
   leftBracket: {fileID: 99428251}
   rightBracket: {fileID: 1049444779}
@@ -59856,13 +62724,13 @@ MonoBehaviour:
   - {fileID: 4828118107205286272, guid: 068efb4739fbc3f479388e4b1c6f1329, type: 3}
   OutputSlot: {fileID: 2123480719}
   OutputSlotPos: {fileID: 2123480720}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 188524088}
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 188524089}
   CraftSlot2Trans: {fileID: 1036371156}
-  stopInstantly: 0
 --- !u!114 &2123480724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60091,6 +62959,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -60102,13 +62971,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2130142330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60369,6 +63238,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -60380,13 +63250,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2132753085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60667,6 +63537,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -60678,13 +63549,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!1 &2134093764
 GameObject:
   m_ObjectHideFlags: 0
@@ -60781,6 +63652,7 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
   multiplication: {fileID: 0}
   leftBracket: {fileID: 0}
   rightBracket: {fileID: 0}
@@ -60792,13 +63664,13 @@ MonoBehaviour:
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 0}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
 --- !u!61 &2134093768
 BoxCollider2D:
   m_ObjectHideFlags: 0

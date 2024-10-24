@@ -3,7 +3,33 @@ guid: 8e16721d3ac00467e985611bf648ad29
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameManager: {instanceID: 0}
+  - one: {instanceID: 0}
+  - two: {instanceID: 0}
+  - three: {instanceID: 0}
+  - four: {instanceID: 0}
+  - five: {instanceID: 0}
+  - six: {instanceID: 0}
+  - seven: {instanceID: 0}
+  - eight: {instanceID: 0}
+  - nine: {instanceID: 0}
+  - multiplication: {instanceID: 0}
+  - leftBracket: {instanceID: 0}
+  - rightBracket: {instanceID: 0}
+  - subtraction: {instanceID: 0}
+  - division: {instanceID: 0}
+  - rootStart: {instanceID: 0}
+  - rootEnd: {instanceID: 0}
+  - exponentiation: {instanceID: 0}
+  - OutputSlot: {instanceID: 0}
+  - OutputSlotPos: {instanceID: 0}
+  - CraftSlot1: {fileID: 7273485292205209502, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+  - CraftSlot2: {fileID: 63205287689193639, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+  - CraftingGrid: {instanceID: 0}
+  - CraftingGridTrans: {instanceID: 0}
+  - CraftSlot1Trans: {instanceID: 0}
+  - CraftSlot2Trans: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

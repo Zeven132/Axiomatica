@@ -28,6 +28,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     public GameObject nine;
    
     // Operators/Exponents
+    public GameObject addition;
     public GameObject multiplication;
     public GameObject leftBracket;
     public GameObject rightBracket;
@@ -41,6 +42,8 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
    
     public GameObject OutputSlot;
     public Transform OutputSlotPos;
+
+    public GameObject InventorySlot;
    
     public GameObject CraftSlot1;
     public GameObject CraftSlot2;
@@ -48,11 +51,11 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     public GameObject CraftingGrid;
     public Transform CraftingGridTrans;
    
-    public Transform CraftSlot1Trans; // ha
+    public Transform CraftSlot1Trans;
     public Transform CraftSlot2Trans;
-    public bool stopInstantly = false;
-   
-    public void  OnPointerEnter(PointerEventData eventData) //if mouse enters an equation
+
+    // when mouse enters an equation
+    public void  OnPointerEnter(PointerEventData eventData)
     {  
         if (eqSlotDetermine == true && (Input.GetMouseButton(0) || Input.GetKey("left shift")))
         {
@@ -61,6 +64,8 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             Debug.Log(gameManager.TempEqPosStorage);
         }
     }
+   
+    // when mouse exits an equation
     public void OnPointerExit(PointerEventData eventData)
     {
         if (eqSlotDetermine == true && Input.GetMouseButton(0) == false )
@@ -69,10 +74,14 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             Debug.Log(gameManager.TempEqPosStorage);
         }
     }
-         
-    public void OnDrop(PointerEventData eventData) //on symbol dropped
+   
+    // on symbol dropped
+    public void OnDrop(PointerEventData eventData)
     {
-        if (eqSlotDetermine == true) {gameManager.eqIndex2[AssignEqSlot] = gameManager.TempEqStorage;}
+        if (eqSlotDetermine == true)
+        {
+            gameManager.eqIndex2[AssignEqSlot] = gameManager.TempEqStorage;
+        }
         if (transform.childCount == 0 && gameManager.TempMergeStorage == false) //if slot empty
         {
             GameObject dropped = eventData.pointerDrag;
@@ -82,8 +91,9 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             {  
                 if (CraftSlot == false)
                 {
-                    gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = gameManager.tempdragstorage; //changed slotpos internal val = assigned int to the slot obj
-                    Debug.Log("assigned slotpos:                     " + gameManager.TempEqPosStorage + ", " + SlotObjN + " with value of " + gameManager.tempdragstorage);
+                    //changed slotpos internal val = assigned int to the slot obj
+                    gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = gameManager.tempdragstorage;
+                    Debug.Log("assigned slotpos: " + gameManager.TempEqPosStorage + ", " + SlotObjN + " with value of " + gameManager.tempdragstorage);
                     switch (drag.SymbolType)
                     {
                         case 1:
@@ -161,14 +171,15 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             Drag drag = dropped.GetComponent<Drag>();
             drag.parentAfterDrag = transform;
         }
-    gameManager.slotposUpd();
+        gameManager.slotposUpd();
     }
-
-    public void CraftCheck() // checks for valid crafting output once called
+   
+    // checks for valid crafting output once called
+    public void CraftCheck()
     {  
         if(CraftSlot1.transform.childCount == 1 && CraftSlot2.transform.childCount == 1) // if both slots have symbols in them
         {
-            if (gameManager.craftIndex[0, 0] == gameManager.craftIndex[0, 1] && (gameManager.craftIndex[0, 0] > 0 && gameManager.craftIndex[0, 1] > 0)) // if both slots equal in numerical value and above 0
+            if (gameManager.craftIndex[0, 0] == gameManager.craftIndex[0, 1] && (gameManager.craftIndex[0, 0] > 0 && gameManager.craftIndex[0, 1] > 0))// && (gameManager.craftIndex[1, 0] == 0 gameManager.craftIndex[1, 1] == 0)) // if both slots equal in numerical value and above 0
             {      
                 switch(gameManager.craftIndex[0, 0]) // merge type recipies
                 {  
@@ -176,30 +187,37 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
                         Instantiate(two, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 2:
                         Instantiate(three, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 3:
                         Instantiate(four, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 4:
                         Instantiate(five, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 5:
                         Instantiate(six, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 6:
                         Instantiate(seven, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 7:
                         Instantiate(eight, OutputSlotPos);
                         RemoveSymbol();
                         break;
+                       
                     case 8:
                         Instantiate(nine, OutputSlotPos);
                         RemoveSymbol();
@@ -248,14 +266,21 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             }
         }
     }
-
-    void RemoveSymbol() //deletes symbols in crafting slots once used to craft something. also sets crafting
+   
+    // deletes symbols in crafting slots once used to craft something
+    void RemoveSymbol()
     {
         try
         {
-            if (CraftSlot1.transform.childCount == 1) {Destroy(CraftSlot1.transform.GetChild(0).gameObject);}
-            if (CraftSlot2.transform.childCount == 1) {Destroy(CraftSlot2.transform.GetChild(0).gameObject);}
-            for (int i = 0; i < 10; i++)
+            if (CraftSlot1.transform.childCount == 1) // removes symbol from crafting slot
+            {
+                Destroy(CraftSlot1.transform.GetChild(0).gameObject);
+            }
+            if (CraftSlot2.transform.childCount == 1)
+            {
+                Destroy(CraftSlot2.transform.GetChild(0).gameObject);
+            }
+            for (int i = 0; i < 10; i++) // loops through each element
             {
                 gameManager.craftIndex[i, 0] = 0;
                 gameManager.craftIndex[i, 1] = 0;
@@ -264,31 +289,142 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             }
             Debug.Log("Removed");
         }
-        catch {RemoveSymbol();}
+        catch 
+        {
+            RemoveSymbol();
+        }
     }
-
+   
+    // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("Game Manager")
         .GetComponent<GameManager>();
     }
-
-    void CraftValReset() // is this function used fuckin anywhere???`
+   
+    // removes crafting values
+    void CraftValReset()
     {
-        if (CraftSlot1.transform.childCount == 0 && CraftSlot2.transform.childCount == 0)
+        // if both are empty, set all to 0;
+        if (CraftSlot == true)
         {
-            for (int i = 0; i < 10; i++)
+            if (CraftSlot1.transform.childCount == 0 && CraftSlot2.transform.childCount == 0)
             {
-                gameManager.craftIndex[i, 0] = 0;
-                gameManager.craftIndex[i, 1] = 0;
+                for (int i = 0; i < 10; i++)
+                {
+                    gameManager.craftIndex[i, 0] = 0;
+                    gameManager.craftIndex[i, 1] = 0;
+                }
+            }
+            else // otherwise, check individually
+            {
+                if (CraftSlot1.transform.childCount == 0)
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        gameManager.craftIndex[i, 0] = 0;
+                    }
+                }
+                if (CraftSlot2.transform.childCount == 0)
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        gameManager.craftIndex[i, 1] = 0;
+                    }
+                }
             }
         }
     }
-
-    public void IsEmpty() // removes all values from slot
+   
+    // removes all values from slot
+    public void IsEmpty()
     {
-        gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = 0; //maybe it will work? YES IT DOES HAHA
+        gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = 0;
         gameManager.eqIndex2[AssignEqSlot] = gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = 0;
+    }
+
+    public void SpawnCheatSymbol(int type)
+    {
+        switch(type)
+        {
+            case 1:
+                Instantiate(one, InventorySlot.transform);
+                break;
+
+            case 2:
+                Instantiate(two, InventorySlot.transform);
+                break;
+            
+            case 3:
+                Instantiate(three, InventorySlot.transform);
+                break;
+
+            case 4:
+                Instantiate(four, InventorySlot.transform);
+                break;
+
+            case 5:
+                Instantiate(five, InventorySlot.transform);
+                break;
+
+            case 6:
+                Instantiate(six, InventorySlot.transform);
+                break;
+
+            case 7:
+                Instantiate(seven, InventorySlot.transform);
+                break;
+            
+            case 8:
+                Instantiate(eight, InventorySlot.transform);
+                break;
+            
+            case 9:
+                Instantiate(nine, InventorySlot.transform);
+                break;
+            
+            case 10:
+                Instantiate(gameManager.BVSymbol, InventorySlot.transform);
+                break;
+            
+            case 11:
+                Instantiate(addition, InventorySlot.transform);
+                break;
+            
+            case 12:
+                Instantiate(multiplication, InventorySlot.transform);
+                break;
+            
+            case 13:
+                Instantiate(division, InventorySlot.transform);
+                break;
+            
+            case 14:
+                Instantiate(subtraction, InventorySlot.transform);
+                break;
+            
+            case 15:
+                Instantiate(exponentiation, InventorySlot.transform);
+                break;
+            
+            case 16:
+                Instantiate(rootStart, InventorySlot.transform);
+                break;
+            
+            case 17:
+                Instantiate(rootEnd, InventorySlot.transform);
+                break;
+            
+            case 18:
+                Instantiate(leftBracket, InventorySlot.transform);
+                break;
+            
+            case 19:
+                Instantiate(rightBracket, InventorySlot.transform);
+                break;
+        }
+        
+
     }
 
     void Update()
@@ -298,6 +434,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
         {
             IsEmpty();
         }
+        CraftValReset();
     }
 //credit to https://www.youtube.com/watch?v=kWRyZ3hb1Vc
 }
