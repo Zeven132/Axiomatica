@@ -10,11 +10,6 @@ using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
 
-// todo:
-// end screen: Congradualtions, you have won the game!
-// you can choose to continue playing if you want, but be advised that there are no more new things to unlock.
-
-// end screen displays how long playthrough was
 
 public class GameManager : MonoBehaviour
 {
@@ -175,6 +170,9 @@ public class GameManager : MonoBehaviour
     public double PrevProgressIndex = 0;
     public double progressStage = 0.6; // the log base that the progress index is calculated at
 
+    // sound effect
+    [SerializeField] public AudioClip[] chalkSounds;
+
     // savedata serialization
     [SerializeField]
     private TextMeshProUGUI SourceDataText;
@@ -318,7 +316,7 @@ public class GameManager : MonoBehaviour
     // Called if player attempts to prestige to get a lower resetmult than they already have
     IEnumerator ResetWarning()
     {
-        prestigeWarning.text = "It would be silly to do that, you would just waste time by decreasing the multiplyer.\n If you're trying to get yourself out of a softlock and you've already closed and opened the game, fair enough: press [~] and click [FORCE PRESTIGE]";
+        prestigeWarning.text = "It would be silly to do that, you would just waste time by decreasing the multiplyer.\n If you're trying to get yourself out of a softlock, fair enough: press [~] and click [FORCE PRESTIGE]";
         yield return new WaitForSecondsRealtime(12);
         prestigeWarning.text = "";
     }
@@ -337,7 +335,11 @@ public class GameManager : MonoBehaviour
     // this is where game progression is controlled, ran just before temp values are reset
     public void gameProgression()
     {
-        record = (solution > record) ? record = solution : record = record; // update record
+        if (solution > record) // update record
+        {
+            record = solution;
+            SoundFXManager.instance.PlayRandomSoundFXClip(chalkSounds, transform, 1f);
+        }
         if (record >= 100000)
         {
             EquationUnlock(5);
@@ -584,7 +586,7 @@ public class GameManager : MonoBehaviour
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------";
-        rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage;
+        rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\nrecord: "+record;
         pauseCountText.text = "\t-- crafting slot data --\n---------------------------------------\n"
         +"\nValue:\t\t"+craftIndex[0, 0]+"\t"+craftIndex[0,1]
         +"\nAddition:\t\t"+craftIndex[1, 0]+"\t"+craftIndex[1,1]
@@ -891,8 +893,6 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
     
-
-
     // debug menu controls
     public void DebugControl(bool TildaDown)
     {
@@ -909,7 +909,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame :3
     void Update()
     {
-        //SaveTime =  - startTime;
         playTime = Time.timeSinceLevelLoad + PlayerStats.playTime;
         SaveTimeText.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}");
         if (Input.GetKeyDown(KeyCode.BackQuote)) {DebugControl(true);}

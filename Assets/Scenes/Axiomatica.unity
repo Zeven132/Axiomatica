@@ -238,6 +238,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &2294649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -626,6 +627,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &4647829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1004,7 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -1039,6 +1041,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &12931532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1178,6 +1186,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12931527}
   m_CullTransparentMesh: 1
+--- !u!1 &20104428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20104429}
+  - component: {fileID: 20104431}
+  - component: {fileID: 20104430}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &20104429
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20104428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1947931972}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 14.5, y: -201.9}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &20104430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20104428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '[volume]'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &20104431
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20104428}
+  m_CullTransparentMesh: 1
 --- !u!1 &21288544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,7 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -1318,6 +1460,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &21288549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1841,6 +1989,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &40518318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2085,7 +2234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -2120,6 +2269,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &42895384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2446,7 +2601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -2481,6 +2636,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &52685224
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2788,13 +2949,14 @@ RectTransform:
   m_LocalScale: {x: 0.3603603, y: 0.6504065, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1037958154}
   - {fileID: 160991635}
   - {fileID: 934223316}
   m_Father: {fileID: 709572900}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.516, y: -130.4}
+  m_AnchoredPosition: {x: 2.516, y: -82.5}
   m_SizeDelta: {x: 355.9638, y: 237.9752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59373183
@@ -2974,6 +3136,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &69756381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3218,7 +3381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -3253,6 +3416,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &79711038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3631,7 +3800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -3666,6 +3835,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &96265139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4049,7 +4224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -4084,6 +4259,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &103366567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4483,6 +4664,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &117455264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4890,6 +5072,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122754225}
   m_CullTransparentMesh: 1
+--- !u!1 &123351832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123351833}
+  - component: {fileID: 123351834}
+  m_Layer: 5
+  m_Name: volumeSlider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &123351833
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123351832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1689015523}
+  - {fileID: 994023231}
+  - {fileID: 1822549634}
+  m_Father: {fileID: 1947931972}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000021935, y: -240.2}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &123351834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123351832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 936185909}
+  m_FillRect: {fileID: 396507543}
+  m_HandleRect: {fileID: 936185908}
+  m_Direction: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.89
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 152284670}
+        m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &126832090
 GameObject:
   m_ObjectHideFlags: 0
@@ -5050,6 +5334,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &127055163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +5860,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &148704391
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5828,6 +6114,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &148783358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6080,6 +6367,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &151592874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6118,6 +6406,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151592870}
   m_CullTransparentMesh: 1
+--- !u!1 &152284669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152284671}
+  - component: {fileID: 152284670}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &152284670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152284669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8a24ccbdbc8524ca9d6a059fdb22b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 1486010689790399207, guid: de852fd61523baa4cb469acb71db77ab, type: 3}
+  audioMixer: {fileID: 24100000, guid: a232f462cf87905448102a519c4596d5, type: 2}
+--- !u!4 &152284671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152284669}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &152492713
 GameObject:
   m_ObjectHideFlags: 0
@@ -6259,6 +6593,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &152492717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6837,7 +7172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -6872,6 +7207,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &161037988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8066,7 +8407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -8101,6 +8442,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &198842538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8627,6 +8974,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &235640414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9323,7 +9671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 42}
+  m_AnchoredPosition: {x: 0, y: 64.6}
   m_SizeDelta: {x: 457.9159, y: 163.1183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266771384
@@ -10237,6 +10585,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &344432698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10971,7 +11320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -11006,6 +11355,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &361200086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11389,7 +11744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -11424,6 +11779,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &384967433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11751,6 +12112,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &396507542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396507543}
+  - component: {fileID: 396507545}
+  - component: {fileID: 396507544}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &396507543
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396507542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 994023231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.88998896, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &396507544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396507542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &396507545
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396507542}
+  m_CullTransparentMesh: 1
 --- !u!1 &398930478
 GameObject:
   m_ObjectHideFlags: 0
@@ -11856,7 +12292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -11891,6 +12327,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &398930483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12282,7 +12724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -12317,6 +12759,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &427536860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12880,6 +13328,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &441238142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13134,6 +13583,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &441667839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13401,6 +13851,8 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 188524089}
   CraftSlot2Trans: {fileID: 1036371156}
+  chalkSounds:
+  - {fileID: 8300000, guid: 960b4e1266821534c8e754fb15808376, type: 3}
 --- !u!114 &457251409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14146,6 +14598,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &498153736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14338,6 +14791,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &511216169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14943,7 +15397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -14978,6 +15432,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &523627663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15222,7 +15682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -15257,6 +15717,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &527268856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15638,7 +16104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -15673,6 +16139,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &539360629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16515,6 +16987,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &557267847
 GameObject:
   m_ObjectHideFlags: 0
@@ -16817,6 +17290,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1524094920}
+  - {fileID: 1181955476}
   - {fileID: 1828388305}
   - {fileID: 709572900}
   - {fileID: 1284306124}
@@ -17280,7 +17754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -17315,6 +17789,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &603313014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17568,6 +18048,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &614054001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17958,6 +18439,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &617081700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18212,6 +18694,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &617171567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18456,7 +18939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -18491,6 +18974,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &618206740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19150,6 +19639,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &653206009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19537,6 +20027,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &661209889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19790,6 +20281,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &670160552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20450,6 +20942,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &696009042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20934,7 +21427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -20969,6 +21462,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &706374387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21358,6 +21857,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &708904845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21956,7 +22456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -21991,6 +22491,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &714412770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22619,6 +23125,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &742138240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22771,6 +23278,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &755230734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22989,7 +23497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -23024,6 +23532,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &770603725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23674,7 +24188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -23709,6 +24223,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &815975356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23953,7 +24473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -23988,6 +24508,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &816497506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24378,6 +24904,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &827194783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24622,7 +25149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -24657,6 +25184,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &827954870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25304,7 +25837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -25339,6 +25872,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &835578629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25593,6 +26132,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &837635979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25972,7 +26512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -26007,6 +26547,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &845882245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26520,7 +27066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -26555,6 +27101,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &864914715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26799,7 +27351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -26834,6 +27386,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &865369621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27833,6 +28391,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &890164126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28563,7 +29122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -28598,6 +29157,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &924747988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29628,6 +30193,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadTarget: Title Screen
   unloadTarget: Axiomatica
+--- !u!1 &936185907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936185908}
+  - component: {fileID: 936185910}
+  - component: {fileID: 936185909}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &936185908
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936185907}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1822549634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.88998896, y: 0}
+  m_AnchorMax: {x: 0.88998896, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &936185909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936185907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &936185910
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936185907}
+  m_CullTransparentMesh: 1
 --- !u!1 &943325937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8852493234136030676, guid: bf74fbba22e0deb419fbf09c3ad6bd82, type: 3}
@@ -30005,7 +30645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -30040,6 +30680,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &958944706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30418,7 +31064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -30453,6 +31099,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &980350280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30697,7 +31349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -30732,6 +31384,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &982398293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30976,7 +31634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -31011,6 +31669,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &984215996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31155,6 +31819,151 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1564360637348474671, guid: 57985229041791241a552f0e29af2c3f, type: 3}
   m_PrefabInstance: {fileID: 4855566285540671248}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &985271429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985271430}
+  - component: {fileID: 985271433}
+  - component: {fileID: 985271432}
+  - component: {fileID: 985271431}
+  m_Layer: 5
+  m_Name: Button (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &985271430
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985271429}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.36036035, y: 0.6504065, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1481870997}
+  m_Father: {fileID: 1181955476}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.47816205, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -226.91592, y: 659.32513}
+  m_SizeDelta: {x: 201.21419, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &985271431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985271429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 985271432}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1181955475}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709572899}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &985271432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985271429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &985271433
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985271429}
+  m_CullTransparentMesh: 1
 --- !u!1 &992841945
 GameObject:
   m_ObjectHideFlags: 0
@@ -31289,6 +32098,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992841945}
   m_CullTransparentMesh: 1
+--- !u!1 &994023230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994023231}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &994023231
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994023230}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 396507543}
+  m_Father: {fileID: 123351833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &995162731
 GameObject:
   m_ObjectHideFlags: 0
@@ -31673,7 +32518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -31708,6 +32553,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1003768154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31952,7 +32803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -31987,6 +32838,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1016720559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32239,6 +33096,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &1018293830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32525,6 +33383,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1022797493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33218,6 +34077,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1037290849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33356,6 +34216,163 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037290845}
+  m_CullTransparentMesh: 1
+--- !u!1 &1037958153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037958154}
+  - component: {fileID: 1037958157}
+  - component: {fileID: 1037958156}
+  - component: {fileID: 1037958155}
+  m_Layer: 5
+  m_Name: Settings Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1037958154
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037958153}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1108817487}
+  m_Father: {fileID: 59373182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1037958155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037958153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1037958156}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1181955475}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 709572899}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1691569196}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1037958156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037958153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1037958157
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037958153}
   m_CullTransparentMesh: 1
 --- !u!1 &1049444779 stripped
 GameObject:
@@ -33681,7 +34698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -33716,6 +34733,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1052822114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34400,6 +35423,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102375388}
+  m_CullTransparentMesh: 1
+--- !u!1 &1108817486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1108817487}
+  - component: {fileID: 1108817489}
+  - component: {fileID: 1108817488}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1108817487
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108817486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1037958154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1108817488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108817486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '[settings]'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: cd9a96b871b33954597b18230da67223, type: 2}
+  m_sharedMaterial: {fileID: 8635115492445931952, guid: cd9a96b871b33954597b18230da67223, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 17
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1108817489
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108817486}
   m_CullTransparentMesh: 1
 --- !u!1 &1110611712
 GameObject:
@@ -35385,6 +36542,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &1144964260
 GameObject:
   m_ObjectHideFlags: 0
@@ -36115,6 +37273,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175864582}
   m_CullTransparentMesh: 1
+--- !u!1 &1181955475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181955476}
+  - component: {fileID: 1181955479}
+  - component: {fileID: 1181955478}
+  - component: {fileID: 1181955477}
+  m_Layer: 5
+  m_Name: settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1181955476
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181955475}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1947931972}
+  - {fileID: 985271430}
+  m_Father: {fileID: 590245815}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0026245, y: -399.8686}
+  m_SizeDelta: {x: 547.72, y: 1353.1178}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1181955477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181955475}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1947931972}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1181955478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181955475}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1181955479
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181955475}
+  m_CullTransparentMesh: 1
 --- !u!1 &1201655564
 GameObject:
   m_ObjectHideFlags: 0
@@ -36220,7 +37486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -36255,6 +37521,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1201655569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36664,6 +37936,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1218586216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36963,6 +38236,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &1232589335
 GameObject:
   m_ObjectHideFlags: 0
@@ -37553,6 +38827,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1265051618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38058,7 +39333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -38093,6 +39368,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1283657544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38471,7 +39752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 6
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -38506,6 +39787,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1285234330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39047,6 +40334,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304213426}
   m_CullTransparentMesh: 1
+--- !u!1 &1307299025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1307299026}
+  - component: {fileID: 1307299028}
+  - component: {fileID: 1307299027}
+  m_Layer: 5
+  m_Name: defaultVol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1307299026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307299025}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1947931972}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 109.1, y: -240.19998}
+  m_SizeDelta: {x: 2.3821, y: 19.5247}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1307299027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307299025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1307299028
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307299025}
+  m_CullTransparentMesh: 1
 --- !u!1 &1310439083
 GameObject:
   m_ObjectHideFlags: 0
@@ -39152,7 +40514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -39187,6 +40549,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1310439088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39405,7 +40773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -39440,6 +40808,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1315302252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40546,7 +41920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -40581,6 +41955,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1377030067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40842,6 +42222,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1377092614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41040,6 +42421,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1378429022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41395,7 +42777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -41430,6 +42812,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1385444129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41897,7 +43285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -41932,6 +43320,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1414676327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42231,6 +43625,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &1423415243
 GameObject:
   m_ObjectHideFlags: 0
@@ -42445,7 +43840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -42480,6 +43875,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1440594965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42698,7 +44099,15 @@ MonoBehaviour:
 
     (Data
     Persistence - Save & load your game state while avoiding common mistakes | Unity
-    Tutorial)'
+    Tutorial)
+
+
+
+
+    Sasquatch B Studios
+
+    (How To Add Sound Effects the RIGHT
+    Way | Unity Tutorial)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
   m_sharedMaterial: {fileID: -7130737770211262945, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
@@ -43329,6 +44738,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475462705}
   m_CullTransparentMesh: 1
+--- !u!1 &1481870996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481870997}
+  - component: {fileID: 1481870999}
+  - component: {fileID: 1481870998}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1481870997
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481870996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 985271430}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1481870998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481870996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '[back to main]'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: cd9a96b871b33954597b18230da67223, type: 2}
+  m_sharedMaterial: {fileID: 8635115492445931952, guid: cd9a96b871b33954597b18230da67223, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1481870999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481870996}
+  m_CullTransparentMesh: 1
 --- !u!1 &1496992244
 GameObject:
   m_ObjectHideFlags: 0
@@ -43434,7 +44977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -43469,6 +45012,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1496992249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43722,6 +45271,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1502896436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44354,6 +45904,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1527322923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44977,6 +46528,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &1537799391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45269,6 +46821,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1540542296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45608,7 +47161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 1
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -45643,6 +47196,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1548076479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47168,7 +48727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -47203,6 +48762,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1600176521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48088,6 +49653,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1634589536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48697,7 +50263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 7
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -48732,6 +50298,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1660730095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48986,7 +50558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -49021,6 +50593,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1670094049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49398,7 +50976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -49433,6 +51011,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1671752420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49766,6 +51350,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1685107239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49904,6 +51489,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685107235}
+  m_CullTransparentMesh: 1
+--- !u!1 &1689015522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689015523}
+  - component: {fileID: 1689015525}
+  - component: {fileID: 1689015524}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1689015523
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689015522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 123351833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1689015524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689015522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1689015525
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689015522}
   m_CullTransparentMesh: 1
 --- !u!224 &1690626231 stripped
 RectTransform:
@@ -50179,7 +51839,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.8489074, y: 0, z: -1.7079085, w: -1.8478699}
+  m_margin: {x: 0.8489074, y: 43.787037, z: -1.7079085, w: -1.8478699}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -50290,7 +51950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -50325,6 +51985,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1691882297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50569,7 +52235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -50604,6 +52270,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1693458330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50848,7 +52520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -50883,6 +52555,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1697414511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51399,7 +53077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -51434,6 +53112,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1709179762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51651,6 +53335,12 @@ MonoBehaviour:
     Save/Load system:
 
 
+
+
+
+
+    Audio system:
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
@@ -51833,7 +53523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -51868,6 +53558,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1732460377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52121,6 +53817,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1735218671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52805,6 +54502,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &1764082408
 GameObject:
   m_ObjectHideFlags: 0
@@ -53658,6 +55356,8 @@ MonoBehaviour:
   progressIndex: 0
   PrevProgressIndex: 0
   progressStage: 1.1
+  chalkSounds:
+  - {fileID: 8300000, guid: 960b4e1266821534c8e754fb15808376, type: 3}
   SourceDataText: {fileID: 86191095}
   InputField: {fileID: 439644133}
   SaveTimeText: {fileID: 1284306125}
@@ -53712,6 +55412,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &1810857987
 GameObject:
   m_ObjectHideFlags: 0
@@ -53826,6 +55527,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1810857991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54075,6 +55777,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814307589}
   m_CullTransparentMesh: 1
+--- !u!1 &1822549633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822549634}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1822549634
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822549633}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 936185908}
+  m_Father: {fileID: 123351833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1824727960
 GameObject:
   m_ObjectHideFlags: 0
@@ -54399,7 +56137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Windows Build v1.15- 24/10/2024 - 11:11PM
+  m_text: Windows Build v1.16 - 29/10/2024 - 9:45PM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
   m_sharedMaterial: {fileID: -7130737770211262945, guid: db4dff40c2064944e8968adaae6deca6, type: 2}
@@ -54581,7 +56319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -54616,6 +56354,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1833833992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55401,6 +57145,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &1844246101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55843,6 +57588,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1855203344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56095,6 +57841,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!114 &1859650974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56388,6 +58135,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1901815729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56637,7 +58385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 4
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -56672,6 +58420,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1929515193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56916,7 +58670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -56951,6 +58705,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1942328196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57090,6 +58850,143 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942328191}
   m_CullTransparentMesh: 1
+--- !u!1 &1947931969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1947931972}
+  - component: {fileID: 1947931971}
+  - component: {fileID: 1947931970}
+  m_Layer: 5
+  m_Name: '[settings]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1947931970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947931969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '[settings]'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: cd9a96b871b33954597b18230da67223, type: 2}
+  m_sharedMaterial: {fileID: 8635115492445931952, guid: cd9a96b871b33954597b18230da67223, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 120
+  m_fontSizeBase: 120
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0.8489074, y: 4.907761, z: -0.21233362, w: -1.8478699}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1947931971
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947931969}
+  m_CullTransparentMesh: 1
+--- !u!224 &1947931972
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947931969}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.36036035, y: 0.6504065, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 20104429}
+  - {fileID: 1307299026}
+  - {fileID: 123351833}
+  m_Father: {fileID: 1181955476}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 594.99976}
+  m_SizeDelta: {x: 558.6556, y: 163.1183}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1948886700
 GameObject:
   m_ObjectHideFlags: 0
@@ -57195,7 +59092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 3
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -57230,6 +59127,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1948886705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57474,7 +59377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -57509,6 +59412,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1960450281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57888,7 +59797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 5
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -57923,6 +59832,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1964253856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58176,6 +60091,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &1964653898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58833,7 +60749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 10
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -58868,6 +60784,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &1999665886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59244,7 +61166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 9
-  EqSlotNum: 0
+  EqSlotNum: 8
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -59279,6 +61201,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2003534622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59809,6 +61737,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &2024287024
 GameObject:
   m_ObjectHideFlags: 0
@@ -60200,6 +62129,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &2031534930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60526,7 +62456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -60561,6 +62491,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2042273700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60814,6 +62750,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &2053513197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61058,7 +62995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 6
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -61093,6 +63030,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2056760888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61474,7 +63417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 3
-  EqSlotNum: 0
+  EqSlotNum: 5
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -61509,6 +63452,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2067491300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61838,8 +63787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.73501015, y: -0.00070763}
-  m_SizeDelta: {x: 1513.5, y: 851.69}
+  m_AnchoredPosition: {x: 0.73501015, y: -0.013695}
+  m_SizeDelta: {x: 1513.5, y: 851.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2072814947
 CanvasRenderer:
@@ -62153,6 +64102,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &2100608677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62397,7 +64347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 2
-  EqSlotNum: 0
+  EqSlotNum: 2
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -62432,6 +64382,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2103406624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62731,6 +64687,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 188524089}
   CraftSlot2Trans: {fileID: 1036371156}
+  chalkSounds: []
 --- !u!114 &2123480724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62943,7 +64900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 8
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -62978,6 +64935,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2130142330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63222,7 +65185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   SlotObjN: 4
-  EqSlotNum: 0
+  EqSlotNum: 7
   Number: Number
   eqSlotDetermine: 0
   IsNowEmpty: 0
@@ -63257,6 +65220,12 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds:
+  - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+  - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+  - {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+  - {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+  - {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
 --- !u!61 &2132753085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63556,6 +65525,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!1 &2134093764
 GameObject:
   m_ObjectHideFlags: 0
@@ -63671,6 +65641,7 @@ MonoBehaviour:
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
+  chalkSounds: []
 --- !u!61 &2134093768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64687,6 +66658,30 @@ PrefabInstance:
       propertyPath: CraftSlot2Trans
       value: 
       objectReference: {fileID: 1036371156}
+    - target: {fileID: 5352931505919901206, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352931505919901206, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 5352931505919901206, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 5352931505919901206, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 5352931505919901206, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 5352931505919901206, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 6262015642133011837, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -65171,6 +67166,30 @@ PrefabInstance:
       propertyPath: CraftSlot2Trans
       value: 
       objectReference: {fileID: 1036371156}
+    - target: {fileID: 1755153612650139915, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755153612650139915, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 1755153612650139915, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 1755153612650139915, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 1755153612650139915, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 1755153612650139915, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 8551726135679365038, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -65761,10 +67780,98 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1844246099}
     m_Modifications:
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 23350860617914899, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 52872455633260643, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1810424841}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 134667220289372494, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: damageSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 377883820378024401, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 408934744905665944, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -65909,6 +68016,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1810424841}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 3494795985215479241, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 3629406327726848614, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_Name
       value: x0
@@ -65917,6 +68052,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Equation
       objectReference: {fileID: 0}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 3940389332012849506, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 4411762991843527608, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -66033,6 +68196,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 5943076332640903435, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 6058755416108780825, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -66081,6 +68272,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 6117902274523159484, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 6345620683424904276, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -66177,6 +68396,34 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 6480531132220951875, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 6559561279695761315, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -66249,6 +68496,34 @@ PrefabInstance:
       propertyPath: m_text
       value: x
       objectReference: {fileID: 0}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 7704905287090229915, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 8170416535476136342, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -66297,6 +68572,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1810424841}
+    - target: {fileID: 8508702626470561572, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: m_Name
+      value: Equation Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: EqSlotNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc8968d304f74784ba2eeb4b3b319e1e, type: 3}
+    - target: {fileID: 8827309263353704082, guid: fd1eb602dbc572d429e442639387099f, type: 3}
+      propertyPath: chalkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c5827c0e52bc94b902e24b31cde3eb, type: 3}
     - target: {fileID: 8992404806353590824, guid: fd1eb602dbc572d429e442639387099f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -66633,4 +68940,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1322975162}
   - {fileID: 1740167525}
+  - {fileID: 152284671}
   - {fileID: 1810424840}

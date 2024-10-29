@@ -54,45 +54,67 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     public Transform CraftSlot1Trans;
     public Transform CraftSlot2Trans;
 
+    [SerializeField] public AudioClip[] chalkSounds;
+
+
     // when mouse enters an equation
     public void  OnPointerEnter(PointerEventData eventData)
     {  
+        /*
         if (eqSlotDetermine == true && (Input.GetMouseButton(0) || Input.GetKey("left shift")))
         {
             AssignEqSlot = EqSlotNum;
             gameManager.TempEqPosStorage = AssignEqSlot;
             Debug.Log(gameManager.TempEqPosStorage);
-        }
+        }*/
     }
    
     // when mouse exits an equation
     public void OnPointerExit(PointerEventData eventData)
     {
+        /*
         if (eqSlotDetermine == true && Input.GetMouseButton(0) == false )
         {
             gameManager.TempEqPosStorage = 0;
             Debug.Log(gameManager.TempEqPosStorage);
         }
+        */
     }
    
     // on symbol dropped
     public void OnDrop(PointerEventData eventData)
     {
-        if (eqSlotDetermine == true)
+        /*if (eqSlotDetermine == true)
         {
+            
+            Debug.Log(gameManager.TempEqPosStorage);
             gameManager.eqIndex2[AssignEqSlot] = gameManager.TempEqStorage;
         }
+        */
         if (transform.childCount == 0 && gameManager.TempMergeStorage == false) //if slot empty
         {
             GameObject dropped = eventData.pointerDrag;
             Drag drag = dropped.GetComponent<Drag>();
             drag.parentAfterDrag = transform; // sets dragged symbol to be the child of slot gameobject
+            try
+            {
+                SoundFXManager.instance.PlayRandomSoundFXClip(chalkSounds, transform, 1f);
+            }
+            catch
+            {
+
+            }
+
+            
             if (eqSlotDetermine == false)// if symbol dropped
             {  
                 if (CraftSlot == false)
                 {
                     //changed slotpos internal val = assigned int to the slot obj
+                    AssignEqSlot = EqSlotNum;
+                    gameManager.TempEqPosStorage = AssignEqSlot;
                     gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = gameManager.tempdragstorage;
+
                     Debug.Log("assigned slotpos: " + gameManager.TempEqPosStorage + ", " + SlotObjN + " with value of " + gameManager.tempdragstorage);
                     switch (drag.SymbolType)
                     {
@@ -288,6 +310,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
                 gameManager.craftIndex[0, 1] = 0;
             }
             Debug.Log("Removed");
+            SoundFXManager.instance.PlayRandomSoundFXClip(chalkSounds, transform, 1f);
         }
         catch 
         {

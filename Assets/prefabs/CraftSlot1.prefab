@@ -200,6 +200,7 @@ MonoBehaviour:
   IsNowEmpty: 0
   CraftSlot: 1
   CraftSlotPos: 0
+  isInvSlot: 0
   one: {fileID: 0}
   two: {fileID: 0}
   three: {fileID: 0}
@@ -209,16 +210,26 @@ MonoBehaviour:
   seven: {fileID: 0}
   eight: {fileID: 0}
   nine: {fileID: 0}
+  addition: {fileID: 0}
+  multiplication: {fileID: 0}
+  leftBracket: {fileID: 0}
+  rightBracket: {fileID: 0}
+  subtraction: {fileID: 0}
+  division: {fileID: 0}
+  rootStart: {fileID: 0}
+  rootEnd: {fileID: 0}
+  exponentiation: {fileID: 0}
   OutputNumbers: []
   OutputSlot: {fileID: 0}
   OutputSlotPos: {fileID: 0}
+  InventorySlot: {fileID: 0}
   CraftSlot1: {fileID: 7273485292205209502}
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
   CraftSlot1Trans: {fileID: 0}
   CraftSlot2Trans: {fileID: 0}
-  stopInstantly: 0
+  damageSoundClip: {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
 --- !u!114 &7426971551785001188
 MonoBehaviour:
   m_ObjectHideFlags: 0

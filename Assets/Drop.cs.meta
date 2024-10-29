@@ -14,6 +14,7 @@ MonoImporter:
   - seven: {instanceID: 0}
   - eight: {instanceID: 0}
   - nine: {instanceID: 0}
+  - addition: {instanceID: 0}
   - multiplication: {instanceID: 0}
   - leftBracket: {instanceID: 0}
   - rightBracket: {instanceID: 0}
@@ -24,12 +25,14 @@ MonoImporter:
   - exponentiation: {instanceID: 0}
   - OutputSlot: {instanceID: 0}
   - OutputSlotPos: {instanceID: 0}
+  - InventorySlot: {instanceID: 0}
   - CraftSlot1: {fileID: 7273485292205209502, guid: eed9f26d54792bb46849df0aaccc648c, type: 3}
   - CraftSlot2: {fileID: 63205287689193639, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
   - CraftingGrid: {instanceID: 0}
   - CraftingGridTrans: {instanceID: 0}
   - CraftSlot1Trans: {instanceID: 0}
   - CraftSlot2Trans: {instanceID: 0}
+  - damageSoundClip: {fileID: 8300000, guid: b7db1677e86feb24797b43ccc3399a7a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
