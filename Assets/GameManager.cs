@@ -65,29 +65,23 @@ public class GameManager : MonoBehaviour
     public Image EquationX7;
     public Image EquationX8;
 
-    // Tutorial Descriptions
-    public TextMeshProUGUI lbrackTutText;
-    public TextMeshProUGUI rbrackTutText;
-    public TextMeshProUGUI rootTutText;
-    public TextMeshProUGUI pwrTutText;
-    public TextMeshProUGUI addTutText;
-    public TextMeshProUGUI multTutText;
-    public TextMeshProUGUI divTutText;
-    public TextMeshProUGUI subTutText;
+    // Tutorial text
+    public TextMeshProUGUI tutText;
    
     // Crafting
-    public Transform StorageSlot;
-    public GameObject one;
-    public GameObject two;
-    public GameObject three;
-    public GameObject four;
-    public GameObject five;
-    public GameObject addition;
-    public GameObject multiplication;
+    public Transform StorageSlot; // output for instantantiated symbols (not output slot for crafting)
+    public GameObject one; // one symbol
+    public GameObject two; // two symbol
+    public GameObject three; // three symbol
+    public GameObject four; // four symbol
+    public GameObject five; // five symbol
+    public GameObject addition; // addition symbol
+    public GameObject multiplication; // multiplication symbol
 
-    public GameObject BVSymbol;
-    public GameObject WinScreen;
-    public GameObject InventorySlot;
+    // misc game objects
+    public GameObject BVSymbol; // symbol with 999999 val, used for cheats
+    public GameObject WinScreen; // win screen
+    public GameObject InventorySlot; // inventory gameobject
    
     // Slot numeric values
     public double[,] slotpos = new double [12, 11]; // used during calculation
@@ -195,12 +189,13 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pausescreen.gameObject.SetActive(false);
-        TutorialControl(false, false);
+        TutorialControl(false);
         debugMenu.gameObject.SetActive(false);
         PlayerStats = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
+         // sets value based off of save file
         playTime = PlayerStats.playTime;
-        resetMultiplyer = PlayerStats.resetMultiplyer; // sets value based off of save file
-        targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
+        resetMultiplyer = PlayerStats.resetMultiplyer;
+        targetText.text = "" + resetMultiplyer + "\n↓\n" + (1 + Math.Sqrt(record / 250));
         if (resetMultiplyer > 1) // if player has prestiged
         {
             Intro.gameObject.SetActive(false);
@@ -220,7 +215,7 @@ public class GameManager : MonoBehaviour
                 PlayerStats data = DataService.LoadData<PlayerStats>("/player-stats.json", EncryptionEnabled);
                 InputField.text = "Loaded from file:\r\n" + JsonConvert.SerializeObject(data, Formatting.Indented);
             }
-            catch (Exception e)
+            catch
             {
                 Debug.LogError($"Could not read file!");
                 InputField.text = "<color=#ff0000>Error reading save file!</color>";
@@ -277,18 +272,20 @@ public class GameManager : MonoBehaviour
         }
         if (symbolVal < 5)
         {
-            Random rnd = new Random(); // credit https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
+            Random rnd = new Random();
+            // 1/10 chance
             if (rnd.Next(10) == 1)
             {
-                Instantiate(addition, StorageSlot); // 1/10 chance
+                Instantiate(addition, StorageSlot);
             }
         }
         else
         {
             Random rnd = new Random();
+            // 1/25 chance
             if (rnd.Next(25) == 1)
             {
-                Instantiate(multiplication, StorageSlot); // 1/25 chance
+                Instantiate(multiplication, StorageSlot);
             }
         }
     }
@@ -298,9 +295,9 @@ public class GameManager : MonoBehaviour
     // On start() the value is determined by the file.
     public void prestige()
     {
-        if (1+Math.Sqrt(record/250) > resetMultiplyer)
+        if (1 + Math.Sqrt(record / 250) > resetMultiplyer)
         {
-            resetMultiplyer = 1 + Math.Sqrt(record/250);
+             resetMultiplyer = 1 + Math.Sqrt(record / 250);
             SourceDataText.text = "{\n\"resetMultiplyer\": "+resetMultiplyer+"\n}";
             PlayerStats.resetMultiplyer = resetMultiplyer;
             PlayerStats.playTime = playTime;
@@ -324,7 +321,7 @@ public class GameManager : MonoBehaviour
     //debug menu option that forces prestige
     public void ForcePrestige()
     {
-        resetMultiplyer = 1 + Math.Sqrt(record/250);
+        resetMultiplyer = 1 + Math.Sqrt(record / 250);
         SourceDataText.text = "{\n\"resetMultiplyer\": "+resetMultiplyer+"\n}";
         PlayerStats.resetMultiplyer = resetMultiplyer;
         PlayerStats.playTime = playTime;
@@ -370,8 +367,8 @@ public class GameManager : MonoBehaviour
         else if (record >= 20){progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;}
         else if (record >= 8)
         {
-            progressIndex = (Math.Pow(record, 0.75) * resetMultiplyer + 20);//progressIndex = Math.Log((Math.Pow(record, 4.2) - 11), 1.8);
-        }                                  //Math.Pow(record, (0.13 * record));//m * (Math.Log(record * progressStage)); //y=m(log(x*c)) m=22 c=0.6  //2.2        //(Math.Log(record, progressIndex + 1)); //progressIndex = (Math.Log((Math.Pow(record, progressIndex)+1), progressStage));
+            progressIndex = (Math.Pow(record, 0.75) * resetMultiplyer + 20);
+        }
         else {progressIndex = (Math.Pow(1.7, record - 1)) * resetMultiplyer;}
         progressIndex = Math.Round(progressIndex);
         if (progressIndex > PrevProgressIndex)
@@ -380,7 +377,7 @@ public class GameManager : MonoBehaviour
                 {
                     for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
                     {  
-                        if (prev % 8 == 0) // gives eighth, but 8x value; saves time with crafting while providing same value
+                        if (prev % 16 == 0) // gives sixteenth, but 16x value; saves time with crafting while providing same value
                         {
                             GetSymbol(5);
                         }
@@ -390,7 +387,7 @@ public class GameManager : MonoBehaviour
                 {
                     for (int prev = (int) PrevProgressIndex; prev < (int) progressIndex; prev++)
                     {  
-                        if (prev % 8 == 0) // gives eighth, but 8x value; saves time with crafting while providing same value
+                        if (prev % 8 == 0) // gives eighth, but 8x value
                         {
                             GetSymbol(4);
                         }
@@ -478,134 +475,133 @@ public class GameManager : MonoBehaviour
     public void slotposUpd()
     {
         slotpos1Text.text = "";
-        for (int i=0;i<8; i++) //for each row
+        for (int i = 0; i < 8; i++) //for each row
         {
-            for(int k=1;k<11;k++) // for each element
+            for(int k = 1; k < 11; k++) // for each element
             {
-                slotpos1Text.text += slotpos[i,k]+" ";
+                slotpos1Text.text += slotpos[i,k] + " ";
             }
             slotpos1Text.text += "\n";
         }
        
-        eqSlotText.text = "row 0 |"+eqIndex[0]+"|"+solutionIndex[0]
-        +"|\nrow 1 |"+eqIndex[1]+"|"+solutionIndex[1]
-        +"|\nrow 2 |"+eqIndex[2]+"|"+solutionIndex[2]
-        +"|\nrow 3 |"+eqIndex2[3]+"|"+solutionIndex2[3]
-        +"|\nrow 4 |"+eqIndex2[4]+"|"+solutionIndex2[4]
-        +"|\nrow 5 |"+eqIndex2[5]+"|"+solutionIndex2[5]
-        ;
+        eqSlotText.text = "row 0 |" + eqIndex[0] + "|" + solutionIndex[0]
+        + "|\nrow 1 |" + eqIndex[1] + "|" + solutionIndex[1]
+        + "|\nrow 2 |" + eqIndex[2] + "|" + solutionIndex[2]
+        + "|\nrow 3 |" + eqIndex2[3] + "|" + solutionIndex2[3]
+        + "|\nrow 4 |" + eqIndex2[4] + "|" + solutionIndex2[4]
+        + "|\nrow 5 |" + eqIndex2[5] + "|" + solutionIndex2[5];
 
         pwrslotText.text = "     -- internal symbol slot data --\n---------------------------------------\n lbrack\n";
-        for (int i=1;i<5; i++) // Left Bracket
+        for (int i = 1; i < 5; i++) // Left Bracket
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text +=lbrackIndex[i,k]+" ";
+                pwrslotText.text += lbrackIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n rbrack\n";
-        for (int i=1;i<5; i++) // Right Bracket
+        for (int i = 1; i < 5; i++) // Right Bracket
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += rbrackIndex[i,k]+" ";
+                pwrslotText.text += rbrackIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n rootstart\n";
-        for (int i=1;i<5; i++) // Root Start
+        for (int i = 1; i < 5; i++) // Root Start
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += rootstartIndex[i,k]+" ";
+                pwrslotText.text += rootstartIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n rootend\n";
-        for (int i=1;i<5; i++) // Root end
+        for (int i = 1; i < 5; i++) // Root end
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += rootendIndex[i,k]+" ";
+                pwrslotText.text += rootendIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n exponentiation\n";
-        for (int i=1;i<5; i++) // Power
+        for (int i = 1; i < 5; i++) // Power
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += pwrIndex[i,k]+" ";
+                pwrslotText.text += pwrIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n division\n";
-        for (int i=1;i<5; i++) // Division
+        for (int i = 1; i < 5; i++) // Division
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += divIndex[i,k]+" ";
+                pwrslotText.text += divIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n multiplication\n";
-        for (int i=1;i<5; i++) // Multiplication
+        for (int i = 1; i < 5; i++) // Multiplication
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += multIndex[i,k]+" ";
+                pwrslotText.text += multIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n addition\n";
-        for (int i=1;i<5; i++) // Addition
+        for (int i = 1; i < 5; i++) // Addition
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += addIndex[i,k]+" ";
+                pwrslotText.text += addIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------\n subtraction\n";
-        for (int i=1;i<5; i++) // Subtraction
+        for (int i = 1; i < 5; i++) // Subtraction
         {
             pwrslotText.text += $"row {i}: ";
-            for(int k=1;k<11;k++)
+            for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += subIndex[i,k]+" ";
+                pwrslotText.text += subIndex[i,k] + " ";
             }
             pwrslotText.text += "\n";
         }
         pwrslotText.text += "---------------------------------------";
-        rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle+"\nreset multiplyer: "+resetMultiplyer+"\ncurrent Equation slot: ["+TempEqPosStorage+"]\neq type select: "+TempEqStorage+"\nrecord: "+record;
+        rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle + "\nreset multiplyer: " + resetMultiplyer + "\ncurrent Equation slot: [" + TempEqPosStorage + "]\neq type select: " + TempEqStorage + "\nrecord: " + record;
         pauseCountText.text = "\t-- crafting slot data --\n---------------------------------------\n"
-        +"\nValue:\t\t"+craftIndex[0, 0]+"\t"+craftIndex[0,1]
-        +"\nAddition:\t\t"+craftIndex[1, 0]+"\t"+craftIndex[1,1]
-        +"\nSubtraction:\t"+craftIndex[2, 0]+"\t"+craftIndex[2,1]
-        +"\nMultiplication\t"+craftIndex[3, 0]+"\t"+craftIndex[3,1]
-        +"\nDivision:\t\t"+craftIndex[4, 0]+"\t"+craftIndex[4,1]
-        +"\nExponentiation:\t"+craftIndex[5, 0]+"\t"+craftIndex[5,1]
-        +"\nLeft Bracket:\t"+craftIndex[6, 0]+"\t"+craftIndex[6,1]
-        +"\nRight Bracket:\t"+craftIndex[7, 0]+"\t"+craftIndex[7,1]
-        +"\nRoot Start:\t"+craftIndex[8, 0]+"\t"+craftIndex[8,1]
-        +"\nRoot End:\t\t"+craftIndex[9, 0]+"\t"+craftIndex[9,1]
-        +"\n---------------------------------------";
-        targetText.text = "" +resetMultiplyer+"\n↓\n"+(1+Math.Sqrt(record/250));
-        symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
+        + "\nValue:\t\t" + craftIndex[0, 0] + "\t" + craftIndex[0,1]
+        + "\nAddition:\t\t" + craftIndex[1, 0] + "\t" + craftIndex[1,1]
+        + "\nSubtraction:\t" + craftIndex[2, 0] + "\t" +craftIndex[2,1]
+        + "\nMultiplication\t" + craftIndex[3, 0]+"\t" + craftIndex[3,1]
+        + "\nDivision:\t\t" + craftIndex[4, 0] + "\t" + craftIndex[4,1]
+        + "\nExponentiation:\t" + craftIndex[5, 0] + "\t" + craftIndex[5,1]
+        + "\nLeft Bracket:\t" + craftIndex[6, 0] + "\t" + craftIndex[6,1]
+        + "\nRight Bracket:\t" + craftIndex[7, 0] + "\t" + craftIndex[7,1]
+        + "\nRoot Start:\t" + craftIndex[8, 0] + "\t" + craftIndex[8,1]
+        + "\nRoot End:\t\t" + craftIndex[9, 0] + "\t" + craftIndex[9,1]
+        + "\n---------------------------------------";
+        targetText.text = "" + resetMultiplyer + "\n↓\n" + (1 + Math.Sqrt(record / 250));
+        symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: " + StorageSlot.transform.childCount + " ]";
     }
 
-    public void EqReset(int CurrentEq)
+ public void EqReset(int CurrentEq)
     {  
-        Debug.Log("Resetting Slot Data for ["+CurrentEq+", 1-10]");
+        Debug.Log("Resetting Slot Data for [" + CurrentEq + ", 1-10]");
         for (int i = 1; i <= 10; i++)
         {
             slotpos[CurrentEq, i] = slotposStored[CurrentEq, i];
@@ -632,19 +628,19 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i <= 5; i++)
             {
-                for (int k = 1;k<=10; k++)
+                for (int k = 1; k <= 10; k++)
                 {
                     slotposStored[i, k] = slotpos[i,k];
                 }
             }
     }
 
-    // Calculator. param describes the slot where it starts, the slot where it ends, if it is being called recursively, the row that it calls
+     // Calculator. param describes the slot where it starts, the slot where it ends, if it is being called recursively, the row that it calls
     public void Mathfunc(int startpos, int endpos, bool IsRecCall, int eqCalled)
     {  
         if (IsRecCall == false)
         {
-            Debug.Log("//---------- Mathfunc Called ----------\\\\");
+            Debug.Log("                         //---------- Mathfunc Called ----------\\\\");
         }
         else
         {
@@ -663,12 +659,12 @@ public class GameManager : MonoBehaviour
                 }
 
                 // BRACKETS
-                for (int index=startpos;index<endpos;index++) // check all possible positions within bounds for left brackets
+                for (int index = startpos; index < endpos; index++) // check all possible positions within bounds for left brackets
                 {
                     if (lbrackIndex[eqCalled, index] > 0 && lbrackRecIndex[eqCalled, index] == false) //if checked slot has a left bracket and has not been ran recursively
                     {
                         Debug.Log("lbrack found at slot"+index);
-                        for (int index2=index+1;index2<=endpos;index2++) // if a vaild left bracket position is found, check all for right brackets, starting at the left bracket position to end
+                        for (int index2 = index + 1; index2 <= endpos; index2++) // if a vaild left bracket position is found, check all for right brackets, starting at the left bracket position to end
                         {
                             if (rbrackIndex[eqCalled, index2] > 0 && rbrackRecIndex[eqCalled, index2] == false) // if checked position has a right bracket in it and has not been done before
                             {
@@ -694,14 +690,21 @@ public class GameManager : MonoBehaviour
                             Debug.Log("Root Found");
                             if (rootstartIndex[eqCalled, expcheck] > 0 && rootstartRecIndex[eqCalled, expcheck] == false) // ROOT FIRST
                             {
-                                for (int index2=startpos; index2<=endpos; index2++)
+                                for (int index2 = startpos; index2 <= endpos; index2++)
                                 {
                                     Debug.Log("index = "+index2);
                                     if (rootendIndex[eqCalled, index2] > 0 && rootendRecIndex[eqCalled, expcheck] == false)
                                     {
                                         rootstartRecIndex[eqCalled, expcheck] = true; //record found rootstart into recusion index
                                         rootendRecIndex[eqCalled, index2] = true; //record found rootend into recusion index
-                                        Mathfunc(rootstartIndex[eqCalled, expcheck] + 1, rootendIndex[eqCalled, index2] - 1, true, eqCalled); //call calculator recursively with the bounds within the root.
+                                        if (expcheck + 1 != index2 - 1) // check if root start and end are NOT 1 slot apart
+                                        {
+                                            Mathfunc(rootstartIndex[eqCalled, expcheck] + 1, rootendIndex[eqCalled, index2] - 1, true, eqCalled); //call calculator recursively with the bounds within the root.
+                                        }
+                                        else // falls through to this if they are 1 slot apart
+                                        {
+                                            solution = slotpos[eqCalled, expcheck + 1]; // gets value of slot in-between
+                                        }
                                         solution = Math.Sqrt(solution); // once solved
                                         slotpos[eqCalled, rootendIndex[eqCalled, index2]] = slotpos[eqCalled, rootstartIndex[eqCalled, expcheck]] = solution; // surrounding rootstart and rootend also assigned solution to allow other symbols to calculate off of this solution
                                         Debug.Log("//SQUARE ROOT DONE");
@@ -794,7 +797,7 @@ public class GameManager : MonoBehaviour
                         Debug.Log("//SUBTRACTION DONE");
                     }
                 }
-                if (IsRecCall == true) // end of function if called recursively
+                if (IsRecCall) // end of function if called recursively
                 {
                     Debug.Log("      \\\\--- Recursion Done ---//");
                 }
@@ -802,14 +805,13 @@ public class GameManager : MonoBehaviour
                 {
                     if (double.IsInfinity(solution) || double.IsNaN(solution)) // error-handling for NaNs and Infinities
                     {
-                        
                         solution = 0;
                     }
                     solution = (eqCalled < 6) ? solutionIndex2[eqCalled] = solution : solutionIndex3[eqCalled] = solution; // error handling for broken array
-                    Debug.Log("\\\\---------- Mathfunc Done ----------//");
-                    solution = (solutionIndex2[1]+solutionIndex2[2]+solutionIndex2[3]+solutionIndex2[4]+solutionIndex2[5]+solutionIndex3[6]+solutionIndex3[7]+solutionIndex3[8]+solutionIndex3[9]);
+                    Debug.Log("                 \\\\---------- Mathfunc Done ----------//");
+                    solution = (solutionIndex2[1] + solutionIndex2[2] + solutionIndex2[3] + solutionIndex2[4] + solutionIndex2[5] + solutionIndex3[6] + solutionIndex3[7] + solutionIndex3[8] + solutionIndex3[9]);
                     Debug.Log("solution: " + solution);
-                    solutionText.text = ""+solution;
+                    solutionText.text = "" + solution;
                     slotposUpd(); //updates debug menu
                     gameProgression(); //gives player symbols
                     EqReset(eqCalled); //resets slot values, must be done last
@@ -825,47 +827,48 @@ public class GameManager : MonoBehaviour
         if ((eqCalled + 1) < 10 && IsRecCall == false) // calls next equation row
         {
             Debug.Log("//////////////////////////////////////////////////////////////// Next Equation Start");
-            Mathfunc(1, 10, false, eqCalled+1);
+            Mathfunc(1, 10, false, eqCalled + 1);
         }              
     }
    
     // tutorial messages, triggered by holding [h], probably a better way to do this but it doesnt really matter
-    public void TutorialControl(bool state, bool antiState)
+    public void TutorialControl(bool state)
     {
-        if (state == true)
+        if (state)
         {
+            tutText.gameObject.SetActive(true);
             switch (TutorialDesc)
             {
                 case 1: // Addition
-                    addTutText.gameObject.SetActive(true);
+                    tutText.text = "Addition:\nThe next symbol is the amount of times the previous symbol is incremented.";
                     break;
                    
                 case 2: // Multiplication
-                    multTutText.gameObject.SetActive(true);
+                    tutText.text = "Multiplication:\nThe next symbol is the amount of times the previous symbol is added to itself.";
                     break;
                    
                 case 3: // Division
-                    divTutText.gameObject.SetActive(true);
+                    tutText.text = "Division:\nReverse of multiplication; outputs the amount of times the next symbol is contained in the previous symbol.";
                     break;
                    
                 case 4: // Subtraction
-                    subTutText.gameObject.SetActive(true);
+                    tutText.text = "Subtraction:\nThe next symbol is the amount of times the previous symbol is decremented.";
                     break;
                    
                 case 5: // Exponentiation
-                    pwrTutText.gameObject.SetActive(true);
+                    tutText.text = "Exponentiation:\nThe next symbol is the amount of times the previous symbol is multiplied by itself.";
                     break;
                    
                 case 6: // Square Root
-                    rootTutText.gameObject.SetActive(true);
+                    tutText.text = "Square root:\nOutputs the number that when multiplied by itself equals the solution to the slots between this symbol and the root end.";
                     break;
                    
                 case 7: // Right Bracket
-                    rbrackTutText.gameObject.SetActive(true);
+                    tutText.text = "Right bracket:\nThe slots between this symbol and the left bracket are solved first";
                     break;
                    
                 case 8: // Left Bracket
-                    lbrackTutText.gameObject.SetActive(true);
+                    tutText.text = "Left bracket:\nThe slots between this symbol and the right bracket are solved first";
                     break;
                    
                 default:
@@ -874,14 +877,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {    
-            lbrackTutText.gameObject.SetActive(antiState);
-            rbrackTutText.gameObject.SetActive(antiState);
-            rootTutText.gameObject.SetActive(antiState);
-            pwrTutText.gameObject.SetActive(antiState);
-            divTutText.gameObject.SetActive(antiState);
-            multTutText.gameObject.SetActive(antiState);
-            addTutText.gameObject.SetActive(antiState);
-            subTutText.gameObject.SetActive(antiState);
+            tutText.gameObject.SetActive(false);
         }
     }
    
@@ -909,12 +905,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame :3
     void Update()
     {
-        playTime = Time.timeSinceLevelLoad + PlayerStats.playTime;
-        SaveTimeText.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}");
-        if (Input.GetKeyDown(KeyCode.BackQuote)) {DebugControl(true);}
-        if (Input.GetKeyUp(KeyCode.BackQuote)) {DebugControl(false);}
-        if (Input.GetKeyDown(KeyCode.H)) { TutorialControl(true, false);}
-        if (Input.GetKeyUp(KeyCode.H)) { TutorialControl(false, false);}
+        playTime = Time.timeSinceLevelLoad + PlayerStats.playTime; // gets playtime
+        SaveTimeText.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}"); // updates playtime display
+        if (Input.GetKeyDown(KeyCode.BackQuote)) {DebugControl(true);} // debug key down
+        if (Input.GetKeyUp(KeyCode.BackQuote)) {DebugControl(false);} // debug key up
+        if (Input.GetKeyDown(KeyCode.H)) { TutorialControl(true);} // tutorial key down
+        if (Input.GetKeyUp(KeyCode.H)) { TutorialControl(false);} // tutorial key up
         if (Input.GetKeyDown(KeyCode.Return)) {Mathfunc(1, 10, false, 1);} // Solve hotkey
         if (Input.GetKeyDown(KeyCode.Escape)) // if odd amt of esc presses then it pauses
         {
