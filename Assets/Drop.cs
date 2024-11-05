@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class Drop : MonoBehaviour, IDropHandler
 {
     public GameManager gameManager;
     public int SlotObjN; //object Slot number
@@ -55,42 +55,10 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     public Transform CraftSlot2Trans;
 
     [SerializeField] public AudioClip[] chalkSounds;
-
-
-    // when mouse enters an equation
-    public void  OnPointerEnter(PointerEventData eventData)
-    {  
-        /*
-        if (eqSlotDetermine == true && (Input.GetMouseButton(0) || Input.GetKey("left shift")))
-        {
-            AssignEqSlot = EqSlotNum;
-            gameManager.TempEqPosStorage = AssignEqSlot;
-            Debug.Log(gameManager.TempEqPosStorage);
-        }*/
-    }
-   
-    // when mouse exits an equation
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        /*
-        if (eqSlotDetermine == true && Input.GetMouseButton(0) == false )
-        {
-            gameManager.TempEqPosStorage = 0;
-            Debug.Log(gameManager.TempEqPosStorage);
-        }
-        */
-    }
    
     // on symbol dropped
     public void OnDrop(PointerEventData eventData)
     {
-        /*if (eqSlotDetermine == true)
-        {
-            
-            Debug.Log(gameManager.TempEqPosStorage);
-            gameManager.eqIndex2[AssignEqSlot] = gameManager.TempEqStorage;
-        }
-        */
         if (transform.childCount == 0 && gameManager.TempMergeStorage == false) //if slot empty
         {
             GameObject dropped = eventData.pointerDrag;
@@ -116,64 +84,7 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
                     gameManager.slotpos[gameManager.TempEqPosStorage, SlotObjN] = gameManager.tempdragstorage;
 
                     Debug.Log("assigned slotpos: " + gameManager.TempEqPosStorage + ", " + SlotObjN + " with value of " + gameManager.tempdragstorage);
-                    switch (drag.SymbolType)
-                    {
-                        case 1:
-                            gameManager.addslot = SlotObjN;
-                            gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.addslot;
-                            Debug.Log("addslot: " + gameManager.addslot);
-                            break;
-
-                        case 2:
-                            gameManager.subslot = SlotObjN;
-                            gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subslot;
-                            Debug.Log("subslot: " + gameManager.subslot);
-                            break;
-
-                        case 3:
-                            gameManager.multslot = SlotObjN;
-                            gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multslot;
-                            Debug.Log("multslot: " + gameManager.multslot);
-                            break;
-
-                        case 4:
-                            gameManager.divslot = SlotObjN;
-                            gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divslot;
-                            Debug.Log("divslot: " + gameManager.divslot);
-                            break;
-
-                        case 5:
-                            gameManager.pwrslot = SlotObjN;
-                            gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrslot;
-                            Debug.Log("pwrslot: " + gameManager.pwrslot);
-                            break;
-
-                        case 6:
-                            gameManager.lbrack = SlotObjN;
-                            gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrack;
-                            Debug.Log("lbrack: " + gameManager.lbrack);
-                            break;
-
-                        case 7:
-                            gameManager.rbrack = SlotObjN;
-                            gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrack;
-                            Debug.Log("rbrack: " + gameManager.rbrack);
-                            break;
-
-                        case 8:
-                            gameManager.rootstart = SlotObjN;
-                            gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstart;
-                            Debug.Log("rootstart: " + gameManager.rootstart);
-                            break;
-
-                        case 9:
-                            gameManager.rootend = SlotObjN;
-                            gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootend;
-                            Debug.Log("rootend: " + gameManager.rootend);
-                            break;
-                        default:
-                            break;
-                    }
+                    SymbolTypeAssign(drag.SymbolType);
                 }
                 else //crafting possible
                 {
@@ -194,6 +105,68 @@ public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
             drag.parentAfterDrag = transform;
         }
         gameManager.slotposUpd();
+    }
+
+    public void SymbolTypeAssign(int symbolType)
+    {
+        switch (symbolType)
+        {
+            case 1:
+                gameManager.addslot = SlotObjN;
+                gameManager.addIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.addslot;
+                Debug.Log("addslot: " + gameManager.addslot);
+                break;
+
+            case 2:
+                gameManager.subslot = SlotObjN;
+                gameManager.subIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.subslot;
+                Debug.Log("subslot: " + gameManager.subslot);
+                break;
+
+            case 3:
+                gameManager.multslot = SlotObjN;
+                gameManager.multIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.multslot;
+                Debug.Log("multslot: " + gameManager.multslot);
+                break;
+
+            case 4:
+                gameManager.divslot = SlotObjN;
+                gameManager.divIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.divslot;
+                Debug.Log("divslot: " + gameManager.divslot);
+                break;
+
+            case 5:
+                gameManager.pwrslot = SlotObjN;
+                gameManager.pwrIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.pwrslot;
+                Debug.Log("pwrslot: " + gameManager.pwrslot);
+                break;
+
+            case 6:
+                gameManager.lbrack = SlotObjN;
+                gameManager.lbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.lbrack;
+                Debug.Log("lbrack: " + gameManager.lbrack);
+                break;
+
+            case 7:
+                gameManager.rbrack = SlotObjN;
+                gameManager.rbrackIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rbrack;
+                Debug.Log("rbrack: " + gameManager.rbrack);
+                break;
+
+            case 8:
+                gameManager.rootstart = SlotObjN;
+                gameManager.rootstartIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootstart;
+                Debug.Log("rootstart: " + gameManager.rootstart);
+                break;
+
+            case 9:
+                gameManager.rootend = SlotObjN;
+                gameManager.rootendIndex[gameManager.TempEqPosStorage, SlotObjN] = gameManager.rootend;
+                Debug.Log("rootend: " + gameManager.rootend);
+                break;
+            default:
+                break;
+        }
     }
    
     // checks for valid crafting output once called

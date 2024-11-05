@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
     public Image debugMenu;
     public Image alphaGrid;
     public Image betaGrid;
-    
    
     // Equations
     public Image EquationX1;
@@ -82,6 +81,7 @@ public class GameManager : MonoBehaviour
     public GameObject BVSymbol; // symbol with 999999 val, used for cheats
     public GameObject WinScreen; // win screen
     public GameObject InventorySlot; // inventory gameobject
+    public GameObject TrashSlot; // trash slot
    
     // Slot numeric values
     public double[,] slotpos = new double [12, 11]; // used during calculation
@@ -313,7 +313,7 @@ public class GameManager : MonoBehaviour
     // Called if player attempts to prestige to get a lower resetmult than they already have
     IEnumerator ResetWarning()
     {
-        prestigeWarning.text = "It would be silly to do that, you would just waste time by decreasing the multiplyer.\n If you're trying to get yourself out of a softlock, fair enough: press [~] and click [FORCE PRESTIGE]";
+        prestigeWarning.text = "It would be silly to do that, you would just waste time by decreasing the multiplyer.\nIf you're trying to get yourself out of a softlock then go to settings in the pause screen.";
         yield return new WaitForSecondsRealtime(12);
         prestigeWarning.text = "";
     }
@@ -326,6 +326,11 @@ public class GameManager : MonoBehaviour
         PlayerStats.resetMultiplyer = resetMultiplyer;
         PlayerStats.playTime = playTime;
         SerializeJson();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    // reloads scene
+    public void ReloadScene()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
    
@@ -923,6 +928,10 @@ public class GameManager : MonoBehaviour
             {
                 PauseControl(true);
             }
+        }
+        if (TrashSlot.transform.childCount == 1) // removes symbol from crafting slot
+        {
+            Destroy(TrashSlot.transform.GetChild(0).gameObject);
         }
     }
 }

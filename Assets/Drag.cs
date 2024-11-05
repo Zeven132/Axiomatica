@@ -23,7 +23,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void  OnPointerEnter(PointerEventData eventData) // shift hotkey
          {  
-            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 21 && Input.GetMouseButton(0) == false) //if left shift down and inventory not full
+            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 20 && Input.GetMouseButton(0) == false) //if left shift down and inventory not full
             {
                 SymbolParent = GetComponentInParent<Drop>(); // get slot and set values to 0
                 SymbolParent.IsEmpty();
@@ -66,65 +66,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             SymbolParent.IsNowEmpty = false;
             Debug.Log("Empty = false");
             gameManager.slotpos[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.tempdragstorage;
-            switch (SymbolType) // sets symbol types
-            {
-                case 1:
-                    gameManager.addslot = SymbolParent.SlotObjN;
-                    gameManager.addIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.addslot;
-                    Debug.Log("addslot: " + gameManager.addslot);
-                    break;
-
-                case 2:
-                    gameManager.subslot = SymbolParent.SlotObjN;
-                    gameManager.subIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.subslot;
-                    Debug.Log("subslot: " + gameManager.subslot);
-                    break;
-
-                case 3:
-                    gameManager.multslot = SymbolParent.SlotObjN;
-                    gameManager.multIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.multslot;
-                    Debug.Log("multslot: " + gameManager.multslot);
-                    break;
-
-                case 4:
-                    gameManager.divslot = SymbolParent.SlotObjN;
-                    gameManager.divIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.divslot;
-                    Debug.Log("divslot: " + gameManager.divslot);
-                    break;
-
-                case 5:
-                    gameManager.pwrslot = SymbolParent.SlotObjN;
-                    gameManager.pwrIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.pwrslot;
-                    Debug.Log("pwrslot: " + gameManager.pwrslot);
-                    break;
-
-                case 6:
-                    gameManager.lbrack = SymbolParent.SlotObjN;
-                    gameManager.lbrackIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.lbrack;
-                    Debug.Log("lbrack: " + gameManager.lbrack);
-                    break;
-
-                case 7:
-                    gameManager.rbrack = SymbolParent.SlotObjN;
-                    gameManager.rbrackIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rbrack;
-                    Debug.Log("rbrack: " + gameManager.rbrack);
-                    break;
-
-                case 8:
-                    gameManager.rootstart = SymbolParent.SlotObjN;
-                    gameManager.rootstartIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rootstart;
-                    Debug.Log("rootstart: " + gameManager.rootstart);
-                    break;
-
-                case 9:
-                    gameManager.rootend = SymbolParent.SlotObjN;
-                    gameManager.rootendIndex[gameManager.TempEqPosStorage, SymbolParent.SlotObjN] = gameManager.rootend;
-                    Debug.Log("rootend: " + gameManager.rootend);
-                    break;
-                   
-                default:
-                    break;
-            }
+            SymbolParent.SymbolTypeAssign(SymbolType);
         }
         else
         {
