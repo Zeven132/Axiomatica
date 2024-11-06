@@ -16,22 +16,21 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public bool CanMerge;
     public Drop SymbolParent;
     public int TutorialNumber;
-    public double tempDragStorageStorage; //dont laugh at me
     public Drop currenteqtype;
     public GameObject InventorySlot;
     [HideInInspector] public Transform parentAfterDrag;
 
     public void  OnPointerEnter(PointerEventData eventData) // shift hotkey
-         {  
-            if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 20 && Input.GetMouseButton(0) == false) //if left shift down and inventory not full
-            {
-                SymbolParent = GetComponentInParent<Drop>(); // get slot and set values to 0
-                SymbolParent.IsEmpty();
-                parentAfterDrag = transform.parent;
-                transform.SetParent(InventorySlot.transform); // change parent of symbol to inventory
-                transform.SetAsLastSibling();
-            }
-         }
+    {  
+        if (Input.GetKey("left shift") && InventorySlot.transform.childCount < 20 && Input.GetMouseButton(0) == false) //if left shift down and inventory not full
+        {
+            SymbolParent = GetComponentInParent<Drop>(); // get slot and set values to 0
+            SymbolParent.IsEmpty();
+            parentAfterDrag = transform.parent;
+            transform.SetParent(InventorySlot.transform); // change parent of symbol to inventory
+            transform.SetAsLastSibling();
+        }
+    }
    
     public void OnBeginDrag(PointerEventData eventData)
     {

@@ -7,7 +7,6 @@ public class Drop : MonoBehaviour, IDropHandler
     public GameManager gameManager;
     public int SlotObjN; //object Slot number
     public int EqSlotNum; //for equations
-    public string Number;
     public bool eqSlotDetermine; //false if symbol slot; true if eq slot
     private int AssignEqSlot; //used to assign eq slots to symbols
     public bool IsNowEmpty = false;
@@ -50,9 +49,6 @@ public class Drop : MonoBehaviour, IDropHandler
    
     public GameObject CraftingGrid;
     public Transform CraftingGridTrans;
-   
-    public Transform CraftSlot1Trans;
-    public Transform CraftSlot2Trans;
 
     [SerializeField] public AudioClip[] chalkSounds;
    
@@ -70,7 +66,7 @@ public class Drop : MonoBehaviour, IDropHandler
             }
             catch
             {
-
+                // try only succeeds if given gameobject has sound effects assigned
             }
 
             

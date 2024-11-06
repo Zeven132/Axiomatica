@@ -236,8 +236,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &2294649
 BoxCollider2D:
@@ -625,8 +623,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &4647829
 BoxCollider2D:
@@ -1039,8 +1035,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -1458,8 +1452,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -1987,8 +1979,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &40518318
 BoxCollider2D:
@@ -2267,8 +2257,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -2768,8 +2756,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -3268,8 +3254,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &69756381
 BoxCollider2D:
@@ -3548,8 +3532,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -3967,8 +3949,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -4391,8 +4371,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -4796,8 +4774,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &117455264
 BoxCollider2D:
@@ -5468,8 +5444,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &127055163
 GameObject:
@@ -5483,7 +5457,7 @@ GameObject:
   - component: {fileID: 127055166}
   - component: {fileID: 127055165}
   m_Layer: 5
-  m_Name: pwrslotText
+  m_Name: typeDisp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5994,8 +5968,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &148704391
 BoxCollider2D:
@@ -6248,8 +6220,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &148783358
 BoxCollider2D:
@@ -6501,8 +6471,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &151592874
 MonoBehaviour:
@@ -6727,8 +6695,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &152492717
 BoxCollider2D:
@@ -7341,8 +7307,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -8576,8 +8540,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -9108,8 +9070,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &235640414
 BoxCollider2D:
@@ -10719,8 +10679,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &344432698
 MonoBehaviour:
@@ -11489,8 +11447,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -11913,8 +11869,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -12461,8 +12415,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -12893,8 +12845,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -13596,8 +13546,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &441238142
 BoxCollider2D:
@@ -13851,8 +13799,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &441667839
 BoxCollider2D:
@@ -14119,8 +14065,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 188524089}
-  CraftSlot2Trans: {fileID: 1036371156}
   chalkSounds:
   - {fileID: 8300000, guid: 960b4e1266821534c8e754fb15808376, type: 3}
 --- !u!114 &457251409
@@ -14866,8 +14810,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &498153736
 MonoBehaviour:
@@ -15059,8 +15001,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &511216169
 BoxCollider2D:
@@ -15700,8 +15640,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -15985,8 +15923,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -16407,8 +16343,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -17118,8 +17052,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &557267847
 GameObject:
@@ -17920,8 +17852,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -18179,8 +18109,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &614054001
 BoxCollider2D:
@@ -18433,8 +18361,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &617081700
 BoxCollider2D:
@@ -18688,8 +18614,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &617171567
 BoxCollider2D:
@@ -18968,8 +18892,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -19633,8 +19555,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &653206009
 BoxCollider2D:
@@ -20021,8 +19941,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &661209889
 BoxCollider2D:
@@ -20275,8 +20193,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &670160552
 BoxCollider2D:
@@ -20797,8 +20713,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &696009044
 MonoBehaviour:
@@ -21216,8 +21130,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -21611,8 +21523,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &708904845
 BoxCollider2D:
@@ -22232,8 +22142,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -22866,8 +22774,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &742138240
 MonoBehaviour:
@@ -23019,8 +22925,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &755230734
 BoxCollider2D:
@@ -23273,8 +23177,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -23961,8 +23863,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -24246,8 +24146,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -24642,8 +24540,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &827194783
 BoxCollider2D:
@@ -24922,8 +24818,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -25610,8 +25504,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -25870,8 +25762,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &837635979
 BoxCollider2D:
@@ -26285,8 +26175,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -26839,8 +26727,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -27124,8 +27010,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -28129,8 +28013,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &890164126
 BoxCollider2D:
@@ -28894,8 +28776,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -30417,8 +30297,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -30836,8 +30714,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -31121,8 +30997,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -31380,8 +31254,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &983075324
 BoxCollider2D:
@@ -31660,8 +31532,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -32544,8 +32414,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -32829,8 +32697,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -33087,8 +32953,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &1018293830
 MonoBehaviour:
@@ -33374,8 +33238,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1022797493
 BoxCollider2D:
@@ -34068,8 +33930,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1037290849
 BoxCollider2D:
@@ -34724,8 +34584,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -35210,10 +35068,8 @@ GameObject:
   - component: {fileID: 1102375389}
   - component: {fileID: 1102375395}
   - component: {fileID: 1102375394}
-  - component: {fileID: 1102375393}
   - component: {fileID: 1102375392}
   - component: {fileID: 1102375391}
-  - component: {fileID: 1102375390}
   m_Layer: 5
   m_Name: Subtraction Symbol (4)
   m_TagString: Untagged
@@ -35240,18 +35096,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1102375390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102375388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eb8a4325337367429a15cf8c6741fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1102375391
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35322,62 +35166,6 @@ MonoBehaviour:
   currenteqtype: {fileID: 0}
   InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
---- !u!114 &1102375393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102375388}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1102375394}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1810424841}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1102375394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36415,8 +36203,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &1144964260
 GameObject:
@@ -37394,8 +37180,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -37809,8 +37593,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1218586216
 BoxCollider2D:
@@ -38109,8 +37891,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &1232589335
 GameObject:
@@ -38700,8 +38480,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1265051618
 BoxCollider2D:
@@ -39241,8 +39019,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -39660,8 +39436,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -40422,8 +40196,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -40681,8 +40453,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -41962,8 +41732,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -42229,8 +41997,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1377092614
 BoxCollider2D:
@@ -42428,8 +42194,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1378429022
 BoxCollider2D:
@@ -42682,8 +42446,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -43190,8 +42952,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -43495,8 +43255,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &1423415243
 GameObject:
@@ -43745,8 +43503,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -45022,8 +44778,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -45281,8 +45035,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1502896436
 BoxCollider2D:
@@ -45777,8 +45529,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1527322923
 BoxCollider2D:
@@ -46401,8 +46151,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &1537799391
 MonoBehaviour:
@@ -46694,8 +46442,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1540542296
 BoxCollider2D:
@@ -47069,8 +46815,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -48497,8 +48241,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -49381,8 +49123,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1634589536
 BoxCollider2D:
@@ -49534,10 +49274,7 @@ GameObject:
   - component: {fileID: 1635272071}
   - component: {fileID: 1635272077}
   - component: {fileID: 1635272076}
-  - component: {fileID: 1635272075}
   - component: {fileID: 1635272074}
-  - component: {fileID: 1635272073}
-  - component: {fileID: 1635272072}
   m_Layer: 5
   m_Name: Addition Symbol (1)
   m_TagString: Untagged
@@ -49564,63 +49301,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1635272072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635272070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eb8a4325337367429a15cf8c6741fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1635272073
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635272070}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &1635272074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49646,62 +49326,6 @@ MonoBehaviour:
   currenteqtype: {fileID: 0}
   InventorySlot: {fileID: 0}
   parentAfterDrag: {fileID: 0}
---- !u!114 &1635272075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635272070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1635272076}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1810424841}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1635272076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50025,8 +49649,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -50320,8 +49942,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -50738,8 +50358,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -51077,8 +50695,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1685107239
 BoxCollider2D:
@@ -51712,8 +51328,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -51997,8 +51611,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -52282,8 +51894,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -52839,8 +52449,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -53291,8 +52899,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -53550,8 +53156,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1735218671
 BoxCollider2D:
@@ -54371,8 +53975,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &1764082408
 GameObject:
@@ -55126,13 +54728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4abe1db31fec5451e9c7985b17f57f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 0}
-  scorediv5: 0
-  rootscore: 0
-  selectcount: 0
   pausescreen: {fileID: 590245819}
-  pwrslotText: {fileID: 127055165}
+  typeDispText: {fileID: 127055165}
   pwrslot2Text: {fileID: 5767654}
   rootstartText: {fileID: 1525595475}
   rootendText: {fileID: 233692338}
@@ -55275,8 +54872,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 63205287689193639, guid: 59a62a6cbe8e9df4abf7236101c653dd, type: 3}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &1810857987
 GameObject:
@@ -55390,8 +54985,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1810857991
 BoxCollider2D:
@@ -56217,8 +55810,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -57008,8 +56599,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &1844246101
 MonoBehaviour:
@@ -57451,8 +57040,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1855203344
 BoxCollider2D:
@@ -57704,8 +57291,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!114 &1859650974
 MonoBehaviour:
@@ -57998,8 +57583,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1901815729
 BoxCollider2D:
@@ -58283,8 +57866,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -58568,8 +58149,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -58989,8 +58568,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -59274,8 +58851,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -59694,8 +59269,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -59953,8 +59526,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &1964653898
 BoxCollider2D:
@@ -60646,8 +60217,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -61063,8 +60632,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -61599,8 +61166,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &2024287024
 GameObject:
@@ -61991,8 +61556,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &2031534930
 BoxCollider2D:
@@ -62353,8 +61916,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -62612,8 +62173,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &2053513197
 BoxCollider2D:
@@ -62892,8 +62451,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -63177,8 +62734,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -63827,8 +63382,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &2100608677
 BoxCollider2D:
@@ -64107,8 +63660,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -64412,8 +63963,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 1036371155}
   CraftingGrid: {fileID: 1534139744}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 188524089}
-  CraftSlot2Trans: {fileID: 1036371156}
   chalkSounds: []
 --- !u!114 &2123480724
 MonoBehaviour:
@@ -64660,8 +64209,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -64945,8 +64492,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds:
   - {fileID: 8300000, guid: 1d8075d131764a642a9823ec31198752, type: 3}
   - {fileID: 8300000, guid: d00f76c07465d4b4696d6d7cbb0721f4, type: 3}
@@ -65250,8 +64795,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!1 &2134093764
 GameObject:
@@ -65366,8 +64909,6 @@ MonoBehaviour:
   CraftSlot2: {fileID: 0}
   CraftingGrid: {fileID: 0}
   CraftingGridTrans: {fileID: 0}
-  CraftSlot1Trans: {fileID: 0}
-  CraftSlot2Trans: {fileID: 0}
   chalkSounds: []
 --- !u!61 &2134093768
 BoxCollider2D:

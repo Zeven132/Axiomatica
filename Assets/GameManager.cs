@@ -13,17 +13,9 @@ using Random = System.Random;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> targets;
-
-    private int score;
-    public int scorediv5;
-    public int rootscore;
-
-    public int selectcount;
-    private int playerpos_x;
     public Button pausescreen;
    
-    public TextMeshProUGUI pwrslotText;
+    public TextMeshProUGUI typeDispText;
     public TextMeshProUGUI pwrslot2Text;
    
     public TextMeshProUGUI rootstartText;
@@ -113,26 +105,26 @@ public class GameManager : MonoBehaviour
     public int subslot;
     
     // Index types in order of operation. 0 is ignored
-    public int[,] lbrackIndex       = new int [12,11];
-    public int[,] rbrackIndex      = new int [12,11];
-    public int[,] rootstartIndex  = new int [12,11];
-    public int[,] rootendIndex   = new int [12,11];
-    public int[,] pwrIndex      = new int [12,11];
-    public int[,] divIndex     = new int [12,11];
-    public int[,] multIndex   = new int [12,11];
-    public int[,] addIndex   = new int [12,11];
-    public int[,] subIndex  = new int [12,11];
+    public int[,] lbrackIndex = new int [12,11];
+    public int[,] rbrackIndex = new int [12,11];
+    public int[,] rootstartIndex = new int [12,11];
+    public int[,] rootendIndex = new int [12,11];
+    public int[,] pwrIndex = new int [12,11];
+    public int[,] divIndex = new int [12,11];
+    public int[,] multIndex = new int [12,11];
+    public int[,] addIndex = new int [12,11];
+    public int[,] subIndex = new int [12,11];
    
     // Recursion indexes for each symbol. Switches equivilent position to true if the exact slot is used
-    public bool[,] lbrackRecIndex       = new bool [12,11];
-    public bool[,] rbrackRecIndex      = new bool [12,11];
-    public bool[,] rootstartRecIndex  = new bool [12,11];
-    public bool[,] rootendRecIndex   = new bool [12,11];
-    public bool[,] pwrRecIndex      = new bool [12,11];
-    public bool[,] divRecIndex     = new bool [12,11];
-    public bool[,] multRecIndex   = new bool [12,11];
-    public bool[,] addRecIndex   = new bool [12,11];
-    public bool[,] subRecIndex  = new bool [12,11];
+    public bool[,] lbrackRecIndex = new bool [12,11];
+    public bool[,] rbrackRecIndex = new bool [12,11];
+    public bool[,] rootstartRecIndex = new bool [12,11];
+    public bool[,] rootendRecIndex = new bool [12,11];
+    public bool[,] pwrRecIndex = new bool [12,11];
+    public bool[,] divRecIndex = new bool [12,11];
+    public bool[,] multRecIndex = new bool [12,11];
+    public bool[,] addRecIndex = new bool [12,11];
+    public bool[,] subRecIndex = new bool [12,11];
    
      // variables used for computation
     private double pwrvar1 = -1;  // the x in (x^y)
@@ -345,15 +337,16 @@ public class GameManager : MonoBehaviour
         if (record >= 100000)
         {
             EquationUnlock(5);
-            if (gameWon == false)
-            {
-                WinScreen.SetActive(true);
-                gameWon = true;
-                endTime.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}");
-            }
+            
         }
-        else if (record >= 25000){EquationUnlock(4);}
-        else if (record >= 10000){EquationUnlock(3);}
+        else if (record >= 25000)
+        {
+            EquationUnlock(4);
+        }
+        else if (record >= 10000)
+        {
+            EquationUnlock(3);
+        }
         else if (record >= 3000)
         {
             progressIndex = Math.Pow(record, 0.5) * resetMultiplyer + 70;
@@ -369,13 +362,21 @@ public class GameManager : MonoBehaviour
             EquationX1.gameObject.SetActive(true);
             progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
         }
-        else if (record >= 20){progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;}
+        else if (record >= 20)
+        {
+            progressIndex = Math.Pow(record, 0.75) * resetMultiplyer + 20;
+        }
         else if (record >= 8)
         {
             progressIndex = (Math.Pow(record, 0.75) * resetMultiplyer + 20);
         }
-        else {progressIndex = (Math.Pow(1.7, record - 1)) * resetMultiplyer;}
+        else 
+        {
+            progressIndex = (Math.Pow(1.7, record - 1)) * resetMultiplyer;
+        }
+
         progressIndex = Math.Round(progressIndex);
+
         if (progressIndex > PrevProgressIndex)
             {
                 if (resetMultiplyer > 16)
@@ -426,7 +427,7 @@ public class GameManager : MonoBehaviour
                     }
                 }  
                 PrevProgressIndex = progressIndex;  
-                symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: "+StorageSlot.transform.childCount+" ]";
+                symbolClaimText.text = "[SYMBOL CLAIM / AMOUNT: " + StorageSlot.transform.childCount + " ]";
             }
         if (record >= 2)
         {
@@ -496,97 +497,97 @@ public class GameManager : MonoBehaviour
         + "|\nrow 4 |" + eqIndex2[4] + "|" + solutionIndex2[4]
         + "|\nrow 5 |" + eqIndex2[5] + "|" + solutionIndex2[5];
 
-        pwrslotText.text = "     -- internal symbol slot data --\n---------------------------------------\n lbrack\n";
+        typeDispText.text = "     -- internal symbol slot data --\n---------------------------------------\n lbrack\n";
         for (int i = 1; i < 5; i++) // Left Bracket
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += lbrackIndex[i,k] + " ";
+                typeDispText.text += lbrackIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n rbrack\n";
+        typeDispText.text += "---------------------------------------\n rbrack\n";
         for (int i = 1; i < 5; i++) // Right Bracket
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += rbrackIndex[i,k] + " ";
+                typeDispText.text += rbrackIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n rootstart\n";
+        typeDispText.text += "---------------------------------------\n rootstart\n";
         for (int i = 1; i < 5; i++) // Root Start
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += rootstartIndex[i,k] + " ";
+                typeDispText.text += rootstartIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n rootend\n";
+        typeDispText.text += "---------------------------------------\n rootend\n";
         for (int i = 1; i < 5; i++) // Root end
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += rootendIndex[i,k] + " ";
+                typeDispText.text += rootendIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n exponentiation\n";
+        typeDispText.text += "---------------------------------------\n exponentiation\n";
         for (int i = 1; i < 5; i++) // Power
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += pwrIndex[i,k] + " ";
+                typeDispText.text += pwrIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n division\n";
+        typeDispText.text += "---------------------------------------\n division\n";
         for (int i = 1; i < 5; i++) // Division
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += divIndex[i,k] + " ";
+                typeDispText.text += divIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n multiplication\n";
+        typeDispText.text += "---------------------------------------\n multiplication\n";
         for (int i = 1; i < 5; i++) // Multiplication
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += multIndex[i,k] + " ";
+                typeDispText.text += multIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n addition\n";
+        typeDispText.text += "---------------------------------------\n addition\n";
         for (int i = 1; i < 5; i++) // Addition
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += addIndex[i,k] + " ";
+                typeDispText.text += addIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------\n subtraction\n";
+        typeDispText.text += "---------------------------------------\n subtraction\n";
         for (int i = 1; i < 5; i++) // Subtraction
         {
-            pwrslotText.text += $"row {i}: ";
+            typeDispText.text += $"row {i}: ";
             for(int k = 1; k < 11; k++)
             {
-                pwrslotText.text += subIndex[i,k] + " ";
+                typeDispText.text += subIndex[i,k] + " ";
             }
-            pwrslotText.text += "\n";
+            typeDispText.text += "\n";
         }
-        pwrslotText.text += "---------------------------------------";
+        typeDispText.text += "---------------------------------------";
         rootstartText.text = "-- misc data --\nnumber of pauses: " + pauseToggle + "\nreset multiplyer: " + resetMultiplyer + "\ncurrent Equation slot: [" + TempEqPosStorage + "]\neq type select: " + TempEqStorage + "\nrecord: " + record;
         pauseCountText.text = "\t-- crafting slot data --\n---------------------------------------\n"
         + "\nValue:\t\t" + craftIndex[0, 0] + "\t" + craftIndex[0,1]
@@ -732,6 +733,14 @@ public class GameManager : MonoBehaviour
                                     solution = slotpos[eqCalled, pwrIndex[eqCalled, index] - 1] = slotpos[eqCalled, pwrIndex[eqCalled, index]] = slotpos[eqCalled, pwrIndex[eqCalled, index] + 1] = Math.Pow(pwrvar1, pwrvar2); //sets all 3 involved slots to solution after solving
                                     Debug.Log("exponentiation: " + solution);
                                     Debug.Log("POWER DONE");
+
+                                    // exponentiaton is the win condition, so the game is won by triggering the relevent code in the calculator  
+                                    if (gameWon == false)
+                                    {
+                                        WinScreen.SetActive(true);
+                                        gameWon = true;
+                                        endTime.SetText($"Play Time: {(System.TimeSpan.FromSeconds((int)playTime).ToString())}");
+                                    }
                                 }
                             }
                         }
